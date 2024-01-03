@@ -26,5 +26,9 @@ Al ajustar nuestra oferta de esta manera, FashionHub aspira a convertirse en la 
 
 ## Integrantes del Equipo:
 
-* @7Diana7 
-* @ifinacho Ignacio Francisco Ibañez. 28 años. Estudiante de Lic. en Sistemas. FullStack Web Developer.
+- **@7Diana7** - Diana Rocio Chaves Banegas, 15 años, estudiante de Python y diferentes lenguajes. Futura Programadora Fullstack en proceso. Dando siempre lo mejor y todo de mí para sacar adelante los proyectos y mis habilidades.
+- **@ifinacho** - Ignacio Francisco Ibañez. 28 años. Estudiante de Lic. en Sistemas. FullStack Web Developer.
+
+## Sitios de referencia:
+
+
