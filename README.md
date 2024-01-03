@@ -29,6 +29,8 @@ Al ajustar nuestra oferta de esta manera, FashionHub aspira a convertirse en la 
 - **@7Diana7** - Diana Rocio Chaves Banegas, 15 años, estudiante de Python y diferentes lenguajes. Futura Programadora Fullstack en proceso. Dando siempre lo mejor y todo de mí para sacar adelante los proyectos y mis habilidades.
 - **@ifinacho** - Ignacio Francisco Ibañez. 28 años. Estudiante de Licenciatura en Sistemas. FullStack Web Developer.
 - **@riverfisica** - Nahuel Quispe, 25 años. Hace tiempo que me interesa la programacion, aunque. cuento solo con conocimientos basicos es por eso que espero de este bootcamp obtener las herramientas suficientes para poder ser un desarrollador web. Espero poder seguir con el ritmo del mismo.
+- **RicardoJoelVergara ** - Ricardo Joel Vergara, 24 años. Recién graduado como técnico en Automatización y Robótica. 
+Apasionado por la tecnología y la programación, estoy emocionado por aprovechar al máximo este curso.
 
 ## Sitios de referencia:
 
