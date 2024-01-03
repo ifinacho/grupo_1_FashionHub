@@ -31,4 +31,9 @@ Al ajustar nuestra oferta de esta manera, FashionHub aspira a convertirse en la 
 
 ## Sitios de referencia:
 
-
++ https://www.portsaid.com.ar/ - Esta pagina fue seleccionada como principal inspiracion debido al impacto visual y estilo "instagram" que tiene.
++ https://www.modalia.com/ - Esta pagina fue seleccionada como ejemplo de mostrar variedad de productos de forma amigable y no excederse en anuncios.
++ https://www.amazon.com/ - Esta pagina fue seleccionada porque es imposible no pensar en Amazon cuando se trata de ventas online. Nos inspira su estilo sencillo y capacidad de mostrar gran variedad de productos.
++ https://us.shein.com/ - Esta pagina fue seleccionada mas bien como un "lo que no deseamos hacer", que es, saturare al cliente de anuncios, ademas de su estilo saturado. Si salvamos su capacidad de poder visualizar productos muy diferentes tan solo en el home.
++ https://www.showroomprive.es/ - Esta pagina fue seleccionada su intuitivo inicio de sesion, donde podemos ver en una imagen, todos los productos que ofrecen sin necesidad de texto, y por otro lado, las opciones de inicio de sesion son muy intuitivas e interactivas. Todo esto de un modo limpio y organizado.
++ https://www.etsy.com/es/ - Esta fue selecionada por su buen balance de colores y formas, a la hora de mostrar distintos productos. Nunca pierde la armonia.
