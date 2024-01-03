@@ -6,7 +6,7 @@ Además de la ropa, FashionHub ofrecerá servicios adicionales, como envío ráp
 ## Audiencia Objetivo:
 La audiencia objetivo de FashionHub estará compuesta por Mujeres de 18 y 40 años de edad, apasionados por la moda y que buscan productos de alta calidad y cuidado con el medio ambiente, que reflejen las últimas tendencias. Esta audiencia valora la comodidad, el estilo y la conveniencia al comprar en línea. También se orientará a aquellos que buscan opciones 100% sostenibles.
 
-##Cómo Ajustaremos Nuestra Oferta:
+## Cómo Ajustaremos Nuestra Oferta:
 1. **Selección de Productos**:
    - Ofreceremos una amplia gama de tallas y estilos para adaptarnos a diferentes preferencias.
    - Ofreceremos una sección 100% sostenible con el medio ambiente
@@ -23,3 +23,8 @@ La audiencia objetivo de FashionHub estará compuesta por Mujeres de 18 y 40 añ
    - Mantendremos precios competitivos para atraer a un público amplio.
 
 Al ajustar nuestra oferta de esta manera, FashionHub aspira a convertirse en la opción preferida para aquellos que buscan moda actualizada, protección al medio ambiente y servicios de compra en línea convenientes y confiables.
+
+## Integrantes del Equipo:
+
+@7Diana7
+@ifinacho
