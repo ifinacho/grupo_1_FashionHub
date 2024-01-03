@@ -26,5 +26,5 @@ Al ajustar nuestra oferta de esta manera, FashionHub aspira a convertirse en la 
 
 ## Integrantes del Equipo:
 
-@7Diana7
-@ifinacho
+* @7Diana7 
+* @ifinacho Ignacio Francisco Ibañez. 28 años. Estudiante de Lic. en Sistemas. FullStack Web Developer.
