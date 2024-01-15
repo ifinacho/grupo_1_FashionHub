@@ -1,0 +1,340 @@
+/*---------------------º All º---------------------*/
+button{
+    background-color: #acc94a;
+    border: none;
+    border-radius: 15px;
+}
+button p{
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+button h5{
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+a{
+    color: #461111;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+h2{
+    color: #461111;
+    font-family: 'Lato', sans-serif;
+}
+p{
+    color: #461111;
+    font-family: 'Lato', sans-serif;
+}
+li{
+    color: #461111;
+    font-family: 'Lato', sans-serif;
+}
+h1{
+    color: #461111;
+    font-family: 'Lato', sans-serif;
+}
+i{
+    color: #461111;
+    font-family: 'Lato', sans-serif;
+}
+/*------------------------------------º header º------------------------------------*/
+header {
+    display: flex;
+    background-color:#f0bfd0;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+header div i{
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 2px;
+}
+.one{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+header article a{
+    font-size:105%;
+    margin: 0.5vh;
+}
+header img {
+    width: 33vw;
+    margin: 5px;
+}
+/*------------------------------------º main-article º------------------------------------*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main article div {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 25px;
+}
+main article{
+    display: flex;
+    width: 80vw;
+    flex-wrap: wrap;
+}
+main article div img{
+    width: 100%;
+    margin-bottom: 10px;
+    align-self: center;
+}
+main article div button {
+    align-self:flex-start;
+    width: 45%;
+    margin: 5px;
+}
+main article div button p{
+    font-size: larger;
+}
+.banner{
+    width: 90%;
+    margin: 40px 0px;
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+}
+/*------------------------------------º main-section º------------------------------------*/
+main section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50vw;
+}
+main h1{
+    margin: 10px 0%;
+    font-size: 115%;
+}
+main section div{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: solid 3px #461111;
+    margin: 15px;
+    width: 80%;
+}
+main section div div{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    border:none;
+    width: 90%;
+}
+main section div div button{
+    width: 105%;
+    height: 6vh;
+}
+main section div div h2{
+    font-size: 2.8rem;
+    margin: 5px;
+}
+main section div div p{
+    display: none;
+}
+main section div div button h5{
+    font-size: 1.3rem;
+    margin: 15px;
+}
+.anuncios{
+    width: 50%;
+    margin: 40px 0px;
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+}
+/*------------------------------------º footer º------------------------------------*/
+footer {
+    display: flex;
+    background-color: #f9efb2;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-inline: 10px;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    align-items: center;
+}
+footer .redes img{
+    width: 50%;
+    margin: 10px;
+}
+footer .redes i{
+    background-color: white;
+    padding: 7px;
+    border-radius: 50%;
+    margin: 2px;
+    font-size:x-large;
+}
+footer .redes div{
+    display: flex;
+    justify-content: center;
+}
+
+footer .creditos{
+    display: none;
+}
+/*------------------------------------º media queries º------------------------------------*/
+
+@media(min-width:426px){
+    header article a{
+        font-size: 220%;
+    }
+    main h1{
+        font-size: 250%;
+    }
+    main section div div p {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 25px;
+        font-size: 150%;
+    }
+    main section div div button h5{
+        font-size: 150%;
+    }
+    footer .redes img{
+        width: 70%;
+        align-self: center;
+    }
+    footer .redes div i{
+        font-size: xx-large;
+    }
+}
+
+@media(min-width:769px){
+    header img{
+        width: 45vw;
+    }
+    header article{
+        font-size: 150%;
+    }
+    header div{
+        font-size: 150%;
+    }
+    main article{
+        flex-wrap: unset;
+        width: 80%;
+    }
+    main section{
+        width: 30%;
+    }
+    main section div div button{
+        width: 70%;
+        font-size: x-large;
+    }
+    footer .creditos{
+        display: flex;
+        margin: 5px;
+        font-size: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media(min-width:1024px){
+    header{
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    header article{
+        font-size: 80%;
+    }
+    header img{
+        width: 20vw;
+    }
+    header div{
+        font-size: medium;
+    }
+    main h1{
+        font-size: 3.5rem;
+        margin: 35px 0px;
+    }
+    main section div div h2{
+        font-size: 4.5rem;
+    }
+    main section div div button h5{
+        font-size: xx-large;
+        margin: 10px;
+    }
+    main article div button p{
+        font-size: xx-large;
+    }
+    footer .creditos{
+        font-size: 165%;
+    }
+}
+@media(min-width:1440px){
+    header article{
+        font-size: 120%;
+    }
+    header div{
+        font-size: 130%;
+    }
+    footer .redes img{
+        width: 90%;
+    }
+    footer .redes div i{
+        font-size: 250%;
+    }
+}
+@media(min-width:2560px){
+    header img{
+        width: 15vw;
+    }
+    .one{
+        width: 40%;
+    }
+    header article{
+        font-size: 150%;
+    }
+    header div{
+        font-size: 200%;
+    }
+    footer .creditos{
+        font-size: 200%;
+    }
+    footer .redes img{
+        width: 120%;
+    }
+    footer .redes div i{
+        font-size: 400%;
+        padding: 15px;
+        margin: 10px;
+    }
+    main article div button{
+        width: 35%;
+        margin: 20px;
+        height: 6vh;
+    }
+    main section div div button{
+        height: 8vh;
+    }
+    main section div div h2{
+        font-size: 5rem;
+    }
+    main section div div p{
+        font-size: 200%;
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+    main section div div button h5{
+        font-size: 200%;
+    }
+    main h1{
+        font-size: 600%;
+    }
+}
