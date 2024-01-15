@@ -11,7 +11,7 @@ La audiencia objetivo de FashionHub estará compuesta por Mujeres de 18 y 40 añ
 - **@7Diana7** : https://github.com/7Diana7 - Diana Rocio Chaves Banegas, 15 años, estudiante de Python y diferentes lenguajes. Futura Programadora Fullstack en proceso. Dando siempre lo mejor y todo de mí para sacar adelante los proyectos y mis habilidades.
 - **@ifinacho** : https://github.com/ifinacho - Ignacio Francisco Ibañez, 28 años. Estudiante de Licenciatura en Sistemas. FullStack Web Developer.
 - **@riverfisica** : https://github.com/riverfisica - Nahuel Quispe, 25 años. Hace tiempo que me interesa la programacion, aunque. cuento solo con conocimientos basicos es por eso que espero de este bootcamp obtener las herramientas suficientes para poder ser un desarrollador web. Espero poder seguir con el ritmo del mismo. Y aprender junto a mis companeros.
-- **@RicardoJoelVergara** : https://github.com/RicardoJoelVergara - Ricardo Joel Vergara, 24 años. Recién graduado como técnico en Automatización y Robótica. 
+- **@RicardoJoelVergara** : https://github.com/RicardoJoelVergara - Ricardo Joel Vergara, 25 años. Recién graduado como técnico en Automatización y Robótica. 
 Apasionado por la tecnología y la programación, estoy emocionado por aprovechar al máximo este curso.
 - **@mannuu348** : https://github.com/mannuu348 - Victor Manuel Pereira, 25 años. Estoy estudiando una tecnicatura en ciberseguridad y trabajo en el area de sistemas de la municipalidad, me encargo de gestionar base de datos y manejar el sistema contable.
 
