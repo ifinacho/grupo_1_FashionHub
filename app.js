@@ -9,4 +9,7 @@ app.listen(3000, () => {
     console.log("server corriendo");
 });
 
-
+app.get("/shopping-cart", (req, res) => {
+    const path_shopping_cart = path.resolve(__dirname, "views/shopping-cart.html");
+    res.sendFile(path_shopping_cart);
+})
