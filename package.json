@@ -1,0 +1,15 @@
+{
+  "name": "grupo_1_fashionhub",
+  "version": "1.0.0",
+  "description": "FashionHub se especializará en la venta de ropa de moda para Mujeres. El catálogo incluirá una amplia variedad de prendas de vestir, desde ropa casual hasta artículos más formales y accesorios de moda. Se prestará especial atención a las últimas tendencias de la moda, respetando la sostenibilidad ecologica y garantizando que los productos reflejen un estilo actualizado y atractivo.\r Además de la ropa, FashionHub ofrecerá servicios adicionales, como envío rápido y seguro, opciones de devolución flexibles.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
