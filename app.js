@@ -17,9 +17,9 @@ app.get("/login", (req, res) => {
     const path_login = path.resolve(__dirname, "views/login.html");
     res.sendFile(path_login);
 });
-app.get("/login", (req, res) => {
-    const path_login = path.resolve(__dirname, "views/login.html");
-    res.sendFile(path_login);
+app.get("/home", (req, res) => {
+    const path_home = path.resolve(__dirname, "views/home.html");
+    res.sendFile(path_home);
 });
 app.get("/register", (req, res) => {
     const path_register = path.resolve(__dirname, "views/registro.html");
