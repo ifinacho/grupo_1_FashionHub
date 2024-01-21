@@ -23,3 +23,6 @@ Apasionado por la tecnología y la programación, estoy emocionado por aprovecha
 + https://us.shein.com/ - Esta pagina fue seleccionada mas bien como un "lo que no deseamos hacer", que es, saturare al cliente de anuncios, ademas de su estilo saturado. Si salvamos su capacidad de poder visualizar productos muy diferentes tan solo en el home.
 + https://www.showroomprive.es/ - Esta pagina fue seleccionada su intuitivo inicio de sesion, donde podemos ver en una imagen, todos los productos que ofrecen sin necesidad de texto, y por otro lado, las opciones de inicio de sesion son muy intuitivas e interactivas. Todo esto de un modo limpio y organizado.
 + https://www.etsy.com/es/ - Esta fue selecionada por su buen balance de colores y formas, a la hora de mostrar distintos productos. Nunca pierde la armonia.
+
+## Tablero de Trabajo:
++ https://trello.com/b/zbjhNXkC/proyecto-integrador-dh
