@@ -1,5 +1,67 @@
+/*---------------------º All (Diana)º---------------------*/
+button p{
+    color: white;
+    font-family: 'Cherry Swash', serif;
+}
+button h5{
+    color: white;
+    font-family: 'Cherry Swash', serif;
+}
+a{
+    color: #461111;
+    text-decoration: none;
+    font-family: 'Cherry Swash', serif;
+}
+h2{
+    color: #461111;
+    font-family: 'Lobster', sans-serif;
+}
+p{
+    color: #461111;
+    font-family: 'Cherry Swash', serif;
+}
+li{
+    color: #461111;
+    font-family: 'Cherry Swash', serif;
+}
+h1{
+    color: #461111;
+    font-family: 'Lobster', sans-serif;
+}
+i{
+    color: #461111;
+}
+/*------------------------------------º header º------------------------------------*/
+header {
+    display: flex;
+    background-color:#f0bfd0;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+
+}
+header div i{
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 2px;
+}
+.one{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+header article a{
+    font-size:105%;
+    margin: 0.5vh;
+}
+header img {
+    width: 33vw;
+    margin: 5px;
+}
+/*-------------------------------------------------------*/
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
