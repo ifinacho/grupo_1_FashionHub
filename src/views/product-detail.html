@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="/home"><img class="img-logo" src="/img/FashionHub-logo.png" alt="esto es un logo"></a>
+        <article class="header-article">
+            <a href="">Colección</a><span>|</span>
+            <a href="">Accesorios</a><span>|</span>
+            <a href="">Denim</a><span>|</span>
+            <a href="">Sostenibilidad</a>
+        </article>
+        <div class="header-div">
+            <form action="">
+                <button id="button-search" type="button" value="search"><i class="fas fa-search"></i></button>
+            </form>
+            <i class="far fa-heart"></i>
+            <a class="header-register" href="/register"><i class="far fa-user"><span> Register</span></i></a>
+            <a class="header-login" href="/login"><i class="far fa-user"><span> Login</span></i></a>
+            <a href="/shopping-cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-articles">
+            <article class="section-articles__article" id="section-articles-1">
+                <div class="section-articles__article-div">
+                    <img src="/img/accesorio-cartera-crossbody-helen.webp" 
+                    alt=" Accesorio Cartera Crossbody Helen" 
+                    title=" Accesorio Cartera Crossbody Helen">
+                </div>
+            </article>
+            <article class="section-articles__article" id="section-articles-2">
+                <div class="section-articles__article-div">
+                    <img src="/img/calzado-sandalias-cuña-azul.webp" 
+                    alt="Calzado Sandalias Cuña Azul" 
+                    title="Calzado Sandalias Cuña Azul">
+                </div>
+            </article>
+            <article class="section-articles__article" id="section-articles-3">
+                <div class="section-articles__article-div">
+                    <img src="/img/remera-blusa-felisa.webp" 
+                    alt="Remera Blusa Felisa" 
+                    title="Remera Blusa Felisa">
+                </div>
+            </article>
+        </section>
+        <section class="section-product">
+            <div class="section-product__div">
+                <img src="/img/pantalon-finne.webp" alt="Pantalon Finne" title="Pantalon Finne">
+            </div>
+        </section>
+        <section class="section-form">
+            <form id="form" action="/home" method="POST">
+                <div id="form-title">
+                    <h1>Pantalon Finne</h1>
+                    <button id="button-heart"><i class="far fa-heart"></i></button>
+                </div>
+                <div>
+                    <p id="form-price">$ 15.000</p>
+                </div>
+                <div>
+                    <p id="form-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facilis ratione, sapiente autem vitae consequuntur molestias eaque suscipit voluptatem, eos, nemo natus quibusdam? Error provident ex assumenda repudiandae quidem nobis.</p>
+                </div>
+                <div class="form-radio">
+                    <label id="form-color">Color:</label>
+                    <label class="radio"><input type="radio" name="color" value="rojo"> Rojo</label>
+                    <label class="radio"><input type="radio" name="color" value="amarillo"> Amarillo</label>
+                    <label class="radio"><input type="radio" name="color" value="rosa"> Rosa</label>
+                </div>
+                <div class="form-radio">
+                    <label id="form-talle">Talle:</label>
+                    <label class="radio"><input type="radio" name="talle" value="small"> Small</label>
+                    <label class="radio"><input type="radio" name="talle" value="medium"> Medium</label>
+                    <label class="radio"><input type="radio" name="talle" value="large"> Large</label>
+                </div>
+                <div id="button-submit" >
+                    <button type="submit" value="comprar">Comprar ahora</button>
+                </div>
+                <div id="button-carrito" >
+                    <a href="/shopping-cart" target="_blank">Añadir al carrito</a>
+                </div>
+                <div class="form-div" id="form-saber-talle">
+                    <h3>Como saber tu talle:</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium earum sint illum officia itaque quos quia error molestias harum dolorem, similique, praesentium modi quam. Nemo consectetur debitis possimus alias quidem!</p>
+                </div>
+                <div class="form-div" id="form-calcular-envio">
+                    <h3>Calcular envio:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem maxime neque placeat totam voluptatem architecto non, ab enim, cumque dicta aperiam similique tempore consectetur voluptate ut ipsum ea quis. Ducimus.</p>
+                </div>
+                <div class="form-div" id="form-composicion">
+                    <h3>Composición:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut repudiandae amet facere rem labore nulla dolorum obcaecati inventore ullam ad dicta, ipsum ipsam vero perferendis omnis cupiditate ea, cumque soluta.</p>
+                </div>
+                <div class="form-div" id="form-cambios-devoluciones">
+                    <h3>Cambios y devoluciones:</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui sapiente sit in quibusdam, numquam vero maxime voluptas sequi, iusto dolorum nostrum nesciunt optio? Voluptatibus aut nostrum sint? Reprehenderit, rem dicta.</p>
+                </div>
+                <div class="form-div" id="form-envios-pagos">
+                    <h3>Envios y formas de pago:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem unde dignissimos laboriosam, officiis cum ad suscipit sed praesentium error, quod, quo nesciunt at quisquam eius similique provident temporibus neque tempora.</p>
+                </div>
+                <div class="form-div" id="form-compartir">
+                    <h3>Compartir</h3>
+                    <div class="redes">
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://ar.pinterest.com/" target="_blank"><i class="fab fa-pinterest-square"></i></a>
+                        <a href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="section-comments">
+            <div id="section-comments-title">
+                <h2>Comentarios</h2>
+                <div id="section-comments-punctuation">
+                    <p id="punctuation">3</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <article class="section-comments__article">
+                <div class="section-comments__punctuation">
+                    <i class="fas fa-circle"></i> 
+                    <p class="section-comments__name">Diana Chaves</p>
+                    <p class="punctuation">4</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p class="section-comments__comment">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae excepturi nobis adipisci, incidunt totam eligendi, magni ad assumenda nulla voluptate id necessitatibus nesciunt vero similique fuga ducimus deleniti ullam? Cum?</p>
+            </article>
+            <article class="section-comments__article">
+                <div class="section-comments__punctuation">
+                    <i class="fas fa-circle"></i>
+                    <p class="section-comments__name">Nahuel Quispe</p>
+                    <p class="punctuation">3</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p class="section-comments__comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, fuga porro reiciendis perspiciatis similique eligendi magni hic eius, libero maxime quod ipsum quaerat rerum sequi asperiores quas laudantium repudiandae recusandae.</p>
+            </article>
+            <article class="section-comments__article">
+                <div class="section-comments__punctuation">
+                    <i class="fas fa-circle"></i>
+                    <p class="section-comments__name">Joel Vergara</p>
+                    <p class="punctuation">3</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p class="section-comments__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam optio excepturi quasi voluptate reprehenderit eaque reiciendis, ipsam quae suscipit nemo modi corporis amet porro consequuntur quaerat deserunt voluptates, sint velit!</p>
+            </article>
+            <article class="section-comments__article">
+                <div class="section-comments__punctuation">
+                    <i class="fas fa-circle"></i>
+                    <p class="section-comments__name">Victor Pereira</p>
+                    <p class="punctuation">2</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p class="section-comments__comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, repellat. Repellat dolore dolorum ratione perspiciatis, odit tempora accusantium pariatur debitis consequatur delectus corrupti nihil laborum, harum fugit, numquam velit! Voluptate.</p>
+            </article>
+        </section>
+        <!--<h1>TAMBIÉN TE PUEDE INTERESAR...</h1>
+        <section>
+            <div>
+                <img src="/img/vestido-sunset.webp" alt="ropa">
+                <div>
+                    <h2>Vestido</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente?</p>
+                    <button>
+                        <h5>Ver Más</h5>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <img src="/img/remera-remeron-real-prince.webp" alt="ropa">
+                <div>
+                    <h2>Vestido</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente?</p>
+                    <button>
+                        <h5>Ver Más</h5>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <img src="/img/vestido-rifa-azul.webp" alt="ropa">
+                <div>
+                    <h2>Vestido</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente?</p>
+                    <button>
+                        <h5>Ver Más</h5>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <img src="/img/pantalon-babucha-thiara.webp" alt="ropa">
+                <div>
+                    <h2>Vestido</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente?</p>
+                    <button>
+                        <h5>Ver Más</h5>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <img src="/img/cabecera-anuncios.png" alt="anuncios" class="anuncios">-->
+    </main>
+
+    <footer>
+        <div class="creditos">
+            <ul id="credito-1">
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+            </ul>
+        </div>
+        <div class="creditos">
+            <ul id="credito-2">
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+            </ul>
+        </div>
+        <div class="creditos">
+            <ul id="credito-3">
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+            </ul>
+        </div>
+        <div class="footer-bot">
+            <img class="img-logo" src="/img/FashionHub-logo.png" alt="esto es un logo">
+            <div class="redes">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

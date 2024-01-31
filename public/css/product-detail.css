@@ -1,0 +1,360 @@
+/*--------NORMALIZACIÓN--------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a, span{
+    color: #461111;
+    text-decoration: none;
+    font-family: 'Cherry Swash', serif;
+}
+p, button, li, i , label{
+    color: #461111;
+    font-family: 'Cherry Swash', serif;
+}
+h1, h2, h3, h4, h5, h6{
+    color: #461111;
+    font-family: 'Lobster', sans-serif;
+}
+button{
+    border: none;
+    background-color: #acc94a;
+    cursor: pointer;
+}
+
+/*--------Styles para Header--------*/
+
+header {
+    display: flex;
+    background-color:#f0bfd0;
+    box-shadow: 0px 0px 11px rgba(0,0,0,0.42);
+    padding: 0.5rem 0;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.img-logo{
+    width: 35vw;
+}
+.header-article{
+    margin: 1rem 0;
+    padding: 0.5rem 0.7rem ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    border-radius: 1rem;
+    order: 2;
+    gap: 0.4rem;
+}
+.header-article span{
+    padding: 0;
+    margin: 0;
+}
+.header-div{
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    order: 1;
+    gap: 0.75rem;
+}
+#button-search{
+    background-color: #f0bfd0;
+}
+.fa-search, .fa-heart, .fa-shopping-cart{
+    background-color: white;
+    padding: 0.6rem;
+    border-radius: 50%;
+}
+.fa-user{
+    background-color: white;
+    padding: 0.6rem;
+    border-radius: 2rem;
+}
+
+/*--------Styles para Main--------*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*.section-articles{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 0.5rem;
+}
+.section-articles__article img{
+    width: 15rem;
+    border-radius: 0.5rem;
+}*/
+
+/*--------Styles para Main Section Article--------*/
+
+.section-articles{
+    display: none;
+}
+
+/*--------Styles para Main Section Product--------*/
+
+.section-product{
+    display: flex;
+    margin-top: 2rem;
+}
+.section-product img{
+    width: 90vw;
+    border-radius: 0.5rem;
+}
+
+/*--------Styles para Main Section Form--------*/
+
+.section-form, .section-comments{
+    width: 90vw;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #f9efb2;
+    border-radius: 0.5rem;
+}
+#form>div{
+    margin-top: 1rem;
+}
+#form-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#form-title>h1{
+    margin: 0;
+    font-size: 2.2rem;
+}
+#button-heart{
+    background-color: #f9efb2;
+    align-self: flex-start;
+    padding-top: 0.3rem;
+    margin: 0 1.75rem 0 1.5rem;
+}
+#button-heart .fa-heart{
+    background-color: #f9efb2;
+    padding: 0;
+    font-size: 1.85rem;
+}
+#form-price{
+    font-size: 1.6rem;
+}
+#form-color, #form-talle{
+    display: block;
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
+    text-decoration: underline wavy;
+}
+.radio{
+    margin-right: 1rem;
+}
+#button-submit, #button-carrito{
+    cursor: pointer;
+    background-color: #acc94a;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.45rem;
+}
+#button-submit{
+    margin-top: 1.5rem !important;
+}
+#button-carrito{
+    margin-top: 0.75rem !important;
+    margin-bottom: 1.75rem;
+}
+#button-submit:hover button,
+#button-submit:hover,
+#button-carrito:hover{
+    background-color: #bfdb62;
+}
+.form-div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.form-div>h3{
+    font-size: 1.45rem;
+}
+#form-compartir>h3{
+    margin-bottom: 0.65rem;
+}
+#form-compartir>.redes{
+    margin-bottom: 0.85rem;
+}
+.fa-pinterest-square, .fa-whatsapp, .fa-tiktok{
+    background-color: white;
+    padding: 0.5rem 0.595rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+/*--------Styles para Main Section Comments--------*/
+
+.section-comments{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding-bottom: 2rem;
+}
+#section-comments-title{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+#section-comments-title>h2{
+    font-size: 1.9rem;
+    text-decoration: underline;
+}
+#section-comments-punctuation{
+    display: flex;
+    align-items: center;
+}
+#punctuation{
+    font-size: 1.5rem;
+    margin-right: 0.4rem;
+}
+#section-comments-punctuation>.fa-star{
+    font-size: 1.25rem;
+}
+.section-comments__punctuation{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.section-comments__punctuation .fa-circle{
+    font-size: 0.65rem;
+    margin-right: 0.5rem;
+}
+.section-comments__name{
+    font-size: 1.2rem;
+    margin-right: 2.2rem;
+}
+.punctuation{
+    font-size: 1.2rem;
+    margin-right: 0.4rem;
+    align-self: flex-start;
+}
+.section-comments__punctuation .fa-star{
+    align-self: flex-start;
+    padding-top: 0.25rem;
+}
+/*main article div {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 25px;
+}
+main article{
+    display: flex;
+    width: 80vw;
+    flex-wrap: wrap;
+}
+main article div img{
+    width: 100%;
+    margin-bottom: 10px;
+    align-self: center;
+}
+main article div button {
+    align-self:flex-start;
+    width: 45%;
+    margin: 5px;
+}
+main article div button p{
+    font-size: larger;
+}*/
+/*main section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50vw;
+}
+main h1{
+    margin: 10px 0%;
+    font-size: 115%;
+}
+main section div{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: solid 3px #461111;
+    margin: 15px;
+    width: 80%;
+}
+main section div div{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    border:none;
+    width: 90%;
+}
+main section div div button{
+    width: 105%;
+    height: 6vh;
+}
+main section div div h2{
+    font-size: 2.8rem;
+    margin: 5px;
+}
+main section div div p{
+    display: none;
+}
+main section div div button h5{
+    font-size: 1.3rem;
+    margin: 15px;
+}
+.anuncios{
+    width: 50%;
+    margin: 40px 0px;
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+}*/
+
+/*--------Styles para Footer--------*/
+
+footer {
+    display: flex;
+    background-color: #f9efb2;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+    margin-top: 1.5rem;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+.creditos ul{
+    margin: 0.5rem;
+}
+.creditos li{
+    text-align: center;
+    line-height: 1.5rem;
+}
+#credito-2, #credito-3{
+    display: none;
+}
+.footer-bot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.redes{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.fa-instagram, .fa-facebook-square, .fa-twitter-square{
+    background-color: white;
+    padding: 0.5rem 0.595rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}

@@ -2,12 +2,14 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-const ruta_public = path.resolve(__dirname, "./public");
-app.use(express.static(ruta_public));
+/*const ruta_public = path.resolve(__dirname, "./public");
+app.use(express.static(ruta_public));*/
+app.use(express.static("public"));
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-    console.log("server corriendo");
-});
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en el puerto: http://localhost:${PORT}`)
+})
 
 app.get("/shopping-cart", (req, res) => {
     const path_shopping_cart = path.resolve(__dirname, "views/shopping-cart.html");
@@ -25,4 +27,7 @@ app.get("/register", (req, res) => {
     const path_register = path.resolve(__dirname, "views/registro.html");
     res.sendFile(path_register);
 })
-
+app.get("/product-detail", (req, res) => {
+    const path_register = path.resolve(__dirname, "views/product-detail.html");
+    res.sendFile(path_register);
+})
