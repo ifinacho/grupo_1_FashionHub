@@ -154,7 +154,7 @@ main{
 .radio{
     margin-right: 1rem;
 }
-#button-submit, #button-carrito{
+#button-submit{
     cursor: pointer;
     background-color: #acc94a;
     padding: 0.4rem 0.75rem;
@@ -162,17 +162,15 @@ main{
     width: 100%;
     text-align: center;
     font-size: 1.45rem;
-}
-#button-submit{
     margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem;
+    transition: background-color 300ms;
 }
-#button-carrito{
-    margin-top: 0.75rem !important;
-    margin-bottom: 1.75rem;
+#button-submit button{
+    transition: background-color 300ms;
 }
 #button-submit:hover button,
-#button-submit:hover,
-#button-carrito:hover{
+#button-submit:hover{
     background-color: #bfdb62;
 }
 .form-div{
