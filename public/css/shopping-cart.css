@@ -1,0 +1,64 @@
+.header-principal {
+    background-color: #f0bfd0;
+
+}
+body {
+    background-color: #fffbff;
+    margin: 0;
+    min-height: 100dvh;
+    font-family: system-ui;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+* {
+    min-width: 0;
+    font: inherit;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+p {
+    text-wrap: pretty;
+}
+button {
+    padding: 15px;}
+.shopping-cart-section-1 {
+    display: inline-block;
+}
+.shopping-cart-section-2 {
+    display: inline-block;
+}
+.shopping-cart-section-2__buy-now {
+    background-color: #ACC94A;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+.shopping-cart-section-2__continue-buy{
+    background-color: #ACC94A;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+.recommendations__add-button {
+    background-color: #ACC94A;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+.recommendations__header{
+    background-color: #ffdcc3;
+}
+.product-recommendation {
+    display: inline-block;
+}
+.logo-fashion-hub {
+    width: 102px;
+    height: 55px;
+    aspect-ratio: 512,279;
+}
