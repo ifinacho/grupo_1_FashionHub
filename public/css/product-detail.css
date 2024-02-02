@@ -235,6 +235,9 @@ main{
     align-self: flex-start;
     padding-top: 0.25rem;
 }
+/*#section-comments-ifi{
+    display: none;
+}*/
 
 /*--------Styles para Footer--------*/
 
@@ -290,8 +293,8 @@ footer {
     }
     .header-article{
         margin-top: 0;
-        margin-right: 4rem;
-        margin-left: 4rem;
+        margin-right: 5rem;
+        margin-left: 5rem;
     }
     .header-div{
         margin: 0 4rem;
@@ -451,5 +454,163 @@ footer {
 /*--------Media Queries Escritorio--------*/
 
 @media(min-width: 1240px) {
+
+    /*--------Styles para Header-------- */
+
+    header{
+        font-size: 1.2rem;
+        padding: 0.6rem 0;
+    }
+    .header-article{
+        margin-bottom: 0;
+        margin-right: 0;
+        margin-left: 0;
+        order: 1;
+    }
+    .header-div{
+        order: 2;
+    }
+
+    /*--------Styles para Main-------- */
+
+    main{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+    }
+
+    /*--------Styles para Main Section Form--------*/
+
+    .section-form{
+        font-size: 1.2rem;
+        width: 31rem;
+        padding-right: 1.6rem;
+        padding-left: 1.6rem;
+        grid-row: 1/3;
+        grid-column: 3;
+    }
+    #form>div{
+        margin-top: 1.2rem;
+    }
+    #form-title>h1{
+        margin: 0;
+        font-size: 2.2rem;
+    }
+    #button-heart{
+        padding-top: 0.5rem;
+        margin: 0 1.95rem 0 1.7rem;
+    }
+    #button-heart .fa-heart{
+        padding: 0;
+        font-size: 2.05rem;
+    }
+    #form-price{
+        font-size: 1.8rem;
+    }
+    #form-color, #form-talle{
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+    }
+    .radio{
+        margin-right: 1.2rem;
+    }
+    #button-submit{
+        padding: 0.6rem 0.95rem;
+        font-size: 1.6rem;
+    }
+    .form-div{
+        gap: 0.7rem;
+    }
+    .form-div>h3{
+        font-size: 1.65rem;
+    }
+    #form-compartir>h3{
+        margin-bottom: 0.85rem;
+    }
+    #form-compartir>.redes{
+        margin-bottom: 1.05rem;
+    }
+    .fa-pinterest-square, .fa-whatsapp, .fa-tiktok{
+        padding: 0.7rem 0.795rem;
+        font-size: 1.7rem;
+    }
+
+    /*--------Styles para Main Section Comments--------*/
+    
+    .section-comments{
+        font-size: 1.2rem;
+        width: 42.1rem;
+        grid-column: 1/3;
+        /*position: relative;*/
+        /*bottom: 58.1rem;*/
+        /*right: 15.5rem;*/
+        padding-right: 1.6rem;
+        padding-left: 1.6rem;
+        padding-top: 1.6rem;
+        gap: 1.5rem;
+        padding-bottom: 2.35rem;
+        align-self: center;
+    }
+    #section-comments-title{
+        gap: 2.2rem;
+    }
+    #section-comments-title>h2{
+        font-size: 2.1rem;
+    }
+    #punctuation{
+        font-size: 1.7rem;
+        margin-right: 0.6rem;
+    }
+    #section-comments-punctuation>.fa-star{
+        font-size: 1.45rem;
+    }
+    .section-comments__punctuation{
+        margin-bottom: 0.7rem;
+    }
+    .section-comments__punctuation .fa-circle{
+        font-size: 0.85rem;
+        margin-right: 0.7rem;
+    }
+    .section-comments__name{
+        font-size: 1.5rem;
+        margin-right: 2.4rem;
+    }
+    .punctuation{
+        font-size: 1.5rem;
+        margin-right: 0.6rem;
+    }
+    .section-comments__punctuation .fa-star{
+        padding-top: 0.45rem;
+    }
+    /*#section-comments-ifi{
+        display: inline-block;
+    }*/
+    
+
+    /*--------Styles para Footer--------*/
+
+    footer {
+        font-size: 1.2rem;
+    }
+    .creditos ul{
+        margin: 0.7rem;
+    }
+    .creditos li{
+        line-height: 1.7rem;
+    }
+    #credito-3{
+        display: inline-block;
+    }
+    .footer-bot{
+        gap: 0.7rem;
+    }
+    .redes{
+        gap: 1.2rem;
+    }
+    .fa-instagram, .fa-facebook-square, .fa-twitter-square{
+        padding: 0.7rem 0.795rem;
+        font-size: 1.7rem;
+    }
 
 }
