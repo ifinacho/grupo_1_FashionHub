@@ -1,5 +1,5 @@
 /*---------------------º All (Diana)º---------------------*/
-button p{
+/*button p{
     color: white;
     font-family: 'Cherry Swash', serif;
 }
@@ -30,8 +30,9 @@ h1{
 }
 i{
     color: #461111;
-}
+}*/
 /*------------------------------------º header º------------------------------------*/
+/*
 header {
     display: flex;
     background-color:#f0bfd0;
@@ -59,7 +60,7 @@ header article a{
 header img {
     width: 33vw;
     margin: 5px;
-}
+}*/
 /*-------------------------------------------------------*/
 body {
     margin: 0;

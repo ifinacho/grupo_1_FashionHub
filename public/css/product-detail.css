@@ -1,82 +1,3 @@
-/*--------NORMALIZACIÓN--------*/
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a, span{
-    color: #461111;
-    text-decoration: none;
-    font-family: 'Cherry Swash', serif;
-}
-p, button, li, i , label{
-    color: #461111;
-    font-family: 'Cherry Swash', serif;
-}
-h1, h2, h3, h4, h5, h6{
-    color: #461111;
-    font-family: 'Lobster', sans-serif;
-}
-button{
-    border: none;
-    background-color: #acc94a;
-    cursor: pointer;
-}
-
-/*--------Styles para Header--------*/
-
-header {
-    display: flex;
-    background-color:#f0bfd0;
-    box-shadow: 0px 0px 11px rgba(0,0,0,0.42);
-    padding: 0.5rem 0;
-    margin-bottom: 2rem;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    border-radius: 0.5rem;
-
-}
-.img-logo{
-    width: 9rem;
-}
-.header-article{
-    margin: 1rem 0;
-    padding: 0.5rem 0.7rem ;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: white;
-    border-radius: 1rem;
-    order: 2;
-    gap: 0.4rem;
-}
-.header-article span{
-    padding: 0;
-    margin: 0;
-}
-.header-div{
-    margin-top: 0.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    order: 1;
-    gap: 0.75rem;
-}
-#button-search{
-    background-color: #f0bfd0;
-}
-.fa-search, .fa-heart, .fa-shopping-cart{
-    background-color: white;
-    padding: 0.6rem;
-    border-radius: 50%;
-}
-.fa-user{
-    background-color: white;
-    padding: 0.6rem;
-    border-radius: 2rem;
-}
-
 /*--------Styles para Main--------*/
 
 main{
@@ -242,66 +163,9 @@ main{
     padding-top: 0.25rem;
 }
 
-/*--------Styles para Footer--------*/
-
-footer {
-    display: flex;
-    background-color: #f9efb2;
-    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
-    margin-top: 2rem;
-    padding: 1rem;
-    justify-content: space-evenly;
-    border-radius: 0.5rem;
-}
-.creditos ul{
-    margin: 0.5rem;
-}
-.creditos li{
-    text-align: center;
-    line-height: 1.5rem;
-}
-#credito-2, #credito-3{
-    display: none;
-}
-.footer-bot{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-}
-.redes{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-.fa-instagram, .fa-facebook-square, .fa-twitter-square{
-    background-color: white;
-    padding: 0.5rem 0.595rem;
-    border-radius: 50%;
-    font-size: 1.5rem;
-}
-
 /*--------Media Queries Tablet--------*/
 
 @media(min-width: 768px) {
-
-    /*--------Styles para Header-------- */
-
-    header{
-        font-size: 1.1rem;
-    }
-    .img-logo{
-        margin: 0.5rem 2rem;
-    }
-    .header-article{
-        margin-top: 0;
-        margin-right: 5rem;
-        margin-left: 5rem;
-    }
-    .header-div{
-        margin: 0 4rem;
-    }
 
     /*--------Styles para Main-------- */
 
@@ -427,52 +291,11 @@ footer {
     .section-comments__punctuation .fa-star{
         padding-top: 0.35rem;
     }
-
-    /*--------Styles para Footer--------*/
-
-    footer {
-        font-size: 1.1rem;
-    }
-    .creditos ul{
-        margin: 0.6rem;
-    }
-    .creditos li{
-        line-height: 1.6rem;
-    }
-    #credito-2{
-        display: inline-block;
-    }
-    .footer-bot{
-        gap: 0.6rem;
-    }
-    .redes{
-        gap: 1.1rem;
-    }
-    .fa-instagram, .fa-facebook-square, .fa-twitter-square{
-        padding: 0.6rem 0.695rem;
-        font-size: 1.6rem;
-    }
 }
 
 /*--------Media Queries Escritorio--------*/
 
 @media(min-width: 1240px) {
-
-    /*--------Styles para Header-------- */
-
-    header{
-        font-size: 1.2rem;
-        padding: 0.6rem 0;
-    }
-    .header-article{
-        margin-bottom: 0;
-        margin-right: 0;
-        margin-left: 0;
-        order: 1;
-    }
-    .header-div{
-        order: 2;
-    }
 
     /*--------Styles para Main-------- */
 
@@ -596,31 +419,5 @@ footer {
     }
     .section-comments__punctuation .fa-star{
         padding-top: 0.45rem;
-    }    
-
-    /*--------Styles para Footer--------*/
-
-    footer {
-        font-size: 1.2rem;
     }
-    .creditos ul{
-        margin: 0.7rem;
-    }
-    .creditos li{
-        line-height: 1.7rem;
-    }
-    #credito-3{
-        display: inline-block;
-    }
-    .footer-bot{
-        gap: 0.7rem;
-    }
-    .redes{
-        gap: 1.2rem;
-    }
-    .fa-instagram, .fa-facebook-square, .fa-twitter-square{
-        padding: 0.7rem 0.795rem;
-        font-size: 1.7rem;
-    }
-
 }

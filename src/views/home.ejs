@@ -4,30 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
-    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/normalize.css">    
+    <link rel="stylesheet" href="css/norm-header-footer.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="/img/FashionHub-logo.png" alt="esto es un logo">
-        <section>
-            <article class="one">
-                <a href="">Colección</a>  
-                <a href="">Accesorios</a>  
-                <a href="">Denim</a>  
-                <a href="">Sostenibilidad</a>
-            </article>
-            <div>
-                <i class="fas fa-search"></i>
-                <i class="far fa-heart"></i>
-                <a href="/login"><i class="far fa-user"></i></a>
-                <a href="/shopping-cart"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </section>
-    </header>
-
+    <%- include('./partials/header.ejs') %>
     <main>
         <img src="/img/Banner-ofertas.jpg" alt="Banner-ofertas" class="banner">
         <article>
@@ -125,51 +109,6 @@
         </section>
         <img src="/img/cabecera-anuncios.png" alt="anuncios" class="anuncios">
     </main>
-
-    <footer>
-        <section>
-            <div class="creditos">
-                <ul type="none">
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                </ul>
-            </div>
-            <div class="creditos">
-                <ul type="none">
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                </ul>
-            </div>
-            <div class="creditos">
-                <ul type="none">
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                </ul>
-            </div>
-        </section>
-        <div class="redes">
-            <img src="/img/FashionHub-logo.png" alt="esto es un logo">
-            <div>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter"></i>
-            </div>
-        </div>
-    </footer>
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>

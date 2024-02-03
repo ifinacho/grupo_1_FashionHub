@@ -1,4 +1,5 @@
 /*---------------------º All º---------------------*/
+/*
 button{
     background-color: #acc94a;
     border: none;
@@ -36,7 +37,9 @@ h1{
 i{
     color: #461111;
 }
+*/
 /*------------------------------------º header º------------------------------------*/
+/*
 header {
     display: flex;
     background-color:#f0bfd0;
@@ -73,6 +76,48 @@ header img {
     width: 9rem;
     margin: 5px;
 }
+*/
+/*------------------------------------º footer º------------------------------------*/
+/*
+footer {
+    display: flex;
+    background-color: #f9efb2;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-inline: 10px;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+footer section{
+    display: none;
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    align-items: center;
+}
+footer .redes img{
+    width: 50%;
+    margin: 10px;
+}
+footer .redes i{
+    background-color: white;
+    padding: 7px;
+    border-radius: 50%;
+    margin: 2px;
+    font-size:x-large;
+}
+footer .redes div{
+    display: flex;
+    justify-content: center;
+}
+
+footer .creditos{
+    display: none;
+}
+*/
 /*------------------------------------º main-article º------------------------------------*/
 main {
     display: flex;
@@ -159,51 +204,14 @@ main section div div button h5{
     margin-bottom: 60px;
     box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
 }
-/*------------------------------------º footer º------------------------------------*/
-footer {
-    display: flex;
-    background-color: #f9efb2;
-    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-inline: 10px;
-    justify-content: space-evenly;
-    margin-top: 40px;
-}
-footer section{
-    display: none;
-}
-.redes{
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    align-items: center;
-}
-footer .redes img{
-    width: 50%;
-    margin: 10px;
-}
-footer .redes i{
-    background-color: white;
-    padding: 7px;
-    border-radius: 50%;
-    margin: 2px;
-    font-size:x-large;
-}
-footer .redes div{
-    display: flex;
-    justify-content: center;
-}
 
-footer .creditos{
-    display: none;
-}
 /*------------------------------------º media queries º------------------------------------*/
 
 @media(min-width:426px){
+    /*
     header article a{
         font-size: 220%;
-    }
+    }*/
     main article{
         grid-template-columns: repeat(2,1fr);
     }
@@ -219,16 +227,18 @@ footer .creditos{
     main section div div button h5{
         font-size: 150%;
     }
+    /*
     footer .redes img{
         width: 70%;
         align-self: center;
     }
     footer .redes div i{
         font-size: xx-large;
-    }
+    }*/
 }
 
 @media(min-width:769px){
+    /*
     header{
         justify-content: space-evenly;
         flex-direction: row;
@@ -241,7 +251,7 @@ footer .creditos{
     }
     header div{
         font-size: 150%;
-    }
+    }*/
     main article{
         grid-template-columns: repeat(4,1fr);
     }
@@ -251,7 +261,7 @@ footer .creditos{
     main section div div button{
         width: 70%;
         font-size: x-large;
-    }
+    }/*
     footer section{
         display: flex;
         justify-content: space-evenly;
@@ -262,10 +272,11 @@ footer .creditos{
         margin: 5px;
         font-size: 100%;
         flex-wrap: wrap;
-    }
+    }*/
 }
 
 @media(min-width:1024px){
+    /*
     header section{
         flex-direction: row;
     }
@@ -280,7 +291,7 @@ footer .creditos{
     }
     header div{
         font-size: 90%;
-    }
+    }*/
     main h1{
         font-size: 3.5rem;
         margin: 35px 0px;
@@ -294,12 +305,12 @@ footer .creditos{
     }
     main article div button p{
         font-size: xx-large;
-    }
+    }/*
     footer .creditos{
         font-size: 180%;
-    }
+    }*/
 }
-@media(min-width:1440px){
+/*@media(min-width:1440px){
     header article{
         font-size: 120%;
     }
@@ -313,8 +324,9 @@ footer .creditos{
     footer .redes div i{
         font-size: 250%;
     }
-}
+}*/
 @media(min-width:2560px){
+    /*
     header img{
         width: 15vw;
     }
@@ -337,7 +349,7 @@ footer .creditos{
         font-size: 400%;
         padding: 15px;
         margin: 10px;
-    }
+    }*/
     main article div button{
         width: 35%;
         margin: 20px;

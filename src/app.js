@@ -12,22 +12,22 @@ app.listen(PORT, () => {
 })
 
 app.get("/shopping-cart", (req, res) => {
-    const path_shopping_cart = path.resolve(__dirname, "views/shopping-cart.html");
-    res.sendFile(path_shopping_cart);
+    const path_shopping_cart = path.resolve(__dirname, "views/shopping-cart.ejs");
+    res.render(path_shopping_cart);
 });
 app.get("/login", (req, res) => {
-    const path_login = path.resolve(__dirname, "views/login.html");
-    res.sendFile(path_login);
+    const path_login = path.resolve(__dirname, "views/login.ejs");
+    res.render(path_login);
 });
 app.get("/home", (req, res) => {
-    const path_home = path.resolve(__dirname, "views/home.html");
-    res.sendFile(path_home);
+    const path_home = path.resolve(__dirname, "views/home.ejs");
+    res.render(path_home);
 });
 app.get("/register", (req, res) => {
-    const path_register = path.resolve(__dirname, "views/registro.html");
-    res.sendFile(path_register);
+    const path_register = path.resolve(__dirname, "views/registro.ejs");
+    res.render(path_register);
 })
 app.get("/product-detail", (req, res) => {
-    const path_register = path.resolve(__dirname, "views/product-detail.html");
-    res.sendFile(path_register);
+    const path_register = path.resolve(__dirname, "views/product-detail.ejs");
+    res.render(path_register);
 })

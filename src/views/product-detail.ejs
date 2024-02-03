@@ -3,32 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail</title>
+    <title>FH - Detalle de producto</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/product-detail.css">
+    <link rel="stylesheet" href="css/norm-header-footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="/home"><img class="img-logo" src="/img/FashionHub-logo.png" alt="Logo FashionHub" title="Logo FashionHub"></a>
-        <article class="header-article">
-            <a href="">Colección</a><span>|</span>
-            <a href="">Accesorios</a><span>|</span>
-            <a href="">Denim</a><span>|</span>
-            <a href="">Sostenibilidad</a>
-        </article>
-        <div class="header-div">
-            <form action="">
-                <button id="button-search" type="button" value="search"><i class="fas fa-search"></i></button>
-            </form>
-            <i class="far fa-heart"></i>
-            <a class="header-register" href="/register"><i class="far fa-user"><span> Register</span></i></a>
-            <a class="header-login" href="/login"><i class="far fa-user"><span> Login</span></i></a>
-            <a href="/shopping-cart"><i class="fas fa-shopping-cart"></i></a>
-        </div>
-    </header>
-
+    <%- include('./partials/header.ejs') %>
     <main>
         <section class="section-articles">
             <article class="section-articles__article" id="section-articles-1">
@@ -214,49 +197,6 @@
             </article>
         </section>
     </main>
-
-    <footer>
-        <div class="creditos">
-            <ul id="credito-1">
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-            </ul>
-        </div>
-        <div class="creditos">
-            <ul id="credito-2">
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-            </ul>
-        </div>
-        <div class="creditos">
-            <ul id="credito-3">
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-                <li>Lorem, ipsum.</li>
-            </ul>
-        </div>
-        <div class="footer-bot">
-            <img class="img-logo" src="/img/FashionHub-logo.png" alt="Logo FashionHub" title="Logo FashionHub">
-            <div class="redes">
-                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
-            </div>
-        </div>
-    </footer>
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>
