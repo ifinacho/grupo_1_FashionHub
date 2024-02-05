@@ -22,8 +22,12 @@ button{
     border: none;
     background-color: #acc94a;
     cursor: pointer;
+    border-radius: 10px;
+    transition:background-color, 250ms;
 }
-
+button:hover{
+    background-color: #8fb900;
+}
 /*--------Styles para Header--------*/
 
 header {
@@ -32,7 +36,7 @@ header {
     box-shadow: 0px 0px 11px rgba(0,0,0,0.42);
     padding: 0.5rem 0;
     margin-bottom: 2rem;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     border-radius: 0.5rem;
@@ -125,6 +129,7 @@ footer {
 
     header{
         font-size: 1.1rem;
+        justify-content: center;
     }
     .img-logo{
         margin: 0.5rem 2rem;

@@ -119,6 +119,9 @@ footer .creditos{
 }
 */
 /*------------------------------------º main-article º------------------------------------*/
+main article div button p{
+    color: #fff;
+}
 main {
     display: flex;
     flex-direction: column;
@@ -164,6 +167,9 @@ main section{
     justify-content: center;
     width: 50vw;
 }
+main section div div button h5{
+    color: #fff;
+}
 main h1{
     margin: 10px 0%;
     font-size: 115%;
@@ -175,6 +181,15 @@ main section div{
     border: solid 3px #461111;
     margin: 15px;
     width: 80%;
+}
+.sectionBox-shadow{
+    box-shadow: none;
+    transition: all 250ms;
+    width: none;
+}
+.sectionBox-shadow:hover{
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+    width: 85%;
 }
 main section div div{
     display: flex;
@@ -237,7 +252,7 @@ main section div div button h5{
     }*/
 }
 
-@media(min-width:769px){
+@media(min-width:768px){
     /*
     header{
         justify-content: space-evenly;

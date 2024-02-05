@@ -19,7 +19,7 @@ app.get("/login", (req, res) => {
     const path_login = path.resolve(__dirname, "views/login.ejs");
     res.render(path_login);
 });
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
     const path_home = path.resolve(__dirname, "views/home.ejs");
     res.render(path_home);
 });
