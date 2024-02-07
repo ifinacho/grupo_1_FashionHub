@@ -2,6 +2,9 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
+const rutaShoppingCart = require("./routes/shopping-cart.js");
+
+
 /*const ruta_public = path.resolve(__dirname, "./public");
 app.use(express.static(ruta_public));*/
 app.use(express.static("public"));
@@ -11,10 +14,13 @@ app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto: http://localhost:${PORT}`)
 })
 
-app.get("/shopping-cart", (req, res) => {
+/*app.get("/shopping-cart", (req, res) => {
     const path_shopping_cart = path.resolve(__dirname, "views/shopping-cart.ejs");
     res.render(path_shopping_cart);
-});
+}); */
+app.use("/shopping-cart", rutaShoppingCart);
+
+
 app.get("/login", (req, res) => {
     const path_login = path.resolve(__dirname, "views/login.ejs");
     res.render(path_login);
