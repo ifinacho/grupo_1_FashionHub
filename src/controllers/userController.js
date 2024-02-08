@@ -1,9 +1,9 @@
 const controller = {
     login : (req, res) => {
-        res.render("./views/login.ejs")
+        res.render("login")
     },
     register : (req, res) => {
-        res.render("./views/registro.ejs");
+        res.render("registro");
     }
 
 };

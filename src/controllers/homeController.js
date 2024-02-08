@@ -1,6 +1,9 @@
+const path = require('path');
+
+
 const controller = {
     index : (req, res) => {
-        res.render("./views/home.ejs");
+        res.render("home");
     }
 };
 module.exports = controller;

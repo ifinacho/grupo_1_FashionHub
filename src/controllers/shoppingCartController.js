@@ -1,6 +1,6 @@
 const controller = {
     index: (req, res) => {
-        res.render("./views/shopping-cart.ejs");
+        res.render("shopping-cart");
     },
     checkout: () => {
 
