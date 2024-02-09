@@ -1,35 +1,50 @@
-.header-principal {
-    background-color: #f0bfd0;
-
-}
-body {
+main {
     background-color: #fffbff;
     margin: 0;
-    min-height: 100dvh;
-    font-family: system-ui;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-* {
+*{
     min-width: 0;
-    font: inherit;
 }
-*, *::before, *::after {
-    box-sizing: border-box;
+.shopping-cart{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: rgb(150, 150, 150) 1px solid;
+    padding: 2rem;
+    border-radius: 2.5rem;
+    margin: 2rem 1rem;
 }
-h1, h2, h3, h4, h5, h6 {
+.shopping-cart table{
+    border-spacing: 0.75rem 1rem;
+}
+.more-products{
+    border-radius: 0.5rem;
+    margin: 2rem 1rem;
+}
+.shopping-cart-section-1 table{    
+    display: flex;
+    flex-wrap: wrap;
+}
+.shopping-cart-section-2-title, .more-products-title{
     text-wrap: balance;
+    margin: 0 1rem;
 }
-p {
+.shopping-cart p, .more-products p {
     text-wrap: pretty;
 }
-button {
+.shopping-cart button, .more-products button {
     padding: 15px;
 }
 .shopping-cart-section-1 {
     display: inline-block;
+    margin-right: 1.5rem;
+}
+#button-delete{
+    text-align: center;
 }
 .shopping-cart-section-2 {
     display: inline-block;
@@ -57,9 +72,4 @@ button {
 }
 .product-recommendation {
     display: inline-block;
-}
-.logo-fashion-hub {
-    width: 102px;
-    height: 55px;
-    aspect-ratio: 512,279;
 }
