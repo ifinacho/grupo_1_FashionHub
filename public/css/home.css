@@ -132,8 +132,8 @@ main article div {
     flex-direction: column;
     background-color: white;
     box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     margin: 25px;
 }
 main article{
@@ -143,16 +143,16 @@ main article{
 }
 main article div img{
     width: 100%;
-    margin-bottom: 10px;
     align-self: center;
 }
 main article div button {
     align-self:flex-start;
-    width: 45%;
-    margin: 5px;
+    width: 50%;
+    margin: 1rem;
 }
 main article div button p{
-    font-size: larger;
+    padding: 0.25rem;
+    font-size: 1.5rem;
 }
 .banner{
     width: 90%;
@@ -170,16 +170,16 @@ main section{
 main section div div button h5{
     color: #fff;
 }
-main h1{
+/*main h1{
     margin: 10px 0%;
     font-size: 115%;
-}
+}*/
 main section div{
     display: flex;
     flex-direction: column;
     background-color: white;
     border: solid 3px #461111;
-    margin: 15px;
+    margin: 1rem;
     width: 80%;
 }
 .sectionBox-shadow{
@@ -200,7 +200,7 @@ main section div div{
 }
 main section div div button{
     width: 105%;
-    height: 80px;
+    height: 3rem;
 }
 main section div div h2{
     font-size: 2.8rem;
@@ -230,18 +230,18 @@ main section div div button h5{
     main article{
         grid-template-columns: repeat(2,1fr);
     }
-    main h1{
+    /*main h1{
         font-size: 250%;
-    }
+    }*/
     main section div div p {
         display: block;
         margin-top: 5px;
         margin-bottom: 25px;
-        font-size: 150%;
+        /*font-size: 150%;*/
     }
-    main section div div button h5{
+    /*main section div div button h5{
         font-size: 150%;
-    }
+    }*/
     /*
     footer .redes img{
         width: 70%;
@@ -271,11 +271,11 @@ main section div div button h5{
         grid-template-columns: repeat(4,1fr);
     }
     main section{
-        width: 30%;
+        width: 25%;
     }
     main section div div button{
         width: 70%;
-        font-size: x-large;
+        /*font-size: x-large;*/
     }/*
     footer section{
         display: flex;
@@ -308,19 +308,19 @@ main section div div button h5{
         font-size: 90%;
     }*/
     main h1{
-        font-size: 3.5rem;
+        /*font-size: 3.5rem;*/
         margin: 35px 0px;
     }
-    main section div div h2{
+    /*main section div div h2{
         font-size: 4.5rem;
-    }
+    }*/
     main section div div button h5{
-        font-size: xx-large;
+        /*font-size: xx-large;*/
         margin: 10px;
     }
-    main article div button p{
+    /*main article div button p{
         font-size: xx-large;
-    }/*
+    }*//*
     footer .creditos{
         font-size: 180%;
     }*/
@@ -373,18 +373,18 @@ main section div div button h5{
     main section div div button{
         height: 120px;
     }
-    main section div div h2{
+    /*main section div div h2{
         font-size: 5rem;
-    }
+    }*/
     main section div div p{
-        font-size: 200%;
+        /*font-size: 200%;*/
         margin-top: 25px;
         margin-bottom: 50px;
     }
-    main section div div button h5{
+    /*main section div div button h5{
         font-size: 200%;
-    }
-    main h1{
+    }*/
+    /*main h1{
         font-size: 600%;
-    }
+    }*/
 }
