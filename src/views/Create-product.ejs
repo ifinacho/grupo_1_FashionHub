@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FH - CreateProduct</title>
+    <link rel="stylesheet" href="/css/normalize.css">    
+    <link rel="stylesheet" href="css/norm-header-footer.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <div class="container">
+            <h1 class="container-title">Subir Producto</h1>
+            <p class="container-message">Ingrese los siguientes datos para subir el producto</p>
+            <form id="registration-form" action="/" method="post">
+                <div class="form-group">
+                    <label for="name">Nombre *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">Imagen *</label>
+                    <input type="image" id="image" name="image" required>
+                </div>
+                <div class="form-group">
+                    <label for="color">Color *
+                        <input type="text" list="color" name="name" required>
+                    </label>
+                    <datalist id="color">
+                        <option value="Rojo"></option>
+                        <option value="Verde"></option>
+                        <option value="Azul"></option>
+                        <option value="Amarillo"></option>
+                        <option value="Rosa"></option>
+                        <option value="Naranja"></option>
+                        <option value="Celeste"></option>
+                        <option value="Violeta"></option>
+                        <option value="Marron"></option>
+                        <option value="Lima"></option>
+                        <option value="Blanco"></option>
+                        <option value="Negro"></option>
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label for="talle">Talle *
+                        <input type="text" list="talle" name="talle" required>
+                    </label>
+                    <datalist id="talle">
+                        <option value="Extra extra large"></option>
+                        <option value="Extra large"></option>
+                        <option value="large"></option>
+                        <option value="Medium"></option>
+                        <option value="Small"></option>
+                        <option value="Extra small"></option>
+                        <option value="Naranja"></option>
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+    <script src="script.js"></script>
+</body>
+</html>

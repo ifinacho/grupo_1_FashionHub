@@ -74,7 +74,7 @@ header {
 #button-search{
     background-color: #f0bfd0;
 }
-.fa-search, .fa-heart, .fa-shopping-cart{
+.fa-search, .fa-heart, .fa-shopping-cart, .fa-plus{
     background-color: white;
     padding: 0.6rem;
     border-radius: 50%;
