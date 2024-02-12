@@ -48,6 +48,8 @@ app.use("/", rutaHome);
 const rutaProducts = require("./routes/product-detailRoute.js");
 app.use("/product-detail", rutaProducts );
 
+// /Create-product
+
 /*app.get("/product-detail", (req, res) => {
     const path_register = path.resolve(__dirname, "views/product-detail.ejs");
     res.render(path_register);

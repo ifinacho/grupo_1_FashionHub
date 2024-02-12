@@ -88,20 +88,19 @@ header {
 /*--------Styles para Footer--------*/
 
 footer {
-    display: flex;
+    /*display: flex;*/
     background-color: #f9efb2;
     box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
     margin-top: 2rem;
     padding: 1rem;
-    justify-content: space-evenly;
+    /*justify-content: space-evenly;*/
     border-radius: 0.5rem;
 }
 .creditos ul{
     margin: 0.5rem;
 }
 .creditos li{
-    text-align: center;
-    line-height: 1.5rem;
+    display:none
 }
 #credito-2, #credito-3{
     display: none;
@@ -151,12 +150,17 @@ footer {
 
     footer {
         font-size: 1.1rem;
+        display: flex;
+        justify-content: space-evenly;
     }
     .creditos ul{
         margin: 0.6rem;
     }
     .creditos li{
-        line-height: 1.6rem;
+        display: block;
+        text-align: center;
+        line-height: 1.5rem;
+        list-style-type: none
     }
     #credito-2{
         display: inline-block;

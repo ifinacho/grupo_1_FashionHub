@@ -15,54 +15,16 @@
     <main>
         <img src="/img/Banner-ofertas.jpg" alt="Banner-ofertas" class="banner">
         <article>
-            <div>
-                <img src="/img/pantalon-finne.webp" alt="ropa">
-                <a href="/product-detail">
-                    <button>
-                        <p>Ver Más</p>
-                    </button>
-                </a>
-            </div>
-            <div>
-                <img src="/img/pantalon-cargo-turci.webp" alt="ropa">
-                <a href="/product-detail">
-                    <button>
-                        <p>Ver Más</p>
-                    </button>
-                </a>
-            </div>
-            <div>
-                <img src="/img/pantalon-palazzo-artemi.webp" alt="ropa">
-                <a href="/product-detail">
-                    <button>
-                        <p>Ver Más</p>
-                    </button>
-                </a>
-            </div>
-            <div>
-                <img src="/img/vestido-thomy.webp" alt="ropa">
-                <a href="/product-detail">
-                    <button>
-                        <p>Ver Más</p>
-                    </button>
-                </a>
-            </div>
-            <div>
-                <img src="/img/remera-blusa-little.webp" alt="ropa">
-                <a href="/product-detail">
-                    <button>
-                        <p>Ver Más</p>
-                    </button>
-                </a>
-            </div>
-            <div>
-                <img src="/img/vestido-rifa-negro.webp" alt="ropa">
-                <a href="/product-detail">
-                    <button>
-                        <p>Ver Más</p>
-                    </button>
-                </a>
-            </div>
+            <% for(i=0; i < 8; i++){ %>
+                <div>
+                    <img src="/img/pantalon-finne.webp" alt="ropa">
+                    <a href="/product-detail">
+                        <button>
+                            <p>Ver Más</p>
+                        </button>
+                    </a>
+                </div>
+            <%}%>
         </article>
         <h1>TAMBIÉN TE PUEDE INTERESAR...</h1>
         <section>
