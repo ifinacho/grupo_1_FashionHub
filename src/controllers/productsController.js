@@ -9,7 +9,7 @@ const controller = {
         res.render("product-detail");
     },
     edit: (req,res)=>{
-        res.render('Edit-Product')
+        res.render('edit-Product')
     },
     editPut: (req, res)=>{
         res.render('Edit-Product-PUT')
