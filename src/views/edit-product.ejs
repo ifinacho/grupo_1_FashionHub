@@ -19,19 +19,20 @@
             <form id="registration-form" action="/" method="post">
                 <div class="form-group">
                     <label for="name">Nombre *</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required value="<%= ProductsId.name>">
                 </div>
                 <div class="form-group">
                     <label for="image">Imagen *</label>
-                    <input type="image" id="image" name="image" required>
+                    <input type="image" id="image" name="image" required value="<%= ProductsId.image>">
                 </div>
                 <div class="form-group">
-                    <label for="desc">Descripción *</label>
-                    <input type="text" id="desc" name="desc" rows="5" cols="35">
+                    <label for="description">Descripción *</label>
+                    <input type="text" id="description" name="description" rows="5" cols="35" value="<%= ProductsId.description>">
+                    <textarea name="description" id="description" class="form-input" value="<%= newProduct.description %>"><%= ProductsId.description></textarea>
                 </div>
                 <div class="form-group">
                     <label for="color">Color *
-                        <input type="text" list="color" name="name" required>
+                        <input type="text" list="color" name="color" required value="<%= ProductsId.color>">
                     </label>
                     <datalist id="color">
                         <option value="Rojo"></option>
@@ -50,7 +51,7 @@
                 </div>
                 <div class="form-group">
                     <label for="talle">Talle *
-                        <input type="text" list="talle" name="talle" required>
+                        <input type="text" list="talle" name="talle" required value="<%= ProductsId.color>">
                     </label>
                     <select id="talle">
                         <option value="Extra extra large"></option>
