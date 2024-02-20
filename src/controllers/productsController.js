@@ -38,7 +38,7 @@ const controller = {
                 encoding: "utf- 8"
             }
         )
-        res.redirect('/products')
+        res.redirect('/home')
     },
     edit: (req,res)=>{
         const idFound = +req.params.id
@@ -48,15 +48,15 @@ const controller = {
     editPut: (req, res)=>{
         const idFound = +req.params.id
         const {name, description, price, discount, color, talle, image}= req.body
-		products.forEach(e => {
-			if(e.id == idFound){
-				e.name = name
-				e.price = price
-				e.discount = discount
-				e.description = description
-				e.color = color
-                e.talle = talle
-				e.image = image
+		products.forEach(product => {
+			if(product.id == idFound){
+				product.name = name
+				product.price = price
+				product.discount = discount
+				product.description = description
+				product.color = color
+                product.talle = talle
+				product.image = image
 			}
 			
 		})
@@ -67,7 +67,7 @@ const controller = {
                 encoding: "utf- 8"
             }
         )
-        res.redirect('/products')
+        res.redirect('/home')
     },
     delete: (req, res)=>{
         const idDelete = +req.params.id
