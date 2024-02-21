@@ -26,13 +26,13 @@ const controller = {
 			name: req.body.name,
 			price: req.body.price,
 			discount: req.body.discount,
-			category: req.body.category,
+			color: req.body.color,
+            talle: req.body.talle,
 			description: req.body.description,
 			image: "default-image.png"
 		}
         products.push(newProduct)
         fs.writeFileSync(
-            path.join(__dirname, "../data/productsDataBase.json"),
             productsFilePath,JSON.stringify(products,null, 4),
             {
                 encoding: "utf- 8"
@@ -61,7 +61,6 @@ const controller = {
 			
 		})
         fs.writeFileSync(
-            path.join(__dirname, "../data/productsDataBase.json"),
             productsFilePath,JSON.stringify(products,null, 4),
             {
                 encoding: "utf- 8"
@@ -75,7 +74,6 @@ const controller = {
         res.render('delete the product')
 
         fs.writeFileSync(
-			path.join(__dirname, "../data/productsDataBase.json"),
 			productsFilePath,JSON.stringify(something,null,4),
 			{
 				encoding: "utf-8"

@@ -6,7 +6,6 @@
     <title>FH - EditProduct</title>
     <link rel="stylesheet" href="/css/normalize.css">    
     <link rel="stylesheet" href="/css/norm-header-footer.css">
-    <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/CreateProduct.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
@@ -16,14 +15,14 @@
     <main>
         <div class="container">
             <h1 class="container-title">Editar Producto</h1>
-            <form id="registration-form" action="/" method="post">
+            <form id="registration-form" action="/edit-product/<%= ProductsId.id %>?_method=PUT" method="post">
                 <div class="form-group">
                     <label for="name">Nombre *</label>
                     <input type="text" id="name" name="name" required value="<%= ProductsId.name>">
                 </div>
                 <div class="form-group">
                     <label for="image">Imagen *</label>
-                    <input type="image" id="image" name="image" required value="<%= ProductsId.image>">
+                    <input type="file" id="image" name="image" required value="<%= ProductsId.image>">
                 </div>
                 <div class="form-group">
                     <label for="description">Descripción *</label>
@@ -56,7 +55,7 @@
                     <select id="talle">
                         <option value="Extra extra large"></option>
                         <option value="Extra large"></option>
-                        <option value="large"></option>
+                        <option value="Large"></option>
                         <option value="Medium"></option>
                         <option value="Small"></option>
                         <option value="Extra small"></option>

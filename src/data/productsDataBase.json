@@ -1,3 +1,12 @@
 [
-    
+    {
+        "id": 1,
+        "name": "pantalon palazzo arteo",
+        "price": 2500,
+		"discount": 1000,
+		"color": "Marron",
+        "talle": "Large",
+		"description": "olis",
+		"image": "pantalon-palazzo-arteo.webp"
+    }
 ]
