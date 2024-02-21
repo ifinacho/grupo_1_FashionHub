@@ -18,7 +18,7 @@
             <form id="registration-form" action="/edit-product/<%= ProductsId.id %>?_method=PUT" method="post">
                 <div class="form-group">
                     <label for="name">Nombre *</label>
-                    <input type="text" id="name" name="name" required value="<%= ProductsId.name>">
+                    <input type="text" id="name" name="name" required value="<%= product.name %>">
                 </div>
                 <div class="form-group">
                     <label for="image">Imagen *</label>
@@ -26,12 +26,12 @@
                 </div>
                 <div class="form-group">
                     <label for="description">Descripción *</label>
-                    <input type="text" id="description" name="description" rows="5" cols="35" value="<%= ProductsId.description>">
-                    <textarea name="description" id="description" class="form-input" value="<%= newProduct.description %>"><%= ProductsId.description></textarea>
+                    <input type="text" id="description" name="description" rows="5" cols="35" value="<%= product.description %>">
+                    <textarea name="description" id="description" class="form-input" value="<%= product.description %>"><%= product.description %></textarea>
                 </div>
                 <div class="form-group">
                     <label for="color">Color *
-                        <input type="text" list="color" name="color" required value="<%= ProductsId.color>">
+                        <input type="text" list="color" name="color" required value="<%= product.color %>">
                     </label>
                     <datalist id="color">
                         <option value="Rojo"></option>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label for="talle">Talle *
-                        <input type="text" list="talle" name="talle" required value="<%= ProductsId.color>">
+                        <input type="text" list="talle" name="talle" required value="<%= product.color %>">
                     </label>
                     <select id="talle">
                         <option value="Extra extra large"></option>

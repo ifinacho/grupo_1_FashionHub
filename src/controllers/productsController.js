@@ -12,13 +12,11 @@ const controller = {
     //details - muestra los detalles de todos los productos
     details : (req, res) => {
         const idFound = +req.params.id
-        const ProductsId = products.find(pro => pro.id === idFound)
-        res.render("product-detail", {ProductsId});
+        const product = products.find(pro => pro.id === idFound)
+        res.render("product-detail", {product});
     },
     create: (req, res)=> {
-        const idFound = +req.params.id
-        const ProductsId = products.find(pro => pro.id === idFound)
-        res.render('Create-product', {ProductsId})
+        res.render('Create-product')
     },
     createPost: (req,res)=>{
         let newProduct = {
@@ -42,8 +40,8 @@ const controller = {
     },
     edit: (req,res)=>{
         const idFound = +req.params.id
-        const ProductsId = products.find(pro => pro.id === idFound)
-        res.render('edit-Product',{ProductsId})
+        const product = products.find(pro => pro.id === idFound)
+        res.render('edit-product',{product})
     },
     editPut: (req, res)=>{
         const idFound = +req.params.id
