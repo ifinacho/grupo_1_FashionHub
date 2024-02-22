@@ -15,10 +15,10 @@
     <main>
         <img src="/img/Banner-ofertas.jpg" alt="Banner-ofertas" class="banner">
         <article>
-            <% for(i=0; i < 8; i++){ %>
+            <% for(let i=0; i < TheProducts.length && i < 8; i++){ %>
                 <div>
-                    <img src="/img/pantalon-finne.webp" alt="ropa">
-                    <a href="/product-detail">
+                    <img src="/img/<%= TheProducts[i].image %>" alt="ropa">
+                    <a href="/product-detail/<%= TheProducts[i].id %>">
                         <button>
                             <p>Ver Más</p>
                         </button>
@@ -28,46 +28,18 @@
         </article>
         <h1>TAMBIÉN TE PUEDE INTERESAR...</h1>
         <section>
-            <div class="sectionBox-shadow">
-                <img src="/img/vestido-sunset.webp" alt="ropa">
-                <div>
-                    <h2>Vestido</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente?</p>
-                    <button>
-                        <h5>Ver Más</h5>
-                    </button>
-                </div>
-            </div>
-            <div class="sectionBox-shadow">
-                <img src="/img/remera-remeron-real-prince.webp" alt="ropa">
-                <div>
-                    <h2>Vestido</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente?</p>
-                    <button>
-                        <h5>Ver Más</h5>
-                    </button>
-                </div>
-            </div>
-            <div class="sectionBox-shadow">
-                <img src="/img/vestido-rifa-azul.webp" alt="ropa">
-                <div>
-                    <h2>Vestido</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente?</p>
-                    <button>
-                        <h5>Ver Más</h5>
-                    </button>
-                </div>
-            </div>
-            <div class="sectionBox-shadow">
-                <img src="/img/pantalon-babucha-thiara.webp" alt="ropa">
-                <div>
-                    <h2>Vestido</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente?</p>
-                    <button>
-                        <h5>Ver Más</h5>
-                    </button>
-                </div>
-            </div>
+            <% for(let i=0; i < TheProducts.length && i < 4; i++){%>
+                    <div class="sectionBox-shadow">
+                        <img src="/img/<%= TheProducts[i].image %>" alt="ropa">
+                        <div>
+                            <h2><%= TheProducts[i].category%></h2>
+                            <p><%= TheProducts[i].description%></p>
+                            <button>
+                                <h5>Ver Más</h5>
+                            </button>
+                        </div>
+                    </div>
+            <%}%>
         </section>
         <img src="/img/cabecera-anuncios.png" alt="anuncios" class="anuncios">
     </main>

@@ -1,12 +1,145 @@
 [
     {
         "id": 1,
-        "name": "pantalon palazzo arteo",
+        "name": "pantalon palazzo de Arteo",
         "price": 2500,
 		"discount": 1000,
 		"color": "Marron",
         "talle": "Large",
 		"description": "olis",
-		"image": "pantalon-palazzo-arteo.webp"
+		"image": "pantalon-palazzo-arteo.webp",
+        "category": "Pantalon"
+    },
+    {
+        "id": 2,
+        "name": "pantalon babucha de Thiara",
+        "price": 2000,
+		"discount": 1000,
+		"color": "Verde",
+        "talle": "Large",
+		"description": "olis",
+		"image": "pantalon-babucha-thiara.webp",
+        "category": "Pantalon"
+    },
+    {
+        "id": 3,
+        "name": "pantalon franchesca",
+        "price": 3200,
+		"discount": 2500,
+		"color": "Negro",
+        "talle": "Large",
+		"description": "olis",
+		"image": "pantalon-franchesca.webp",
+        "category": "Pantalon"
+    },
+    {
+        "id": 4,
+        "name": "Atuendo Celeste con blusa felisa",
+        "price": 5600,
+		"discount": 4000,
+		"color": "Celeste",
+        "talle": "Small",
+		"description": "olis",
+		"image": "remera-blusa-felisa.webp",
+        "category": "Atuendo"
+    },
+    {
+        "id": 5,
+        "name": "Atuendo verde evolution con chaqueta",
+        "price": 5200,
+		"discount": 5000,
+		"color": "Verde",
+        "talle": "Medium",
+		"description": "olis",
+		"image": "remera-evolution.webp",
+        "category": "Atuendo"
+    },
+    {
+        "id": 6,
+        "name": "remera blusa de Sofia",
+        "price": 1200,
+		"discount": 600,
+		"color": "Rosa",
+        "talle": "small",
+		"description": "olis",
+		"image": "remera-blusa-sofia.webp",
+        "category": "Remera"
+    },
+    {
+        "id": 7,
+        "name": "remera blusa smothie",
+        "price": 1000,
+		"discount": 400,
+		"color": "Rosa",
+        "talle": "Small",
+		"description": "olis",
+		"image": "remera-blusa-smothie.webp",
+        "category": "Remera"
+    },
+    {
+        "id": 8,
+        "name": "remera rock and roll",
+        "price": 3000,
+		"discount": 800,
+		"color": "Blanco",
+        "talle": "Medium",
+		"description": "olis",
+		"image": "remera-rock-and-roll.webp",
+        "category": "Remera"
+    },
+    {
+        "id": 9,
+        "name": "vestido taichu",
+        "price": 3100,
+		"discount": 2000,
+		"color": "Blanco",
+        "talle": "Medium",
+		"description": "olis",
+		"image": "vestido-taichu.webp",
+        "category": "Vestido"
+    },
+    {
+        "id": 10,
+        "name": "vestido rifa azul",
+        "price": 2700,
+		"discount": 2000,
+		"color": "Rosa",
+        "talle": "Small",
+		"description": "olis",
+		"image": "vestido-rifa-azul.webp",
+        "category": "Vestido"
+    },
+    {
+        "id": 11,
+        "name": "tacon sandalias de piel",
+        "price": 1000,
+		"discount": 850,
+		"color": "Negro",
+        "talle": "Medium",
+		"description": "olis",
+		"image": "calzado-sandalias-tacon-piel.webp",
+        "category": "Calzado"
+    },
+    {
+        "id": 12,
+        "name": "tachuelas zuecos de piel",
+        "price": 1500,
+		"discount": 900,
+		"color": "Rosa",
+        "talle": "Small",
+		"description": "olis",
+		"image": "calzado-zuecos-piel-tachuelas.webp",
+        "category": "Calzado"
+    },
+    {
+        "id": 13,
+        "name": "cinto madness",
+        "price": 1000,
+		"discount": 500,
+		"color": "Amarillo",
+        "talle": "Extra Small",
+		"description": "olis",
+		"image": "accesorio-cinto-madness.webp",
+        "category": "Accesorio"
     }
 ]

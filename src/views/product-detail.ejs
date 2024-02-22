@@ -16,21 +16,21 @@
         <section class="section-articles">
             <article class="section-articles__article" id="section-articles-1">
                 <div class="section-articles__article-div">
-                    <img src="/img/accesorio-cartera-crossbody-helen.webp" 
+                    <img src="/img/<%= product.image%>" 
                     alt="Accesorio Cartera Crossbody Helen" 
                     title="Accesorio Cartera Crossbody Helen">
                 </div>
             </article>
             <article class="section-articles__article" id="section-articles-2">
                 <div class="section-articles__article-div">
-                    <img src="/img/calzado-sandalias-cuña-azul.webp" 
+                    <img src="/img/<%= product.image%>" 
                     alt="Calzado Sandalias Cuña Azul" 
                     title="Calzado Sandalias Cuña Azul">
                 </div>
             </article>
             <article class="section-articles__article" id="section-articles-3">
                 <div class="section-articles__article-div">
-                    <img src="/img/remera-blusa-felisa.webp" 
+                    <img src="/img/<%= product.image%>" 
                     alt="Remera Blusa Felisa" 
                     title="Remera Blusa Felisa">
                 </div>
@@ -38,20 +38,20 @@
         </section>
         <section class="section-product">
             <div class="section-product__div">
-                <img src="/img/pantalon-finne.webp" alt="Pantalon Finne" title="Pantalon Finne">
+                <img src="/img/<%= product.image%>" alt="Pantalon Finne" title="Pantalon Finne">
             </div>
         </section>
         <section class="section-form">
             <form id="form" action="/" method="POST">
                 <div id="form-title">
-                    <h1>Pantalon Finne</h1>
+                    <h1><%= product.name %></h1>
                     <button id="button-heart"><i class="far fa-heart"></i></button>
                 </div>
                 <div>
-                    <p id="form-price">$ 15.000</p>
+                    <p id="form-price"><%= product.price %></p>
                 </div>
                 <div>
-                    <p id="form-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facilis ratione, sapiente autem vitae consequuntur molestias eaque suscipit voluptatem, eos, nemo natus quibusdam? Error provident ex assumenda repudiandae quidem nobis.</p>
+                    <p id="form-description"><%= product.description %></p>
                 </div>
                 <div class="form-radio">
                     <label id="form-color">Color:</label>

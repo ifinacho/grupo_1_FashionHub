@@ -8,7 +8,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
     index : (req, res) => {
-        const TheProducts = products.filter((product)=> product.category === "recomended" || product.category === "in-sale")
+        const TheProducts = products.filter((product)=> product.category === "Atuendo" || product.category === "Pantalon" || product.category === "Remera" || product.category === "Vestido" || product.category === "Calzado" || product.category === "Accesorio")
         res.render("home",{TheProducts});
     },
 	search: (req, res) => {

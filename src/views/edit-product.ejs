@@ -15,14 +15,14 @@
     <main>
         <div class="container">
             <h1 class="container-title">Editar Producto</h1>
-            <form id="registration-form" action="/edit-product/<%= ProductsId.id %>?_method=PUT" method="post">
+            <form id="registration-form" action="/edit-product/<%= Product.id %>?_method=PUT" method="post">
                 <div class="form-group">
                     <label for="name">Nombre *</label>
                     <input type="text" id="name" name="name" required value="<%= product.name %>">
                 </div>
                 <div class="form-group">
                     <label for="image">Imagen *</label>
-                    <input type="file" id="image" name="image" required value="<%= ProductsId.image>">
+                    <input type="file" id="image" name="image" required value="<%= Product.image>">
                 </div>
                 <div class="form-group">
                     <label for="description">Descripción *</label>
@@ -30,36 +30,32 @@
                     <textarea name="description" id="description" class="form-input" value="<%= product.description %>"><%= product.description %></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="color">Color *
-                        <input type="text" list="color" name="color" required value="<%= product.color %>">
-                    </label>
-                    <datalist id="color">
-                        <option value="Rojo"></option>
-                        <option value="Verde"></option>
-                        <option value="Azul"></option>
-                        <option value="Amarillo"></option>
-                        <option value="Rosa"></option>
-                        <option value="Naranja"></option>
-                        <option value="Celeste"></option>
-                        <option value="Violeta"></option>
-                        <option value="Marron"></option>
-                        <option value="Lima"></option>
-                        <option value="Blanco"></option>
-                        <option value="Negro"></option>
-                    </datalist>
+                    <label for="color">Color *</label><br>
+                    
+                    <label for="Color"><input type="checkbox" id="Color" value="Rojo">Rojo</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Naranja">Naranja</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Amarillo">Amarillo</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Indigo">Lima</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Verde">Verde</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Celeste">Celeste</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Azul">Azul</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Indigo">Indigo</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Rosa">Rosa</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Marron">Marron</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Piel">Piel</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Gris">Gris</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Negro">Negro</label>
+                    <label for="Color"><input type="checkbox" id="Color" value="Blanco">Blanco</label>
                 </div>
                 <div class="form-group">
-                    <label for="talle">Talle *
-                        <input type="text" list="talle" name="talle" required value="<%= product.color %>">
-                    </label>
-                    <select id="talle">
-                        <option value="Extra extra large"></option>
-                        <option value="Extra large"></option>
-                        <option value="Large"></option>
-                        <option value="Medium"></option>
-                        <option value="Small"></option>
-                        <option value="Extra small"></option>
-                    </select>
+                    <label for="talle">Talle *</label><br>
+
+                    <label for="talle"><input type="checkbox" id="talle" value="Extra extra large">Extra extra large</label>
+                    <label for="talle"><input type="checkbox" id="talle" value="Extra large">Extra large</label>
+                    <label for="talle"><input type="checkbox" id="talle" value="Large">Large</label>
+                    <label for="talle"><input type="checkbox" id="talle" value="Medium">Medium</label>
+                    <label for="talle"><input type="checkbox" id="talle" value="Small">Small</label>
+                    <label for="talle"><input type="checkbox" id="talle" value="Extra small">Extra small</label>
                 </div>
                 <div class="form-group">
                     <button type="submit">Confirmar</button>

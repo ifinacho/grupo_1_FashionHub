@@ -2,8 +2,9 @@ const express = require("express");
 const productsController = require("../controllers/productsController");
 const router = express.Router();
 
+router.get("/", productsController.index);
 //DETAILS
-router.get("/", productsController.details);
+router.get("/:id", productsController.details);
 
 //CREATE
 router.get("/Create-product", productsController.create);
