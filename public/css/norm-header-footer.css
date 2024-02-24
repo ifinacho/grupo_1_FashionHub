@@ -49,6 +49,11 @@ header {
 .img-logo{
     width: 9rem;
 }
+.header-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
 .header-article{
     margin: 1rem 0;
     padding: 0.5rem 0.7rem ;
@@ -59,6 +64,19 @@ header {
     border-radius: 1rem;
     order: 2;
     gap: 0.4rem;
+}
+input.search-form_input {
+    margin: 1rem 0;
+    padding: 0.5rem 0.7rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: none;
+    width: 400px;
+    height: 40px;
+}
+form.search-form {
+    display: flex;
+    gap: 10px;
 }
 .header-article span{
     padding: 0;

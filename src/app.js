@@ -28,6 +28,6 @@ app.use("/", rutaHome);
 const rutaProducts = require("./routes/product-detailRoute.js");
 app.use("/product-detail", rutaProducts );
 
-// /Create-product
+// Create-product
 
 
