@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FH - HOME</title>
+    <title>FH - COLECCIÓN</title>
     <link rel="stylesheet" href="/css/normalize.css">    
     <link rel="stylesheet" href="/css/norm-header-footer.css">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/Coleccion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
     <%- include('./partials/header.ejs') %>
+
     <main>
+        <h1>Colección</h1>
         <img src="/img/Banner-ofertas.jpg" alt="Banner-ofertas" class="banner">
         <article>
-            <% for(let i=0; i < TheProducts.length && i < 8; i++){ %>
-                <div class="sectionBox-shadow2">
+            <% for(let i=0; i < TheProducts.length; i++){ %>
+                <div>
                     <img src="/img/<%= TheProducts[i].image %>" alt="ropa">
                     <a href="/product-detail/<%= TheProducts[i].id %>">
                         <button>
@@ -26,23 +28,8 @@
                 </div>
             <%}%>
         </article>
-        <h1>TAMBIÉN TE PUEDE INTERESAR...</h1>
-        <section>
-            <% for(let i=0; i < TheProducts.length && i < 4; i++){%>
-                    <div class="sectionBox-shadow">
-                        <img src="/img/<%= TheProducts[i].image %>" alt="ropa">
-                        <div>
-                            <h2><%= TheProducts[i].category%></h2>
-                            <p><%= TheProducts[i].description%></p>
-                            <button>
-                                <h5>Ver Más</h5>
-                            </button>
-                        </div>
-                    </div>
-            <%}%>
-        </section>
-        <img src="/img/cabecera-anuncios.png" alt="anuncios" class="anuncios">
     </main>
+
     <%- include('./partials/footer.ejs') %>
 </body>
 </html>

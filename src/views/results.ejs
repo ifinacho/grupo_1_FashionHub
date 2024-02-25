@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FH - RESULTS</title>
+        <link rel="stylesheet" href="/css/normalize.css">    
+        <link rel="stylesheet" href="/css/norm-header-footer.css">
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <h1>Resultados de la busqueda: <%=busqueda %></h1>
+        <article>
+            <% if(productoBuscado.length > 0){ %>
+                <% productoBuscado.map(products => { %>
+                    <div>
+                        <img src="/img/<%= products.image %>" alt="ropa">
+                        <a href="/product-detail/<%= products.id %>">
+                            <button>
+                                <p>Ver Más</p>
+                            </button>
+                        </a>
+                    </div>
+                <% }) %>
+            <%}%>
+        </article>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

@@ -1,25 +1,32 @@
 <header>
-    <a href="/"><img class="img-logo" src="/logo/FashionHub-logo.png" alt="Logo FashionHub" title="Logo FashionHub"></a>
-    
-    <div class="header-container">
+    <main class="header-container">
+        <a href="/"><img class="img-logo" src="/logo/FashionHub-logo.png" alt="Logo FashionHub" title="Logo FashionHub"></a>
+
+        <div class="header-flex ">
+            <div class="header-div">
+                <i class="far fa-heart"></i>
+                <a class="header-register" href="/user/register"><i class="far fa-user"><span> Register</span></i></a>
+                <a class="header-login" href="/user/login"><i class="far fa-user"><span> Login</span></i></a>
+                <a href="/shopping-cart"><i class="fas fa-shopping-cart"></i></a>
+                <a href="/product-detail/Create-product"><i class="fas fa-plus"></i></a>
+            </div>
+            <article class="header-div">
+                <form action="/results/search" method="GET" class="search-form">
+                    <input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="search-form_input">
+                </form>
+            </article>
+        </div>
+    </main>
+
+    <nav>
         <article class="header-article">
             <a href="/Coleccion">Colección</a><span>|</span>
             <a href="">Accesorios</a><span>|</span>
             <a href="">Denim</a><span>|</span>
             <a href="">Sostenibilidad</a>
         </article>
-        <article class="header-div">
-            <form action="/search" method="GET" class="search-form">
-                <input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="search-form_input">
-                <button id="button-search" type="button" value="search"><i class="fas fa-search"></i></button>
-            </form>
-        </article>
-    </div>
-    <div class="header-div">
-        <i class="far fa-heart"></i>
-        <a class="header-register" href="/user/register"><i class="far fa-user"><span> Register</span></i></a>
-        <a class="header-login" href="/user/login"><i class="far fa-user"><span> Login</span></i></a>
-        <a href="/shopping-cart"><i class="fas fa-shopping-cart"></i></a>
-        <a href="/product-detail/Create-product"><i class="fas fa-plus"></i></a>
-    </div>
+    </nav>
+    <main class="menu-hamburguesa-container">
+        <a href=""class="menu-hamburguesa"><i class="fas fa-bars"></i></a>
+    </main>
 </header>

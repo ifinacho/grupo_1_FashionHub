@@ -7,7 +7,7 @@ router.get("/", productsController.index);
 router.get("/:id", productsController.details);
 
 //CREATE
-router.get("/Create-product", productsController.create);
+router.get("/product-detail/Create-product", productsController.create);
 router.post("/Create-product", productsController.createPost);
 
 //EDIT

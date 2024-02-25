@@ -44,19 +44,25 @@ header {
     align-items: center;
     flex-wrap: wrap;
     border-radius: 0.5rem;
-
+    position: sticky;
 }
 .img-logo{
-    width: 9rem;
+    width: 10rem;
 }
-.header-container {
+.header-container{
     display: flex;
-    flex-direction: column-reverse;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.header-flex {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 .header-article{
     margin: 1rem 0;
-    padding: 0.5rem 0.7rem ;
+    padding: 0.5rem 3.7rem ;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -64,6 +70,7 @@ header {
     border-radius: 1rem;
     order: 2;
     gap: 0.4rem;
+    font-size: 1.4rem;
 }
 input.search-form_input {
     margin: 1rem 0;
@@ -71,7 +78,7 @@ input.search-form_input {
     background-color: white;
     border-radius: 1rem;
     border: none;
-    width: 400px;
+    width: 550px;
     height: 40px;
 }
 form.search-form {
@@ -88,6 +95,7 @@ form.search-form {
     flex-wrap: wrap;
     order: 1;
     gap: 0.75rem;
+    justify-content: center;
 }
 #button-search{
     background-color: #f0bfd0;
@@ -102,7 +110,19 @@ form.search-form {
     padding: 0.6rem;
     border-radius: 2rem;
 }
-
+.menu-hamburguesa-container{
+    display: flex;
+}
+.menu-hamburguesa{
+    background-color: #461111;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 25px 0;
+}
+.fa-bars{
+    color: #fff;
+    font-size: 4rem;
+}
 /*--------Styles para Footer--------*/
 
 footer {
@@ -141,13 +161,41 @@ footer {
     border-radius: 50%;
     font-size: 1.5rem;
 }
-
+/*--------Media Queries Celular--------*/
+@media(min-width:425px){
+    .menu-hamburguesa-container{
+        display: none;
+    }
+    .menu-hamburguesa{
+        display: none;
+    }
+    .fa-bars{
+        display: none;
+    }
+}
+@media(max-width:425px){
+    .header-flex{
+        display: none;
+    }
+    .header-article{
+        display: none;
+    }
+    header nav{
+        display: none;
+    }
+    .anuncios{
+        display: none;
+    }
+}
 /*--------Media Queries Tablet--------*/
 
 @media(min-width: 768px) {
 
     /*--------Styles para Header-------- */
+    .header-container{
+        flex-direction: row;
 
+    }
     header{
         font-size: 1.1rem;
         justify-content: center;
@@ -159,9 +207,6 @@ footer {
         margin-top: 0;
         margin-right: 5rem;
         margin-left: 5rem;
-    }
-    .header-div{
-        margin: 0 4rem;
     }
 
     /*--------Styles para Footer--------*/
@@ -238,271 +283,6 @@ footer {
     .fa-instagram, .fa-facebook-square, .fa-twitter-square{
         padding: 0.7rem 0.795rem;
         font-size: 1.7rem;
-    }
-
-}
-
-
-
-
-/*///////////////----- ESTILOS de NORMALIZACIÓN, HEADER Y FOOTER de DIANA -----///////////////*/
-
-/*---------------------º All º---------------------*/
-/*
-button{
-    background-color: #acc94a;
-    border: none;
-    border-radius: 15px;
-}
-button p{
-    color: white;
-    font-family: 'Cherry Swash', serif;
-}
-button h5{
-    color: white;
-    font-family: 'Cherry Swash', serif;
-}
-a{
-    color: #461111;
-    text-decoration: none;
-    font-family: 'Cherry Swash', serif;
-}
-h2{
-    color: #461111;
-    font-family: 'Lobster', sans-serif;
-}
-p{
-    color: #461111;
-    font-family: 'Cherry Swash', serif;
-}
-li{
-    color: #461111;
-    font-family: 'Cherry Swash', serif;
-}
-h1{
-    color: #461111;
-    font-family: 'Lobster', sans-serif;
-}
-i{
-    color: #461111;
-}
-*/
-/*------------------------------------º header º------------------------------------*/
-/*
-header {
-    display: flex;
-    background-color:#f0bfd0;
-    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
-    padding: 10px;
-    flex-direction: column;
-    align-items: center;
-
-}
-header section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 95%;
-}
-header div i{
-    background-color: white;
-    padding: 8px;
-    border-radius: 50%;
-    margin: 2px;
-}
-.one{
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    margin-bottom: 5%;
-}
-header article a{
-    font-size:105%;
-    margin: 0.5vh;
-}
-header img {
-    width: 9rem;
-    margin: 5px;
-}
-*/
-/*------------------------------------º footer º------------------------------------*/
-/*
-footer {
-    display: flex;
-    background-color: #f9efb2;
-    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-inline: 10px;
-    justify-content: space-evenly;
-    margin-top: 40px;
-}
-footer section{
-    display: none;
-}
-.redes{
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    align-items: center;
-}
-footer .redes img{
-    width: 50%;
-    margin: 10px;
-}
-footer .redes i{
-    background-color: white;
-    padding: 7px;
-    border-radius: 50%;
-    margin: 2px;
-    font-size:x-large;
-}
-footer .redes div{
-    display: flex;
-    justify-content: center;
-}
-
-footer .creditos{
-    display: none;
-}
-*/
-
-/*------------------------------------º media queries º------------------------------------*/
-/*
-@media(min-width:426px){
-
-
-
-    header article a{
-        font-size: 220%;
-    }
-
-
-
-    footer .redes img{
-        width: 70%;
-        align-self: center;
-    }
-    footer .redes div i{
-        font-size: xx-large;
-    }
-    
-}
-
-@media(min-width:769px){
-
-
-
-    header{
-        justify-content: space-evenly;
-        flex-direction: row;
-    }
-    header img{
-        width: 45vw;
-    }
-    header article{
-        font-size: 0.6rem;
-    }
-    header div{
-        font-size: 150%;
-    }
-
-    
-
-    footer section{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    footer .creditos{
-        display: flex;
-        margin: 5px;
-        font-size: 100%;
-        flex-wrap: wrap;
-    }
-
-}
-
-@media(min-width:1024px){
-
-
-
-    header section{
-        flex-direction: row;
-    }
-    .one{
-        margin-bottom: 0;
-    }
-    header article{
-        font-size: 80%;
-    }
-    header img{
-        width: 20vw;
-    }
-    header div{
-        font-size: 90%;
-    }
-
-
-    
-    footer .creditos{
-        font-size: 180%;
-    }
-
-}
-
-@media(min-width:1440px){
-
-
-    
-    header article{
-        font-size: 120%;
-    }
-    header div{
-        font-size: 130%;
-    }
-
-
-    
-    footer .redes img{
-        width: 90%;
-    }
-    footer .redes div i{
-        font-size: 250%;
-    }
-
-}
-
-@media(min-width:2560px){
-
-
-
-    header img{
-        width: 15vw;
-    }
-    .one{
-        width: 40%;
-    }
-    header article{
-        font-size: 150%;
-    }
-    header div{
-        font-size: 200%;
-    }
-
-
-
-    footer .creditos{
-        font-size: 200%;
-    }
-    footer .redes img{
-        width: 120%;
-    }
-    footer .redes div i{
-        font-size: 400%;
-        padding: 15px;
-        margin: 10px;
     }
 
 }
