@@ -6,6 +6,8 @@ const app = express();
 /*const ruta_public = path.resolve(__dirname, "./public");
 app.use(express.static(ruta_public));*/
 app.use(express.static("public"));
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
 app.set('view engine',  'ejs');
@@ -28,6 +30,8 @@ app.use("/", rutaHome);
 const rutaProducts = require("./routes/product-detailRoute.js");
 app.use("/product-detail", rutaProducts );
 
+const rutaCreate = require("./routes/CreateRoute.js")
+app.use("/create", rutaCreate)
 // Create-product
 
 

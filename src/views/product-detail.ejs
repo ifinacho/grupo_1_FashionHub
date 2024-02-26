@@ -69,7 +69,7 @@
                     <button type="submit" value="add-cart">Añadir al carrito</button>
                 </div>
                 <div class="buttons-add-edit">
-                    <a id="button-add" href="/product-detail/Create-product">Agregar Producto</a>
+                    <a id="button-add" href="/shopping-cart">Agregar al Carrito</a>
                     <a id="button-edit" href="/product-detail/edit-product/<%= product.id %>">Editar Producto</a>
 
                 </div>
@@ -89,30 +89,30 @@
         <section class="section-articles-2">
             <article class="section-articles-2__article" id="section-articles-4">
                 <div class="section-articles-2__article-div">
-                    <img src="/img/accesorio-cinto-ariadna.webp" 
-                    alt="Accesorio Cinto Ariadna" 
-                    title="Accesorio Cinto Ariadna">
+                    <img src="/img/<%= product.image %>" 
+                    alt="<%= product.name %>" 
+                    title="<%= product.name %>">
                 </div>
             </article>
             <article class="section-articles-2__article" id="section-articles-5">
                 <div class="section-articles-2__article-div">
-                    <img src="/img/calzado-sandalias-cuña-piel-pedreria.webp" 
-                    alt="Calzado Sandalias Cuña Piel Pedreria" 
-                    title="Calzado Sandalias Cuña Piel Pedreria">
+                    <img src="/img/<%= product.image %>" 
+                    alt="<%= product.name %>" 
+                    title="<%= product.name %>">
                 </div>
             </article>
             <article class="section-articles-2__article" id="section-articles-6">
                 <div class="section-articles-2__article-div">
-                    <img src="/img/atuendo-evolution.webp" 
-                    alt="Remera Evolution" 
-                    title="Remera Evolution">
+                    <img src="/img/<%= product.image %>" 
+                    alt="<%= product.name %>" 
+                    title="<%= product.name %>">
                 </div>
             </article>
             <article class="section-articles-2__article" id="section-articles-7">
                 <div class="section-articles-2__article-div">
-                    <img src="/img/vestido-amelia.webp" 
-                    alt="Vestido Amelia" 
-                    title="Vestido Amelia">
+                    <img src="/img/<%= product.image %>" 
+                    alt="<%= product.name %>" 
+                    title="<%= product.name %>">
                 </div>
             </article>
         </section>

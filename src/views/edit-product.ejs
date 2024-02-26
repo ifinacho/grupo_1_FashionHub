@@ -15,14 +15,14 @@
     <main>
         <div class="container">
             <h1 class="container-title">Editar Producto</h1>
-            <form id="registration-form" action="/edit-product/<%= Product.id %>?_method=PUT" method="post">
+            <form id="registration-form" action="/edit-product/<%= product.id %>?_method=PUT" method="post">
                 <div class="form-group">
                     <label for="name">Nombre *</label>
                     <input type="text" id="name" name="name" required value="<%= product.name %>">
                 </div>
                 <div class="form-group">
                     <label for="image">Imagen *</label>
-                    <input type="file" id="image" name="image" required value="<%= Product.image>">
+                    <input type="file" id="image" name="image" required value="<%= product.image %>">
                 </div>
                 <div class="form-group">
                     <label for="description">Descripción *</label>
