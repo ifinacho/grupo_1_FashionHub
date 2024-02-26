@@ -13,6 +13,7 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
+        <img src="/Banners/Sale-Off-pink.jpg" alt="Banner-ofertas" class="banner">
         <h1>Resultados de la busqueda: <%=busqueda %></h1>
         <article>
             <% if(productoBuscado.length > 0){ %>
@@ -28,6 +29,7 @@
                 <% }) %>
             <%}%>
         </article>
+        <img src="/Anuncios/Anuncio1.jpg" alt="anuncios" class="anuncios">
     </main>
     <%- include('./partials/footer.ejs') %>
 </body>
