@@ -1,3 +1,47 @@
 [
-    
+    {
+        "id": 1,
+        "firstName": "Diana",
+        "lastName": "Banegas",
+        "email": "diana.banegas@gmail.com",
+        "password": "abc123",
+        "category": "Admin",
+        "image": ""
+    },
+    {
+        "id": 2,
+        "firstName": "Nahuel",
+        "lastName": "Quispe",
+        "email": "nahuel.quispe@gmail.com",
+        "password": "def456",
+        "category": "Admin",
+        "image": ""
+    },
+    {
+        "id": 3,
+        "firstName": "Ricardo",
+        "lastName": "Vergara",
+        "email": "ricardo.vergara@gmail.com",
+        "password": "ghi789",
+        "category": "Client",
+        "image": ""
+    },
+    {
+        "id": 4,
+        "firstName": "Victor",
+        "lastName": "Pereira",
+        "email": "victor.pereira@gmail.com",
+        "password": "jkl321",
+        "category": "Client",
+        "image": ""
+    },
+    {
+        "id": 5,
+        "firstName": "Ignacio",
+        "lastName": "Ibañez",
+        "email": "ignacio.ibañez@gmail.com",
+        "password": "mno654",
+        "category": "Client",
+        "image": ""
+    } 
 ]
