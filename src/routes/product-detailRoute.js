@@ -8,7 +8,7 @@ router.get("/:id", productsController.details);
 
 //EDIT - FUNCIONA
 router.get("/edit-product/:id", productsController.edit);
-router.put("/:id", productsController.editPut);
+router.put("/edit-product/:id", productsController.editPut);
 
 //DELETE
 router.delete("/:id", productsController.delete);
