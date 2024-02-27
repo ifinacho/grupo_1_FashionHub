@@ -39,9 +39,9 @@ main article div button p{
 
 @media(min-width:426px){
 
-    main article{
+    /*main article{
         grid-template-columns: repeat(2,1fr);
-    }
+    }*/
 
     main section div div p {
         display: block;
@@ -51,18 +51,18 @@ main article div button p{
     }
 }
 
-/*@media(min-width:640px){
+@media(min-width:640px){
 
     main article{
         grid-template-columns: repeat(2,1fr);
     }
-}*/
+}
 
 @media(min-width:768px){
 
-    main article{
+    /*main article{
         grid-template-columns: repeat(4,1fr);
-    }
+    }*/
     main section{
         width: 25%;
     }
@@ -77,7 +77,7 @@ main article div button p{
     }
 }
 
-/*@media(min-width:960px){
+@media(min-width:960px){
 
     main article{
         grid-template-columns: repeat(3,1fr);
@@ -89,7 +89,7 @@ main article div button p{
     main article{
         grid-template-columns: repeat(4,1fr);
     }
-}*/
+}
 
 @media(min-width:2560px){
 
