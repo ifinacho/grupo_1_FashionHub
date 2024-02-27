@@ -77,29 +77,32 @@ main{
     margin-top: 1.5rem !important;
     transition: background-color 300ms;
 }
-#button-submit button, #button-add, #button-edit{
+#button-submit button, #button-delete, #button-edit{
     transition: background-color 300ms;
 }
 #button-submit:hover button,
 #button-submit:hover,
-#button-add:hover,
+#button-delete:hover,
 #button-edit:hover{
     background-color: #bfdb62;
 }
-.buttons-add-edit{
+.buttons-delete-edit{
     display: flex;
     margin-top: 0.5rem !important;
     gap: 0.5rem;
 }
-#button-add, #button-edit{
-    width: 50%;
+#button-delete, #button-edit{
+    width: 100%;
     padding: 0.4rem 0.7rem;
-    font-size: 1.2rem;
+    font-size: 1.45rem;
     cursor: pointer;
     background-color: #acc94a;
     border-radius: 0.25rem;
     text-align: center;
     transition: background-color 300ms
+}
+#button-delete{
+    margin-top: 0.5rem !important;
 }
 .form-div{
     display: flex;
@@ -252,9 +255,9 @@ main{
         padding: 0.5rem 0.85rem;
         font-size: 1.55rem;
     }
-    #button-add, #button-edit{
+    #button-delete, #button-edit{
         padding: 0.5rem 0.8rem;
-        font-size: 1.4rem;
+        font-size: 1.55rem;
     }
     .form-div{
         gap: 0.6rem;
@@ -365,8 +368,9 @@ main{
         padding: 0.6rem 0.95rem;
         font-size: 1.65rem;
     }    
-    #button-add, #button-edit{
+    #button-delete, #button-edit{
         padding: 0.6rem;
+        font-size: 1.65rem;
     }
     .form-div{
         gap: 0.7rem;

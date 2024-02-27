@@ -47,7 +47,7 @@ const controller = {
     delete: (req, res)=>{
         const idDelete = +req.params.id
 		const something = products.filter((user)=> user.id != idDelete)
-        res.render('delete the product')
+        /*res.render('delete the product')*/
 
         fs.writeFileSync(
 			productsFilePath,JSON.stringify(something,null,4),
@@ -56,7 +56,7 @@ const controller = {
 			}
 		
 		)
-		res.redirect('/home')
+		res.redirect('/')
     }
 };
 module.exports = controller;

@@ -42,7 +42,7 @@
             </div>
         </section>
         <section class="section-form">
-            <form id="form" action="/" method="POST">
+            <form id="form" action="/shopping-cart" method="POSTs">
                 <div id="form-title">
                     <h1><%= product.name %></h1>
                     <button id="button-heart"><i class="far fa-heart"></i></button>
@@ -68,11 +68,13 @@
                 <div id="button-submit" >
                     <button type="submit" value="add-cart">Añadir al carrito</button>
                 </div>
-                <div class="buttons-add-edit">
-                    <a id="button-add" href="/shopping-cart">Agregar al Carrito</a>
+            </form>
+            <form id="form" action="/product-detail/<%= product.id %>?_method=DELETE" method="POST">
+                <div class="buttons-delete-edit">
+                    <!--<a id="button-add" href="/shopping-cart">Agregar al Carrito</a>-->
                     <a id="button-edit" href="/product-detail/edit-product/<%= product.id %>">Editar Producto</a>
-
                 </div>
+                <button id="button-delete" type="submit" value="delete-product">Eliminar Producto</button>
                 <div class="form-div" id="form-compartir">
                     <h3>Compartir</h3>
                     <div class="redes">
@@ -85,6 +87,7 @@
                     </div>
                 </div>
             </form>
+
         </section>
         <section class="section-articles-2">
             <article class="section-articles-2__article" id="section-articles-4">
