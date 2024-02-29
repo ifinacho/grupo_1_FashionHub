@@ -20,11 +20,11 @@ app.set('view engine',  'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
 
-app.use("/shopping-cart", rutaShoppingCart);
-app.use("/user", rutaUser);
+app.use("/create", rutaCreate)
 app.use("/", rutaHome);
 app.use("/product-detail", rutaProducts );
-app.use("/create", rutaCreate)
+app.use("/shopping-cart", rutaShoppingCart);
+app.use("/user", rutaUser);
 
 
 const PORT = process.env.PORT || 3000;
@@ -32,18 +32,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto: http://localhost:${PORT}`);
 });
-
-const rutaCreate = require("./routes/CreateRoute.js")
-app.use("/create", rutaCreate)
-
-const rutaHome = require("./routes/homeRoute.js");
-app.use("/", rutaHome);
-
-const rutaProducts = require("./routes/product-detailRoute.js");
-app.use("/product-detail", rutaProducts );
-
-const rutaShoppingCart = require("./routes/shopping-cartRoute.js");
-app.use("/shopping-cart", rutaShoppingCart);
-
-const rutaUser = require("./routes/userRoute.js");
-app.use("/user", rutaUser);
