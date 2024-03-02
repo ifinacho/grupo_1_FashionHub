@@ -36,6 +36,7 @@ button:hover{
 
 header {
     display: flex;
+    flex-direction: column;
     background-color:#f0bfd0;
     box-shadow: 0px 0px 11px rgba(0,0,0,0.42);
     padding: 0.5rem 0;
@@ -51,18 +52,18 @@ header {
 }
 .header-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     flex-wrap: nowrap;
 }
 .header-flex {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 .header-article{
     margin: 1rem 0;
-    padding: 0.5rem 3.7rem ;
+    padding: 0.5rem 1rem ;
+    width: 90vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -71,19 +72,6 @@ header {
     order: 2;
     gap: 0.4rem;
     font-size: 1.4rem;
-}
-input.search-form_input {
-    margin: 1rem 0;
-    padding: 0.5rem 0.7rem;
-    background-color: white;
-    border-radius: 1rem;
-    border: none;
-    width: 550px;
-    height: 40px;
-}
-form.search-form {
-    display: flex;
-    gap: 10px;
 }
 .header-article span{
     padding: 0;
@@ -96,6 +84,25 @@ form.search-form {
     order: 1;
     gap: 0.75rem;
     justify-content: center;
+}
+.search-form {
+    display: flex;
+    width: 90vw;
+    /*gap: 10px;*/
+}
+.search-form__input {
+    margin: 1rem 0;
+    padding: 0.5rem 0.7rem;
+    background-color: white;
+    border-radius: 1rem 0 0 1rem;
+    border: none;
+    width: 550px;
+    height: 40px;
+}
+.search-form__button{
+    margin: 1rem 0;
+    padding: 0 0.75rem;
+    border-radius: 0 1rem 1rem 0;
 }
 #button-search{
     background-color: #f0bfd0;
@@ -192,13 +199,15 @@ footer {
 @media(min-width: 768px) {
 
     /*--------Styles para Header-------- */
-    .header-container{
-        flex-direction: row;
 
-    }
     header{
         font-size: 1.1rem;
         justify-content: center;
+    }
+    .header-container{
+        flex-direction: row;
+        align-items: center;
+        gap: 5rem;
     }
     .img-logo{
         margin: 0.5rem 2rem;
@@ -207,6 +216,10 @@ footer {
         margin-top: 0;
         margin-right: 5rem;
         margin-left: 5rem;
+        width: 35rem;
+    }
+    .search-form {
+        width: 40vw; 
     }
 
     /*--------Styles para Footer--------*/
@@ -250,8 +263,12 @@ footer {
         font-size: 1.2rem;
         padding: 0.6rem 0;
     }
+    .header-container{
+        gap: 15rem;
+
+    }
     .header-article{
-        margin-bottom: 0;
+        margin-bottom: 1rem;
         margin-right: 0;
         margin-left: 0;
         order: 1;

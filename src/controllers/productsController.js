@@ -9,6 +9,7 @@ const controller = {
     index: (req, res) => {
 		res.render('home', {products});
 	},
+    
     //details - muestra los detalles de todos los productos
     details : (req, res) => {
         const idFound = +req.params.id
