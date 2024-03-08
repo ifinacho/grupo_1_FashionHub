@@ -1,5 +1,6 @@
 const express = require("express");
 const productsController = require("../controllers/productsController");
+const uploadFile = require("../middlewares/uploadFile.js");
 const router = express.Router();
 
 router.get("/", productsController.index);
@@ -8,7 +9,7 @@ router.get("/:id", productsController.details);
 
 //EDIT - FUNCIONA
 router.get("/edit-product/:id", productsController.edit);
-router.put("/edit-product/:id", productsController.editPut);
+router.put("/edit-product/:id", uploadFile.single('nombreADefinir'), productsController.editPut);
 
 //DELETE
 router.delete("/:id", productsController.delete);

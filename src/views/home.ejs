@@ -13,11 +13,11 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        <img src="/Banners/Sale-Off-pink.jpg" alt="Banner-ofertas" class="banner">
+        <img src="/img/Banners/Sale-Off-pink.jpg" alt="Banner-ofertas" class="banner">
         <article>
             <% for(let i=0; i < TheProducts.length && i < 8; i++){ %>
                 <div class="sectionBox-shadow2">
-                    <img src="/img/<%= TheProducts[i].image %>" alt="ropa">
+                    <img src="/img/productos/<%= TheProducts[i].image %>" alt="ropa">
                     <a href="/product-detail/<%= TheProducts[i].id %>">
                         <button>
                             <p>Ver Más</p>
@@ -30,7 +30,7 @@
         <section>
             <% for(let i=0; i < TheProducts.length && i < 4; i++){%>
                     <div class="sectionBox-shadow">
-                        <img src="/img/<%= TheProducts[i].image %>" alt="ropa">
+                        <img src="/img/productos/<%= TheProducts[i].image %>" alt="ropa">
                         <div>
                             <h2><%= TheProducts[i].category%></h2>
                             <p><%= TheProducts[i].description%></p>
@@ -41,7 +41,7 @@
                     </div>
             <%}%>
         </section>
-        <img src="/Anuncios/Anuncio1.jpg" alt="anuncios" class="anuncios">
+        <img src="/img/Anuncios/Anuncio1.jpg" alt="anuncios" class="anuncios">
     </main>
     <%- include('./partials/footer.ejs') %>
 </body>

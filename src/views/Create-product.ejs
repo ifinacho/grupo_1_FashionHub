@@ -16,7 +16,7 @@
         <div class="container">
             <h1 class="container-title">Subir Producto</h1>
             <p class="container-message">Ingrese los siguientes datos para subir el producto</p>
-            <form id="registration-form" action="/product-detail/create-product" method="POST">
+            <form id="registration-form" action="/product-detail/create-product" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="name">Nombre *</label>
                     <input type="text" id="name" name="name" required>

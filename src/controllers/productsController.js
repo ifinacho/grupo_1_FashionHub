@@ -23,7 +23,7 @@ const controller = {
         res.render('edit-product',{product});
     },
     editPut: (req, res)=>{
-        const idFound = +req.params.id
+        const idFound = +req.body.id
         const {name, description, price, discount, color, talle, image}= req.body
 		products.forEach(product => {
 			if(product.id == idFound){
@@ -43,7 +43,7 @@ const controller = {
                 encoding: "utf- 8"
             }
         )
-        res.redirect('/home')
+        res.redirect('/')
     },
     delete: (req, res)=>{
         const idDelete = +req.params.id
