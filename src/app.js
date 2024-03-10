@@ -22,7 +22,7 @@ app.set('views', path.join(__dirname, '/views'));
 
 app.use("/create", rutaCreate)
 app.use("/", rutaHome);
-app.use("/product-detail", rutaProducts );
+app.use("/product-detail", rutaProducts);
 app.use("/shopping-cart", rutaShoppingCart);
 app.use("/user", rutaUser);
 

@@ -17,7 +17,7 @@
         <article>
             <% for(let i=0; i < TheProducts.length && i < 8; i++){ %>
                 <div class="sectionBox-shadow2">
-                    <img src="/img/productos/<%= TheProducts[i].image %>" alt="ropa">
+                    <img src="/img/productos/<%= TheProducts[i].image ? TheProducts[i].image : 'default-image.png' %>" alt="<%= TheProducts[i].name %>" title="<%= TheProducts[i].name %>">
                     <a href="/product-detail/<%= TheProducts[i].id %>">
                         <button>
                             <p>Ver Más</p>
@@ -30,7 +30,7 @@
         <section>
             <% for(let i=0; i < TheProducts.length && i < 4; i++){%>
                     <div class="sectionBox-shadow">
-                        <img src="/img/productos/<%= TheProducts[i].image %>" alt="ropa">
+                        <img src="/img/productos/<%= TheProducts[i].image %>" alt="<%= TheProducts[i].name %>" title="<%= TheProducts[i].name %>">
                         <div>
                             <h2><%= TheProducts[i].category%></h2>
                             <p><%= TheProducts[i].description%></p>

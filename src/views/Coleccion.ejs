@@ -20,7 +20,7 @@
         <article>
             <% for(let i=0; i < TheProducts.length; i++){ %>
                 <div>
-                    <img src="/img/productos/<%= TheProducts[i].image %>" alt="ropa">
+                    <img src="/img/productos/<%= TheProducts[i].image ? TheProducts[i].image : 'default-image.png' %>" alt="<%= TheProducts[i].name %>" title="<%= TheProducts[i].name %>">
                     <a href="/product-detail/<%= TheProducts[i].id %>">
                         <button>
                             <p>Ver Más</p>

@@ -9,7 +9,7 @@ router.get("/:id", productsController.details);
 
 //EDIT - FUNCIONA
 router.get("/edit-product/:id", productsController.edit);
-router.put("/edit-product/:id", uploadFile.single('nombreADefinir'), productsController.editPut);
+router.put("/edit-product/:id", uploadFile.single('image'), productsController.editPut);
 
 //DELETE
 router.delete("/:id", productsController.delete);

@@ -24,7 +24,7 @@ const controller = {
     },
     editPut: (req, res)=>{
         const idFound = +req.body.id
-        const {name, description, price, discount, color, talle, image}= req.body
+        const {name, description, price, discount, color, talle}= req.body
 		products.forEach(product => {
 			if(product.id == idFound){
 				product.name = name
@@ -33,17 +33,17 @@ const controller = {
 				product.description = description
 				product.color = color
                 product.talle = talle
-				product.image = image
+				product.image = req.file.filename
 			}
 			
 		})
         fs.writeFileSync(
-            productsFilePath,JSON.stringify(products,null, 2),
+            productsFilePath,JSON.stringify(products,null, 4),
             {
                 encoding: "utf- 8"
             }
         )
-        res.redirect('/')
+        res.redirect('/Coleccion')
     },
     delete: (req, res)=>{
         const idDelete = +req.params.id
@@ -57,7 +57,7 @@ const controller = {
 			}
 		
 		)
-		res.redirect('/')
+		res.redirect('/Coleccion')
     }
 };
 module.exports = controller;

@@ -16,7 +16,7 @@
         <section class="section-articles">
             <article class="section-articles__article" id="section-articles-1">
                 <div class="section-articles__article-div">
-                    <img src="/img/productos/<%= product.image %>" 
+                    <img src="/img/productos/<%= product.image ? product.image : 'default-image.png' %>" 
                     alt="<%= product.name %>" 
                     title="<%= product.name %>">
                 </div>

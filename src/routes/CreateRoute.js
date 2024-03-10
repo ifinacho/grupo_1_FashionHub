@@ -5,6 +5,6 @@ const router = express.Router();
 
 //CREATE - NO MANDA A LA PAGINA EXACTA
 router.get("/create-product", productsController.create);
-router.post("/create-product", uploadFile.single('nombreADefinir'), productsController.createPost);
+router.post("/create-product", uploadFile.single('image'), productsController.createPost);
 
 module.exports = router

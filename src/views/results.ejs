@@ -19,7 +19,8 @@
             <% if(productoBuscado.length > 0){ %>
                 <% productoBuscado.map(products => { %>
                     <div>
-                        <img src="/img/productos/<%= products.image %>" alt="ropa">
+                        <img src="/img/productos/<%= products.image ? products.image : 'default-image.png' %>" alt="<%= products.name %>" 
+                        title="<%= products.name %>">
                         <a href="/product-detail/<%= products.id %>">
                             <button>
                                 <p>Ver Más</p>
