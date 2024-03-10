@@ -790,16 +790,5 @@
         "description": "olis",
         "image": "atuendo-rigth.webp",
         "category": "Atuendo"
-    },
-    {
-        "id": "84b3b070-c5bf-4e3a-b73c-360a8bac0ad5",
-        "name": "Pantalon Jean Classic Alexa",
-        "price": 3500,
-        "discount": 1000,
-        "color": "Negro",
-        "talle": "Medium",
-        "description": "Pantalon negro de Jean",
-        "image": "IMG_1710033864132_pantalon-jean-classic-alexa.webp",
-        "category": "Pantalon"
     }
 ]
