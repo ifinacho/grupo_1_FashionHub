@@ -6,7 +6,7 @@ const accounts = JSON.parse(fs.readFileSync(accountsFilePath, 'utf-8'))
 
 const controller = {
     login: (req, res)=> {
-        const idFound = +req.params.id
+        const idFound = req.params.id
         const User = accounts.find(U => U.id === idFound)
         res.render('login',{User})
     },

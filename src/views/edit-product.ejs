@@ -6,7 +6,7 @@
     <title>FH - EditProduct</title>
     <link rel="stylesheet" href="/css/normalize.css">    
     <link rel="stylesheet" href="/css/norm-header-footer.css">
-    <link rel="stylesheet" href="/css/CreateProduct.css">
+    <link rel="stylesheet" href="/css/edit-product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
 </head>
@@ -15,7 +15,8 @@
     <main>
         <div class="container">
             <h1 class="container-title">Editar Producto</h1>
-            <form id="registration-form" action="/edit-product/<%= product.id %>?_method=PUT" method="post" enctype="multipart/form-data">
+            <p class="container-message">Ingrese los datos a cambiar del producto</p>
+            <form id="registration-form" action="/product-detail/edit-product/<%= product.id %>?_method=PUT" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="name">Nombre *</label>
                     <input type="text" id="name" name="name" required value="<%= product.name %>">
@@ -27,35 +28,52 @@
                 <div class="form-group">
                     <label for="description">Descripción *</label>
                     <!--<input type="text" id="description" name="description" rows="5" cols="35" value="<%= product.description %>">-->
-                    <textarea name="description" id="description" class="form-input" value="<%= product.description %>"><%= product.description %></textarea>
+                    <textarea name="description" id="description" class="form-input"  rows="4" cols="50" value="<%= product.description %>"><%= product.description %></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="color">Color *</label><br>
-                    
-                    <label for="Color"><input type="checkbox" id="Color" value="Rojo">Rojo</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Naranja">Naranja</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Amarillo">Amarillo</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Indigo">Lima</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Verde">Verde</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Celeste">Celeste</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Azul">Azul</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Indigo">Indigo</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Rosa">Rosa</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Marron">Marron</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Piel">Piel</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Gris">Gris</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Negro">Negro</label>
-                    <label for="Color"><input type="checkbox" id="Color" value="Blanco">Blanco</label>
+                    <label for="price">Precio *</label>
+                    <input type="number" id="price" name="price" required value="<%= product.price %>">
+                </div>
+                <div class="form-group">
+                    <label for="discount">Descuento *</label>
+                    <input type="number" id="discount" name="discount" required value="<%= product.discount %>">
+                </div>
+                <div class="form-group">
+                    <label for="category">Categoria *</label>
+                    <select name="category" id="category">
+                        <option value="Pantalon">Pantalon</option>
+                        <option value="Remera">Remera</option>
+                        <option value="Atuendo">Atuendo</option>
+                        <option value="Vestido">Vestido</option>
+                        <option value="Accesorio">Accesorio</option>
+                        <option value="Calzado">Calzado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="color">Color *</label><br>                    
+                    <label for="Color"><input type="radio" name="color" value="Rojo">Rojo</label>
+                    <label for="Color"><input type="radio" name="color" value="Naranja">Naranja</label>
+                    <label for="Color"><input type="radio" name="color" value="Amarillo">Amarillo</label>
+                    <label for="Color"><input type="radio" name="color" value="Indigo">Lima</label>
+                    <label for="Color"><input type="radio" name="color" value="Verde">Verde</label>
+                    <label for="Color"><input type="radio" name="color" value="Celeste">Celeste</label>
+                    <label for="Color"><input type="radio" name="color" value="Azul">Azul</label>
+                    <label for="Color"><input type="radio" name="color" value="Indigo">Indigo</label>
+                    <label for="Color"><input type="radio" name="color" value="Rosa">Rosa</label>
+                    <label for="Color"><input type="radio" name="color" value="Marron">Marron</label>
+                    <label for="Color"><input type="radio" name="color" value="Piel">Piel</label>
+                    <label for="Color"><input type="radio" name="color" value="Gris">Gris</label>
+                    <label for="Color"><input type="radio" name="color" value="Negro">Negro</label>
+                    <label for="Color"><input type="radio" name="color" value="Blanco">Blanco</label>
                 </div>
                 <div class="form-group">
                     <label for="talle">Talle *</label><br>
-
-                    <label for="talle"><input type="checkbox" id="talle" value="Extra extra large">Extra extra large</label>
-                    <label for="talle"><input type="checkbox" id="talle" value="Extra large">Extra large</label>
-                    <label for="talle"><input type="checkbox" id="talle" value="Large">Large</label>
-                    <label for="talle"><input type="checkbox" id="talle" value="Medium">Medium</label>
-                    <label for="talle"><input type="checkbox" id="talle" value="Small">Small</label>
-                    <label for="talle"><input type="checkbox" id="talle" value="Extra small">Extra small</label>
+                    <label for="talle"><input type="radio" name="talle" value="Extra extra large">Extra extra large</label>
+                    <label for="talle"><input type="radio" name="talle" value="Extra large">Extra large</label>
+                    <label for="talle"><input type="radio" name="talle" value="Large">Large</label>
+                    <label for="talle"><input type="radio" name="talle" value="Medium">Medium</label>
+                    <label for="talle"><input type="radio" name="talle" value="Small">Small</label>
+                    <label for="talle"><input type="radio" name="talle" value="Extra small">Extra small</label>
                 </div>
                 <div class="form-group">
                     <button type="submit">Confirmar</button>

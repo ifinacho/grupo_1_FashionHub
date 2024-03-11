@@ -12,51 +12,43 @@ const controller = {
     
     //details - muestra los detalles de todos los productos
     details : (req, res) => {
-        const idFound = +req.params.id
-        const product = products.find(product => product.id === idFound)
+        console.log(req.params.id)
+        const idFound = req.params.id
+        const product = products.find(product => product.id == idFound)
+        console.log(product)
         res.render("product-detail", {product});
     },
 
     edit: (req,res)=>{
-        const idFound = +req.params.id
-        const product = products.find(product => product.id === idFound)
-        res.render('edit-product',{product});
+        const idFound = req.params.id
+        const product = products.find(product => product.id == idFound)
+        res.render('edit-product', {product});
     },
     editPut: (req, res)=>{
-        const idFound = +req.body.id
-        const {name, description, price, discount, color, talle}= req.body
+        console.log(req.params.id)
+        const idFound = req.params.id
 		products.forEach(product => {
 			if(product.id == idFound){
-				product.name = name
-				product.price = price
-				product.discount = discount
-				product.description = description
-				product.color = color
-                product.talle = talle
-				product.image = req.file.filename
-			}
-			
-		})
-        fs.writeFileSync(
-            productsFilePath,JSON.stringify(products,null, 4),
-            {
-                encoding: "utf- 8"
-            }
-        )
+				product.name = req.body.name;
+				product.price = Number(req.body.price);
+				product.discount = Number(req.body.discount);
+                product.color = req.body.color;
+                product.talle = req.body.talle;
+				product.description = req.body.description;
+				product.image = req.file.filename;
+                product.category = req.body.category;
+			}            
+        })        
+        fs.writeFileSync(productsFilePath,JSON.stringify(products, null, 4))
+
         res.redirect('/Coleccion')
     },
     delete: (req, res)=>{
-        const idDelete = +req.params.id
-		const something = products.filter((user)=> user.id != idDelete)
-        /*res.render('delete the product')*/
+        const idDelete = req.params.id
+		const productsDeleted = products.filter((product)=> product.id != idDelete)
 
-        fs.writeFileSync(
-			productsFilePath,JSON.stringify(something,null,4),
-			{
-				encoding: "utf-8"
-			}
-		
-		)
+        fs.writeFileSync(productsFilePath,JSON.stringify(productsDeleted, null, 4))
+
 		res.redirect('/Coleccion')
     }
 };
