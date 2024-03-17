@@ -3,6 +3,7 @@ const path = require('path');
 const crypto = require('crypto')
 const accountsFilePath = path.join(__dirname, '../data/UsersDataBase.json')
 const accounts = JSON.parse(fs.readFileSync(accountsFilePath, 'utf-8'))
+const { validationResult } = require("express-validator")
 
 const controller = {
     login: (req, res)=> {
@@ -10,7 +11,7 @@ const controller = {
         const User = accounts.find(U => U.id === idFound)
         res.render('login',{User})
     },
-    loginPut : (req, res) => {
+    loginPost : (req, res) => {
         const idFound = +req.params.id
         const {password, email}= req.body
 		accounts.forEach(User => {
@@ -31,26 +32,28 @@ const controller = {
         res.render("registro");
     },
     registerPost : (req, res) => {
-        let newUser = {
-			id: crypto.randomUUID(),
-			name: req.body.name,
-			username: req.body.username,
-            password: req.body.password,
-			dni: req.body.dni,
-			birthdate: req.body.birthdate,
-            email: req.body.email,
-			image: "default-image.png"
-		}
-        accounts.push(newUser)
-        fs.writeFileSync(
-            accountsFilePath,JSON.stringify(accounts,null, 4),
-            {
-                encoding: "utf- 8"
-            }
-        )
-        res.redirect('/')
-    }
 
+        const validations = validationResult(req)
+        if (!validations.isEmpty()){
+            res.render("registro", { errors: validations.mapped(), oldData: req.body })
+        }else{
+            let newUser = {
+                id: crypto.randomUUID(),
+                name: req.body.name,
+                username: req.body.username,
+                password: req.body.password,
+                dni: req.body.dni,
+                birthdate: req.bosdy.birthdate,
+                email: req.body.email,
+                image: req.file.filename
+            }
+            accounts.push(newUser)
+            fs.writeFileSync(
+                accountsFilePath,JSON.stringify(accounts,null, 4)
+            )
+            res.redirect('/')
+        }
+    }
 };
 
 module.exports = controller;

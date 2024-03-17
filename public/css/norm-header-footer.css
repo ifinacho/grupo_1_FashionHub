@@ -32,6 +32,9 @@ button{
 button:hover{
     background-color: #8fb900;
 }
+.mensajeError{
+    color: red;
+}
 /*--------Styles para Header--------*/
 
 header {

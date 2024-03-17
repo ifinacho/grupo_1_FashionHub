@@ -16,38 +16,69 @@
         <div class="container">
             <h1 class="container-title">Registro de usuario</h1>
             <p class="container-message">Ingrese los siguientes datos para registrarse</p>
-            <form id="registration-form" action="/" method="post">
+            <form id="registration-form" action="/user/register" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="name">Nombre *</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>">
+                    <% if(locals.errors && errors.name){ %>
+                        <p class="mensajeError"> <%= errors.name.msg %> </p>
+                    <% } %>
                 </div>
                 <div class="form-group">
                     <label for="username">Apellido *</label>
-                    <input type="text" id="username" name="username" required>
+                    <input type="text" id="username" name="username" value="<%= locals.oldData ? oldData.username : null %>">
+                    <% if(locals.errors && errors.username){ %>
+                        <p class="mensajeError"> <%= errors.username.msg %> </p>
+                    <% } %>
                 </div>
                 <div class="form-group">
                     <label for="dni">DNI *</label>
-                    <input type="text" id="dni" name="dni" required>
+                    <input type="text" id="dni" name="dni" value="<%= locals.oldData ? oldData.dni : null %>">
+                    <% if(locals.errors && errors.dni){ %>
+                        <p class="mensajeError"> <%= errors.dni.msg %> </p>
+                    <% } %>
+                </div>
+                <div class="form-group">
+                    <label for="fotoPerfil">Foto de Perfil: *</label>
+                    <input type="file" id="fotoPerfil" name="fotoPerfil" >
+                    <% if(locals.errors && errors.fotoPerfil){ %>
+                        <p class="mensajeError"> <%= errors.fotoPerfil.msg %> </p>
+                    <% } %>
                 </div>
                 <div class="form-group">
                     <label for="birthdate">Fecha de nacimiento *</label>
-                    <input type="date" id="birthdate" name="birthdate" required>
+                    <input type="date" id="birthdate" name="birthdate" value="<%= locals.oldData ? oldData.birthdate : null %>">
+                    <% if(locals.errors && errors.birthdate){ %>
+                        <p class="mensajeError"> <%= errors.birthdate.msg %> </p>
+                    <% } %>
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail *</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="text" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %>">
+                    <% if(locals.errors && errors.email){ %>
+                        <p class="mensajeError"> <%= errors.email.msg %> </p>
+                    <% } %>
                 </div>
                 <div class="form-group">
-                    <label for="repeat-email">Repetir E-mail *</label>
-                    <input type="email" id="repeat-email" name="repeat-email" required>
+                    <label for="repeatEmail">Repetir E-mail *</label>
+                    <input type="text" id="repeatEmail" name="repeatEmail" value="<%= locals.oldData ? oldData.repeatEmail : null %>">
+                    <% if(locals.errors && errors.repeatEmail){ %>
+                        <p class="mensajeError"> <%= errors.repeatEmail.msg %> </p>
+                    <% } %>
                 </div>
                 <div class="form-group">
                     <label for="password">Contraseña *</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password">
+                    <% if(locals.errors && errors.password){ %>
+                        <p class="mensajeError"> <%= errors.password.msg %> </p>
+                    <% } %>
                 </div>
                 <div class="form-group">
-                    <label for="repeat-password">Repetir Contraseña *</label>
-                    <input type="password" id="repeat-password" name="repeat-password" required>
+                    <label for="repeatPassword">Repetir Contraseña *</label>
+                    <input type="password" id="repeatPassword" name="repeatPassword">
+                    <% if(locals.errors && errors.repeatPassword){ %>
+                        <p class="mensajeError"> <%= errors.repeatPassword.msg %> </p>
+                    <% } %>
                 </div>
                 <div class="form-group">
                     <button type="submit">Confirmar</button>
