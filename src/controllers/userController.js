@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto')
-const accountsFilePath = path.join(__dirname, '../data/UsersDataBase.json')
+const accountsFilePath = path.join(__dirname, '../data/usersDataBase.json')
 const accounts = JSON.parse(fs.readFileSync(accountsFilePath, 'utf-8'))
 const { validationResult } = require("express-validator")
 
@@ -21,10 +21,7 @@ const controller = {
 			}
 		})
         fs.writeFileSync(
-            accountsFilePath,JSON.stringify(accounts,null, 4),
-            {
-                encoding: "utf- 8"
-            }
+            accountsFilePath,JSON.stringify(accounts,null, 4)
         )
         res.redirect('/')
     },
