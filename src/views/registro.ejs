@@ -25,10 +25,10 @@
                     <% } %>
                 </div>
                 <div class="form-group">
-                    <label for="username">Apellido *</label>
-                    <input type="text" id="username" name="username" value="<%= locals.oldData ? oldData.username : null %>">
-                    <% if(locals.errors && errors.username){ %>
-                        <p class="mensajeError"> <%= errors.username.msg %> </p>
+                    <label for="lastName">Apellido *</label>
+                    <input type="text" id="lastName" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %>">
+                    <% if(locals.errors && errors.lastName){ %>
+                        <p class="mensajeError"> <%= errors.lastName.msg %> </p>
                     <% } %>
                 </div>
                 <div class="form-group">

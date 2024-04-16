@@ -2,11 +2,13 @@ const express = require("express");
 const userController = require("../controllers/userController");
 const router = express.Router();
 const uploadFile = require("../middlewares/uploadFile.js");
+const guestMiddleware = require("../middlewares/guestMiddleware.js");
+const authMiddleware = require("../middlewares/authMiddleware.js");
 const { body } = require("express-validator");
 
 let validations = [
     body("name").notEmpty().withMessage("Por favor, ingresa un nombre"),
-    body("username").notEmpty().withMessage("Por favor, ingresa un apellido"),
+    body("lastName").notEmpty().withMessage("Por favor, ingresa un apellido"),
     body("dni").notEmpty().withMessage("Por favor, ingresa un DNI"),
     body("fotoPerfil").custom((value, { req }) => {
         let file = req.file
@@ -33,9 +35,11 @@ let validations = [
     })
 ]
 
-router.get("/login", userController.login);
+router.get("/login", guestMiddleware, userController.login);
 router.post("/login", userController.loginPost);
-router.get("/register", userController.register);
+router.get("/register", guestMiddleware, userController.register);
 router.post("/register", uploadFile.single("fotoPerfil"), validations, userController.registerPost);
+router.get("/profile", authMiddleware, userController.profile);
+router.get("/logout", userController.logout);
 
 module.exports = router;

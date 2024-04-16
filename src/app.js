@@ -1,6 +1,9 @@
 const express = require("express");
+const session = require("express-session")
+const cookies = require("cookie-parser")
 const path = require("path");
 const methodOverride = require('method-override');
+const userMiddleware = require("./middlewares/userMiddleware.js")
 const app = express();
 const rutaShoppingCart = require("./routes/shopping-cartRoute.js");
 const rutaUser = require("./routes/userRoute.js");
@@ -15,6 +18,14 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
+
+app.use(session({
+    secret: "It's a secret",
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(cookies());
+app.use(userMiddleware);
 
 app.set('view engine',  'ejs');
 app.set('views', path.join(__dirname, '/views'));

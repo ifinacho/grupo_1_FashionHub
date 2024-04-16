@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FH - Detalle de producto</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/norm-header-footer.css">
+    <link rel="stylesheet" href="/css/product-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <section class="section-user__image">
+            <div id="user-image">
+                <img src="/img/usuarios/<%= user.fotoPerfil %>" alt="<%= user.name %>" title="<%= user.name %>">
+            </div>
+        </section>
+        <section class="section-user__details">
+            <div id="user-name">
+                <h2>¡Hola <%= user.name %>!</h2>
+            </div>
+            <div>
+                <p id="user-username"><%= user.lastName %></p>
+            </div>
+            <div>
+                <p id="user-email"><%= user.email %></p>
+            </div>
+            <div>
+                <p id="user-dni"><%= user.dni %></p>
+            </div>
+            <div>
+                <p id="user-birthdate"><%= user.birthdate %></p>
+            </div>
+        </section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

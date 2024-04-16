@@ -20,6 +20,9 @@
                 <div class="form-group">
                     <label for="email">E-mail*</label>
                     <input type="email" id="email" name="email" required >
+                    <% if(locals.errors && errors.email) { %>
+                        <p class="mensajeError"> <%= errors.email.msg %> </p>
+                    <% } %>
                 </div>
                 <div class="form-group">
                     <label for="password">Contraseña*</label>

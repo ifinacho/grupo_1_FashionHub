@@ -5,8 +5,13 @@
         <div class="header-flex ">
             <div class="header-div">
                 <i class="far fa-heart"></i>
-                <a class="header-register" href="/user/register"><i class="far fa-user"><span> Register</span></i></a>
-                <a class="header-login" href="/user/login"><i class="far fa-user"><span> Login</span></i></a>
+                <% if(locals.isLogged){ %>
+                    <a class="header-profile" href="/user/profile"><i class="far fa-user"><span> <%= locals.userLogged.name %>'s Profile</span></i></a>
+                    <a class="header-logout" href="/user/logout"><i class="far fa-user"><span> Logout</span></i></a>
+                <% }else{ %>
+                    <a class="header-register" href="/user/register"><i class="far fa-user"><span> Register</span></i></a>
+                    <a class="header-login" href="/user/login"><i class="far fa-user"><span> Login</span></i></a>
+                <% } %>
                 <a href="/shopping-cart"><i class="fas fa-shopping-cart"></i></a>
                 <a href="/create/create-product"><i class="fas fa-plus"></i></a>
             </div>
