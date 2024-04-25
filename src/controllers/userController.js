@@ -48,7 +48,7 @@ const controller = {
             lastName: req.body.username,
             password: bcryptjs.hashSync(req.body.password, 10),
             dni: req.body.dni,
-            birthdate: req.bosdy.birthdate,
+            birthdate: req.body.birthdate,
             email: req.body.email,
             fotoPerfil: req.file.filename
         }
