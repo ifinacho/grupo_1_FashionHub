@@ -43,5 +43,32 @@
         "password": "mno654",
         "category": "Client",
         "fotoPerfil": "default-user.webp"
-    } 
+    },
+    {
+        "id": "e251edc9-95ed-4664-92af-e74cfb3ba5f0",
+        "name": "estudiante",
+        "password": "$2a$10$I3OpxBXrcK4v/mWPEaSGPu15GbdcHvh8WCh0HS7k9R4dGAftLW6PS",
+        "dni": "0000000",
+        "birthdate": "1990-03-23",
+        "email": "correo@gmal.com",
+        "fotoPerfil": "IMG_1714047360765_GBL9XBkXYAAxV0G.jpg"
+    },
+    {
+        "id": "fdeb8970-2c5e-40de-a7f6-be5f6fc0282a",
+        "name": "inti",
+        "password": "$2a$10$uI7huO3c8qAQr57FN3kyE.kymgSNMhxZ.mYxIx3eEcYOjtTwKpofW",
+        "dni": "123423",
+        "birthdate": "2024-04-08",
+        "email": "email@yahoo.com",
+        "fotoPerfil": "IMG_1714053993808_photo_5031072627397079085_y.jpg"
+    },
+    {
+        "id": "75f742b9-2332-426b-bf82-839a248f3639",
+        "name": "inti ",
+        "password": "$2a$10$BsvHELvojGOAj4XqQUjlmO4eMMkUxv3T8OxVtZi4hwKaejogk98aS",
+        "dni": "12345232",
+        "birthdate": "2024-04-01",
+        "email": "user@correo.com",
+        "fotoPerfil": "IMG_1714054188816_Escudo-para-ninos.jpg"
+    }
 ]
