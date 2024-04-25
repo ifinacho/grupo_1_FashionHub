@@ -2,7 +2,7 @@ const multer = require("multer");
 const path = require("path");
 
 const getUploadDestination = (req) =>{
-   if (req.originalUrl.includes("/product")){
+   if (req.originalUrl.includes("/create") ){
       return "productos";
    } else if (req.originalUrl.includes("/user")){
       return "usuarios"
