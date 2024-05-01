@@ -70,5 +70,14 @@
         "birthdate": "2024-04-01",
         "email": "user@correo.com",
         "fotoPerfil": "IMG_1714054188816_Escudo-para-ninos.jpg"
+    },
+    {
+        "id": "7d648c45-2938-491e-bbe6-10bf683e9539",
+        "name": "Leon Francisco",
+        "password": "$2a$10$xu4VpoOAyGelazlt9ls0iepOBhJ3.AVJbHkZlNCj2zN2QXDcthWDa",
+        "dni": "59621632",
+        "birthdate": "2022-10-04",
+        "email": "leon@gmail.com",
+        "fotoPerfil": "IMG_1714354479263_spookyswap_logo.png"
     }
 ]

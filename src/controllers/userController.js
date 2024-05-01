@@ -15,12 +15,14 @@ const controller = {
     loginPost : (req, res) => {
         let userFound = accounts.find(account => account.email === req.body.email)
         if(userFound){
+            console.log(userFound.password)
+            console.log(userFound)
             let okPassword = bcryptjs.compareSync(req.body.password, userFound.password)
             if(okPassword){
-                delete userFound.password
+                /*delete userFound.password*/
                 req.session.userLogged = userFound
-                if(req.body.remember-me){
-                    res.cookie("userEmail", req.body.email, { maxAge: 1000*60*60 })
+                if(req.body.rememberMe){
+                    res.cookie("userEmail", req.body.email, { maxAge: 1000*60*2 })
                 }
                 return res.redirect("/user/profile")
             }else{
