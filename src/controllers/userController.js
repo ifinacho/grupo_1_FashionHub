@@ -22,7 +22,7 @@ const controller = {
                 /*delete userFound.password*/
                 req.session.userLogged = userFound
                 if(req.body.rememberMe){
-                    res.cookie("userEmail", req.body.email, { maxAge: 1000*60*2 })
+                    res.cookie("userEmail", userFound.email, { maxAge: 1000*60*2 })
                 }
                 return res.redirect("/user/profile")
             }else{

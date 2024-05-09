@@ -79,5 +79,14 @@
         "birthdate": "2022-10-04",
         "email": "leon@gmail.com",
         "fotoPerfil": "IMG_1714354479263_spookyswap_logo.png"
+    },
+    {
+        "id": "9864349d-bff4-4295-859a-038e2d92d3ac",
+        "name": "adminpass",
+        "password": "$2a$10$gRWVOrraCh931H5mmq4R9uged2GSsTDiBEyNQr1YKjqxMgsRaX7PK",
+        "dni": "4100000",
+        "birthdate": "19999-08-03",
+        "email": "admin@pass.com",
+        "fotoPerfil": "IMG_1715228689470_photo_5031072627397079085_y.jpg"
     }
 ]
