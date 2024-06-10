@@ -9,10 +9,7 @@ const rutaShoppingCart = require("./routes/shopping-cartRoute.js");
 const rutaUser = require("./routes/userRoute.js");
 const rutaHome = require("./routes/homeRoute.js");
 const rutaProducts = require("./routes/product-detailRoute.js");
-const rutaCreate = require("./routes/CreateRoute.js")
-
-/*const ruta_public = path.resolve(__dirname, "./public");
-app.use(express.static(ruta_public));*/
+const rutaCreate = require("./routes/CreateRoute.js");
 
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
