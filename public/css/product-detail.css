@@ -55,13 +55,23 @@ main{
     font-size: 1.85rem;
 }
 #form-price{
-    font-size: 1.6rem;
+    font-size: 1.9rem;
 }
-#form-color, #form-talle{
-    display: block;
-    font-size: 1.15rem;
+#form-description{
+    font-size: 1.5rem;
+}
+.form-color, .form-size{
+    display: flex;
+    align-items: center;
     margin-bottom: 0.8rem;
+    gap: 1.5rem;
+}
+#form-color, #form-size{
+    font-size: 1.4rem;
     text-decoration: underline wavy;
+}
+#form-color__color-producto, #form-size__size-producto{
+    font-size: 1.2rem;
 }
 .radio{
     margin-right: 1rem;
@@ -242,11 +252,23 @@ main{
         font-size: 1.95rem;
     }
     #form-price{
-        font-size: 1.7rem;
+        font-size: 1.9rem;
     }
-    #form-color, #form-talle{
-        font-size: 1.25rem;
+    #form-description{
+        font-size: 1.5rem;
+    }
+    .form-color, .form-size{
+        display: flex;
+        align-items: center;
         margin-bottom: 0.9rem;
+        gap: 1.5rem;
+    }
+    #form-color, #form-size{
+        font-size: 1.4rem;
+        text-decoration: underline wavy;
+    }
+    #form-color__color-producto, #form-size__size-producto{
+        font-size: 1.2rem;
     }
     .radio{
         margin-right: 1.1rem;
@@ -355,11 +377,23 @@ main{
         font-size: 2.05rem;
     }
     #form-price{
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
-    #form-color, #form-talle{
-        font-size: 1.35rem;
+    #form-description{
+        font-size: 1.5rem;
+    }
+    .form-color, .form-size{
+        display: flex;
+        align-items: center;
         margin-bottom: 1rem;
+        gap: 1.5rem;
+    }
+    #form-color, #form-size{
+        font-size: 1.4rem;
+        text-decoration: underline wavy;
+    }
+    #form-color__color-producto, #form-size__size-producto{
+        font-size: 1.2rem;
     }
     .radio{
         margin-right: 1.2rem;

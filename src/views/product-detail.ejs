@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FH - Detalle de producto</title>
+    <link rel="shortcut icon" href="/img/logo/FashionHub-logo.png" type="image/png" />
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/norm-header-footer.css">
     <link rel="stylesheet" href="/css/product-detail.css">
@@ -48,22 +49,24 @@
                     <button id="button-heart"><i class="far fa-heart"></i></button>
                 </div>
                 <div>
-                    <p id="form-price"><%= product.price %></p>
+                    <p id="form-price">$ <%= product.price %></p>
                 </div>
                 <div>
                     <p id="form-description"><%= product.description %></p>
                 </div>
-                <div class="form-radio">
+                <div class="form-color">
                     <label id="form-color">Color:</label>
-                    <label class="radio"><input type="radio" name="color" value="rojo"> Rojo</label>
+                    <p id="form-color__color-producto"><%= product.color %></p>
+                     <!--<label class="radio"><input type="radio" name="color" value="rojo"> Rojo</label>
                     <label class="radio"><input type="radio" name="color" value="amarillo"> Amarillo</label>
-                    <label class="radio"><input type="radio" name="color" value="rosa"> Rosa</label>
+                    <label class="radio"><input type="radio" name="color" value="rosa"> Rosa</label>-->
                 </div>
-                <div class="form-radio">
-                    <label id="form-talle">Talle:</label>
-                    <label class="radio"><input type="radio" name="size" value="small"> Small</label>
+                <div class="form-size">
+                    <label id="form-size">Talle:</label>
+                    <p id="form-size__size-producto"><%= product.size %></p>
+                    <!--<label class="radio"><input type="radio" name="size" value="small"> Small</label>
                     <label class="radio"><input type="radio" name="size" value="medium"> Medium</label>
-                    <label class="radio"><input type="radio" name="size" value="large"> Large</label>
+                    <label class="radio"><input type="radio" name="size" value="large"> Large</label>-->
                 </div>
                 <div id="button-submit" >
                     <button type="submit" value="add-cart">Añadir al carrito</button>
@@ -80,7 +83,7 @@
                     <div class="redes">
                         <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://x.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
                         <a href="https://ar.pinterest.com/" target="_blank"><i class="fab fa-pinterest-square"></i></a>
                         <a href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
