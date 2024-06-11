@@ -790,16 +790,5 @@
         "description": "olis",
         "image": "vestido-thomy.webp",
         "category": "Vestido"
-    },
-    {
-        "id": "8bc996b8-5fca-49a0-8bbc-542e74f01595",
-        "name": "producto prueba",
-        "price": 766,
-        "discount": 1,
-        "color": "Amarillo",
-        "talle": "Extra large",
-        "description": "asodja",
-        "image": "IMG_1714074770812_WhatsApp Image 2024-02-29 at 19.24.59.jpeg",
-        "category": "Pantalon"
     }
 ]
