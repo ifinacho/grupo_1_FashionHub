@@ -30,7 +30,28 @@ const controller = {
         res.render('edit-product', {product});*/
     },
     editPut: (req, res)=>{
-        console.log(req.params.id)
+        db.Product.update({
+            name: req.body.name,
+            image: req.file.filename,
+            description: req.body.description,
+            price: Number(req.body.price),
+            discount: Number(req.body.discount),
+            category: req.body.category,
+            color: req.body.color,
+            size: req.body.size
+
+        },{
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(()=>{
+            res.redirect('/Coleccion')
+        })
+        .catch(error => {
+            console.error(error);
+        });
+        /*console.log(req.params.id)
         const idFound = req.params.id
 		products.forEach(product => {
 			if(product.id == idFound){
@@ -46,7 +67,7 @@ const controller = {
         })        
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, 4))
 
-        res.redirect('/Coleccion')
+        res.redirect('/Coleccion')*/
     },
     delete: (req, res)=>{
         const idDelete = req.params.id
