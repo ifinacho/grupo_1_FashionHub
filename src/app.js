@@ -11,6 +11,8 @@ const rutaHome = require("./routes/homeRoute.js");
 const rutaProducts = require("./routes/product-detailRoute.js");
 const rutaCreate = require("./routes/CreateRoute.js");
 
+const db = require("../src/database/models");
+
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -33,14 +35,13 @@ app.use("/", rutaHome);
 app.use("/product-detail", rutaProducts);
 app.use("/shopping-cart", rutaShoppingCart);
 app.use("/user", rutaUser);
-
 app.use((req, res, next) => {
     res.status(404).render("404error");
 })
 
 
 const PORT = process.env.PORT || 3000;
-
+db.sequelize.sync();
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto: http://localhost:${PORT}`);
 });

@@ -88,5 +88,14 @@
         "birthdate": "19999-08-03",
         "email": "admin@pass.com",
         "fotoPerfil": "IMG_1715228689470_photo_5031072627397079085_y.jpg"
+    },
+    {
+        "id": "fcb9fcea-7623-4a90-a81e-be3bed1c9d13",
+        "name": "inq",
+        "password": "$2a$10$YjG.jnmqImRLmXFqm0IPq.E8AEIxVc.gxgfjsqPgL2OB0IQbIxT3G",
+        "dni": "41042309",
+        "birthdate": "2024-05-28",
+        "email": "testadmin@gmail.com",
+        "fotoPerfil": "IMG_1718216406910_ropa-termica-mujer-invierno-elle-1668428908.jpg"
     }
 ]
