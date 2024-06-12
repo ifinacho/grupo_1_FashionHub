@@ -13,17 +13,21 @@ const controller = {
     
     //details - muestra los detalles de todos los productos
     details : (req, res) => {
-        console.log(req.params.id)
+        db.Product.findByPk(req.params.id)
+        .then(product => {
+            res.render("product-detail", {product})
+        })
+        /*console.log(req.params.id)
         const idFound = req.params.id
         const product = products.find(product => product.id == idFound)
         console.log(product)
-        res.render("product-detail", {product});
+        res.render("product-detail", {product});*/
     },
 
     edit: (req,res)=>{
         db.Product.findByPk(req.params.id)
         .then(product => {
-            res.render('edit-product', {product})
+            res.render("edit-product", {product})
         })
         /*const idFound = req.params.id
         const product = products.find(product => product.id == idFound)
@@ -46,7 +50,7 @@ const controller = {
             }
         })
         .then(()=>{
-            res.redirect('/Coleccion')
+            res.redirect("/Coleccion")
         })
         .catch(error => {
             console.error(error);
@@ -70,12 +74,23 @@ const controller = {
         res.redirect('/Coleccion')*/
     },
     delete: (req, res)=>{
-        const idDelete = req.params.id
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(()=>{
+            res.redirect("/Coleccion")
+        })
+        .catch(error => {
+            console.error(error);
+        });
+        /*const idDelete = req.params.id
 		const productsDeleted = products.filter((product)=> product.id != idDelete)
 
         fs.writeFileSync(productsFilePath,JSON.stringify(productsDeleted, null, 4))
 
-		res.redirect('/Coleccion')
+		res.redirect('/Coleccion')*/
     }
 };
 module.exports = controller;
