@@ -17,6 +17,9 @@ const controller = {
         .then(product => {
             res.render("product-detail", {product})
         })
+        .catch(error => {
+            console.error(error);
+        });
         /*console.log(req.params.id)
         const idFound = req.params.id
         const product = products.find(product => product.id == idFound)
@@ -29,6 +32,9 @@ const controller = {
         .then(product => {
             res.render("edit-product", {product})
         })
+        .catch(error => {
+            console.error(error);
+        });
         /*const idFound = req.params.id
         const product = products.find(product => product.id == idFound)
         res.render('edit-product', {product});*/
