@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto')
-const db = require("../database/models/")
+const db = require("../database/models/");
+const { error } = require('console');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json')
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
 
@@ -16,7 +17,10 @@ const controller = {
         db.Product.findByPk(req.params.id)
         .then(product => {
             res.render("product-detail", {product})
-        })
+        }).catch( error =>{
+            console.error(error);
+        }
+        )
         /*console.log(req.params.id)
         const idFound = req.params.id
         const product = products.find(product => product.id == idFound)
