@@ -19,10 +19,10 @@
         <h1>Colección</h1>
         <!--<img src="/Banners/Banner-ofertas.jpg" alt="Banner-ofertas" class="banner">-->
         <article>
-            <% for(let i=0; i < TheProducts.length; i++){ %>
+            <% for(let i=0; i < products.length; i++){ %>
                 <div>
-                    <img src="/img/productos/<%= TheProducts[i].image ? TheProducts[i].image : 'default-image.png' %>" alt="<%= TheProducts[i].name %>" title="<%= TheProducts[i].name %>">
-                    <a href="/product-detail/<%= TheProducts[i].id %>">
+                    <img src="/img/productos/<%= products[i].image ? products[i].image : 'default-image.png' %>" alt="<%= products[i].name %>" title="<%= products[i].name %>">
+                    <a href="/product-detail/<%= products[i].id %>">
                         <button>
                             <p>Ver Más</p>
                         </button>

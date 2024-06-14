@@ -51,9 +51,10 @@ const controller = {
     },
 
     edit: (req,res)=>{
+        const colors = ["naranja", "blanco", "Rojo"]; // EN algun momento la conssulta a la base
         db.Product.findByPk(req.params.id)
         .then(product => {
-            res.render("edit-product", {product})
+            res.render("edit-product", {product, colors})
         })
         .catch(error => {
             console.error(error);
