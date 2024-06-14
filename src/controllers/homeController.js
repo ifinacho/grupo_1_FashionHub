@@ -24,13 +24,28 @@ const controller = {
 	},
 	search: (req, res) => {
 		const busqueda = req.query.keywords
-		const productoBuscado = products.filter((product)=> product.name.toLowerCase().includes(busqueda))
+		db.Product.findAll({
+			where:{
+				name: {[db.Sequelize.Op.like]: `%${busqueda}%`},
+				color: {[db.Sequelize.Op.like]: `%${busqueda}%`},
+				size: {[db.Sequelize.Op.like]: `%${busqueda}%`},
+				decription: {[db.Sequelize.Op.like]: `%${busqueda}%`},
+				category: {[db.Sequelize.Op.like]: `%${busqueda}%`}
+			}
+		})
+        .then(products => {
+            res.render("Coleccion", {products})
+        })
+		.catch(error => {
+            console.error(error);
+        });
+		/*const productoBuscado = products.filter((product)=> product.name.toLowerCase().includes(busqueda))
 		
 		res.render('results',{
 			productoBuscado,
 			busqueda,
-			products
-		})
+			productso
+		})*/
 	},
 };
 module.exports = controller;
