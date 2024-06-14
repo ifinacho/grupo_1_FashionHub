@@ -33,7 +33,7 @@ const controller = {
     },
     createPost: (req,res)=>{
         db.Product.create({
-            id: crypto.randomUUID(),
+            //id: crypto.randomUUID(),
             name: req.body.name,
             image: req.file.filename,
             description: req.body.description,
