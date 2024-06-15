@@ -56,16 +56,15 @@
                     </div>
                     <div class="form-group">
                         <h3>Color *</h3>
-                            <% for(let i=0; i < colors.length; i++){ %>
-                                <label for="<%= colors[i] %>">
-                                    <input id="<%= colors[i] %>" type="radio" name="colorx" value="<%= colors[i] %>"
-                                        <%if(product.color===colors[i]){%>
-                                    <%="checked"%>
-                                        <%}%>
-                                            >Color <%= colors[i] %>
-                                </label>
-                                <%}%>
-                        
+                        <% for(let i=0; i < colors.length; i++){ %>
+                            <label for="<%= colors[i] %>">
+                                <input id="<%= colors[i] %>" type="radio" name="colorx" value="<%= colors[i] %>"
+                                    <%if(product.color===colors[i]){%>
+                                <%="checked"%>
+                                    <%}%>
+                                        >Color <%= colors[i] %>
+                            </label>
+                            <%}%>
                     </div>
                     <div class="form-group">
                         <label for="size">Talle *</label><br>

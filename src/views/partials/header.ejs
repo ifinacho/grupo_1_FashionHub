@@ -7,12 +7,12 @@
                 <% if(locals.isLogged){ %>
                     <a class="header-profile" href="/user/profile"><i class="far fa-user"><span> <%= locals.userLogged.name %></span></i></a>
                     <a class="header-logout" href="/user/logout"><i class="far fa-user"><span> Salir</span></i></a>
+                    <a href="/create/create-product"><i class="fas fa-plus"></i></a>
                 <% }else{ %>
                     <a class="header-register" href="/user/register"><i class="far fa-user"><span> Registrarse</span></i></a>
                     <a class="header-login" href="/user/login"><i class="far fa-user"><span> Ingresar</span></i></a>
-                <% } %>
-                <a href="/shopping-cart"><i class="fas fa-shopping-cart"></i></a>
-                <a href="/create/create-product"><i class="fas fa-plus"></i></a>
+                <% } %> 
+                
             </div>
             <article class="header-div">
                 <form action="/results/search" method="GET" class="search-form">

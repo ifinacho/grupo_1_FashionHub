@@ -1,49 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FH - HOME</title>
     <link rel="shortcut icon" href="/img/logo/FashionHub-logo.png" type="image/png" />
-    <link rel="stylesheet" href="/css/normalize.css">    
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/norm-header-footer.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <%- include('./partials/header.ejs') %>
-    <main>
-        <img src="/img/Banners/Sale-Off-pink.jpg" alt="Banner-ofertas" class="banner">
-        <article>
-            <% for(let i=0; i < TheProducts.length && i < 8; i++){ %>
-                <div class="sectionBox-shadow2">
-                    <img src="/img/productos/<%= TheProducts[i].image ? TheProducts[i].image : 'default-image.png' %>" alt="<%= TheProducts[i].name %>" title="<%= TheProducts[i].name %>">
-                    <a href="/product-detail/<%= TheProducts[i].id %>">
-                        <button>
-                            <p>Ver Más</p>
-                        </button>
-                    </a>
-                </div>
-            <%}%>
-        </article>
-        <h1>TAMBIÉN TE PUEDE INTERESAR...</h1>
-        <section>
-            <% for(let i=0; i < TheProducts.length && i < 4; i++){%>
-                    <div class="sectionBox-shadow">
-                        <img src="/img/productos/<%= TheProducts[i].image %>" alt="<%= TheProducts[i].name %>" title="<%= TheProducts[i].name %>">
-                        <div>
-                            <h2><%= TheProducts[i].category%></h2>
-                            <p><%= TheProducts[i].description%></p>
+        <main>
+            <img src="/img/Banners/Sale-Off-pink.jpg" alt="Banner-ofertas" class="banner">
+            <article>
+                <% for(let i=0; i < TheProducts.length && i < 8; i++){ %>
+                    <div class="sectionBox-shadow2">
+                        <img src="/img/productos/<%= TheProducts[i].image ? TheProducts[i].image : 'default-image.png' %>"
+                            alt="<%= TheProducts[i].name %>" title="<%= TheProducts[i].name %>">
+                        <a href="/product-detail/<%= TheProducts[i].id %>">
+                            <h2>
+                                <%=TheProducts[i].name %>
+                            </h2>
                             <button>
-                                <h5>Ver Más</h5>
+                                <p>Ver Más</p>
                             </button>
-                        </div>
+                        </a>
                     </div>
-            <%}%>
-        </section>
-        <img src="/img/Anuncios/Anuncio1.jpg" alt="anuncios" class="anuncios">
-    </main>
-    <%- include('./partials/footer.ejs') %>
+                    <%}%>
+            </article>
+            <%- include('./partials/section-interest.ejs') %>
+                <img src="/img/Anuncios/Anuncio1.jpg" alt="anuncios" class="anuncios">
+        </main>
+        <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>
