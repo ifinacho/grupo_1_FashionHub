@@ -45,14 +45,14 @@ const controller = {
             return res.render("registro", { errors: { email: { msg: "Este email ya está registrado"}}, oldData: req.body })
         }
         let newUser = {
-            id: crypto.randomUUID(),
+            /*id: crypto.randomUUID(),*/
             name: req.body.name,
-            lastName: req.body.username,
+            lastName: req.body.lastName,
             password: bcryptjs.hashSync(req.body.password, 10),
             dni: req.body.dni,
             birthdate: req.body.birthdate,
             email: req.body.email,
-            fotoPerfil: req.file.filename
+            profilePhoto: req.file.filename
         }
         accounts.push(newUser)
         fs.writeFileSync(
