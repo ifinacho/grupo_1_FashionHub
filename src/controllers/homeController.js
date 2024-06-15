@@ -12,8 +12,7 @@ const controller = {
 		res.render("home", { TheProducts });
 	},
 	categories: (req, res) => {
-		console.log(req.params) // { category: "collection"}
-		const category = req.params.category // collection || accessories || footwear
+		const category = req.params.category // clothes || accessories || footwear
 		db.Product.findAll({
 			where: {
 				category: { [db.Sequelize.Op.eq]: category } 

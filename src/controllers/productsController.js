@@ -43,7 +43,7 @@ const controller = {
             color: req.body.color,
             size: req.body.size
 
-        }).then(newProduct => {
+        }).then(() => {
             res.redirect("/Coleccion");
         }).catch(error => {
             console.error(error);
