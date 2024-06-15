@@ -10,7 +10,7 @@ let validations = [
     body("name").notEmpty().withMessage("Por favor, ingresa un nombre"),
     body("lastName").notEmpty().withMessage("Por favor, ingresa un apellido"),
     body("dni").notEmpty().withMessage("Por favor, ingresa un DNI"),
-    body("fotoPerfil").custom((value, { req }) => {
+    body("profilePhoto").custom((value, { req }) => {
         let file = req.file
         if(!file){
             throw new Error("Tienes que subir una imagen");
@@ -38,7 +38,7 @@ let validations = [
 router.get("/login", guestMiddleware, userController.login);
 router.post("/login", userController.loginPost);
 router.get("/register", guestMiddleware, userController.register);
-router.post("/register", uploadFile.single("fotoPerfil"), validations, userController.registerPost);
+router.post("/register", uploadFile.single("profilePhoto"), validations, userController.registerPost);
 router.get("/profile", authMiddleware, userController.profile);
 router.get("/logout", userController.logout);
 
