@@ -44,7 +44,7 @@ const controller = {
             size: req.body.size
 
         }).then(() => {
-            res.redirect("/Coleccion");
+            res.redirect(`/${req.body.category}`);
         }).catch(error => {
             console.error(error);
         });
