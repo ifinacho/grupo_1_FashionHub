@@ -4,7 +4,6 @@
 
         <div class="header-flex ">
             <div class="header-div">
-                <i class="far fa-heart"></i>
                 <% if(locals.isLogged){ %>
                     <a class="header-profile" href="/user/profile"><i class="far fa-user"><span> <%= locals.userLogged.name %></span></i></a>
                     <a class="header-logout" href="/user/logout"><i class="far fa-user"><span> Salir</span></i></a>

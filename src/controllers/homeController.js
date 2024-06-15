@@ -11,7 +11,7 @@ const controller = {
 		const TheProducts = products.filter((product) => product.category === "Atuendo" || product.category === "Pantalon" || product.category === "Remera" || product.category === "Vestido" || product.category === "Calzado" || product.category === "Accesorio")
 		res.render("home", { TheProducts });
 	},
-	Colect: (req, res) => {
+	categories: (req, res) => {
 		console.log(req.params) // { category: "collection"}
 		const category = req.params.category // collection || accessories || footwear
 		db.Product.findAll({
@@ -20,7 +20,7 @@ const controller = {
 			}
 		})
 			.then(products => {
-				res.render("Coleccion", { products })
+				res.render("categories", { products })
 			})
 			.catch(error => {
 				console.error(error);
@@ -38,7 +38,7 @@ const controller = {
 			}
 		})
 			.then(products => {
-				res.render("Coleccion", { products })
+				res.render("results", { products, busqueda })
 			})
 			.catch(error => {
 				console.error(error);

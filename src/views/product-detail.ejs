@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,183 +12,96 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <%- include('./partials/header.ejs') %>
-    <main>
-        <section class="section-articles">
-            <article class="section-articles__article" id="section-articles-1">
-                <div class="section-articles__article-div">
-                    <img src="/img/productos/<%= product.image ? product.image : 'default-image.png' %>" 
-                    alt="<%= product.name %>" 
-                    title="<%= product.name %>">
+        <main>
+            <section class="section-articles">
+                <article class="section-articles__article" id="section-articles-1">
+                    <div class="section-articles__article-div">
+                        <img src="/img/productos/<%= product.image ? product.image : 'default-image.png' %>"
+                            alt="<%= product.name %>" title="<%= product.name %>">
+                    </div>
+                </article>
+                <article class="section-articles__article" id="section-articles-2">
+                    <div class="section-articles__article-div">
+                        <img src="/img/productos/<%= product.image %>" alt="<%= product.name %>"
+                            title="<%= product.name %>">
+                    </div>
+                </article>
+                <article class="section-articles__article" id="section-articles-3">
+                    <div class="section-articles__article-div">
+                        <img src="/img/productos/<%= product.image %>" alt="<%= product.name %>"
+                            title="<%= product.name %>">
+                    </div>
+                </article>
+            </section>
+            <section class="section-product">
+                <div class="section-product__div">
+                    <img src="/img/productos/<%= product.image %>" alt="<%= product.name %>"
+                        title="<%= product.name %>">
                 </div>
-            </article>
-            <article class="section-articles__article" id="section-articles-2">
-                <div class="section-articles__article-div">
-                    <img src="/img/productos/<%= product.image %>" 
-                    alt="<%= product.name %>" 
-                    title="<%= product.name %>">
-                </div>
-            </article>
-            <article class="section-articles__article" id="section-articles-3">
-                <div class="section-articles__article-div">
-                    <img src="/img/productos/<%= product.image %>" 
-                    alt="<%= product.name %>" 
-                    title="<%= product.name %>">
-                </div>
-            </article>
-        </section>
-        <section class="section-product">
-            <div class="section-product__div">
-                <img src="/img/productos/<%= product.image %>" alt="<%= product.name %>" title="<%= product.name %>">
-            </div>
-        </section>
-        <section class="section-form">
-            <form id="form" action="/shopping-cart" method="POST">
-                <div id="form-title">
-                    <h1><%= product.name %></h1>
-                    <button id="button-heart"><i class="far fa-heart"></i></button>
-                </div>
-                <div>
-                    <p id="form-price">$ <%= product.price %></p>
-                </div>
-                <div>
-                    <p id="form-description"><%= product.description %></p>
-                </div>
-                <div class="form-color">
-                    <label id="form-color">Color:</label>
-                    <p id="form-color__color-producto"><%= product.color %></p>
-                     <!--<label class="radio"><input type="radio" name="color" value="rojo"> Rojo</label>
+            </section>
+            <section class="section-form">
+                <form id="form" action="/shopping-cart" method="POST">
+                    <div id="form-title">
+                        <h1>
+                            <%= product.name %>
+                        </h1>
+                    </div>
+                    <div>
+                        <p id="form-price">$ <%= product.price %>
+                        </p>
+                    </div>
+                    <div>
+                        <p id="form-description">
+                            <%= product.description %>
+                        </p>
+                    </div>
+                    <div class="form-color">
+                        <label id="form-color">Color:</label>
+                        <p id="form-color__color-producto">
+                            <%= product.color %>
+                        </p>
+                        <!--<label class="radio"><input type="radio" name="color" value="rojo"> Rojo</label>
                     <label class="radio"><input type="radio" name="color" value="amarillo"> Amarillo</label>
                     <label class="radio"><input type="radio" name="color" value="rosa"> Rosa</label>-->
-                </div>
-                <div class="form-size">
-                    <label id="form-size">Talle:</label>
-                    <p id="form-size__size-producto"><%= product.size %></p>
-                    <!--<label class="radio"><input type="radio" name="size" value="small"> Small</label>
+                    </div>
+                    <div class="form-size">
+                        <label id="form-size">Talle:</label>
+                        <p id="form-size__size-producto">
+                            <%= product.size %>
+                        </p>
+                        <!--<label class="radio"><input type="radio" name="size" value="small"> Small</label>
                     <label class="radio"><input type="radio" name="size" value="medium"> Medium</label>
                     <label class="radio"><input type="radio" name="size" value="large"> Large</label>-->
-                </div>
-                <div id="button-submit" >
-                    <button type="submit" value="add-cart">Añadir al carrito</button>
-                </div>
-            </form>
-            <form id="form" action="/product-detail/<%= product.id %>?_method=DELETE" method="POST">
-                <div class="buttons-delete-edit">
-                    <!--<a id="button-add" href="/shopping-cart">Agregar al Carrito</a>-->
-                    <a id="button-edit" href="/product-detail/edit-product/<%= product.id %>">Editar Producto</a>
-                </div>
-                <button id="button-delete" type="submit" value="delete-product">Eliminar Producto</button>
-                <div class="form-div" id="form-compartir">
-                    <h3>Compartir</h3>
-                    <div class="redes">
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                        <a href="https://x.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                        <a href="https://ar.pinterest.com/" target="_blank"><i class="fab fa-pinterest-square"></i></a>
-                        <a href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
                     </div>
-                </div>
-            </form>
-
-        </section>
-        <section class="section-articles-2">
-            <article class="section-articles-2__article" id="section-articles-4">
-                <div class="section-articles-2__article-div">
-                    <img src="/img/productos/<%= product.image %>" 
-                    alt="<%= product.name %>" 
-                    title="<%= product.name %>">
-                </div>
-            </article>
-            <article class="section-articles-2__article" id="section-articles-5">
-                <div class="section-articles-2__article-div">
-                    <img src="/img/productos/<%= product.image %>" 
-                    alt="<%= product.name %>" 
-                    title="<%= product.name %>">
-                </div>
-            </article>
-            <article class="section-articles-2__article" id="section-articles-6">
-                <div class="section-articles-2__article-div">
-                    <img src="/img/productos/<%= product.image %>" 
-                    alt="<%= product.name %>" 
-                    title="<%= product.name %>">
-                </div>
-            </article>
-            <article class="section-articles-2__article" id="section-articles-7">
-                <div class="section-articles-2__article-div">
-                    <img src="/img/productos/<%= product.image %>" 
-                    alt="<%= product.name %>" 
-                    title="<%= product.name %>">
-                </div>
-            </article>
-        </section>
-        <section class="section-comments">
-            <div id="section-comments-title">
-                <h2>Comentarios</h2>
-                <div id="section-comments-punctuation">
-                    <p id="punctuation">3</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-            </div>
-            <article class="section-comments__article">
-                <div class="section-comments__punctuation">
-                    <i class="fas fa-circle"></i> 
-                    <p class="section-comments__name">Diana Chaves</p>
-                    <p class="punctuation">4</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p class="section-comments__comment">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae excepturi nobis adipisci, magni ad assumenda nulla voluptate id necessitatibus nesciunt vero similique fuga ducimus deleniti ullam? Cum?</p>
-            </article>
-            <article class="section-comments__article">
-                <div class="section-comments__punctuation">
-                    <i class="fas fa-circle"></i>
-                    <p class="section-comments__name">Nahuel Quispe</p>
-                    <p class="punctuation">3</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p class="section-comments__comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, fuga porro reiciendis eligendi magni hic eius, libero maxime quod ipsum quaerat rerum sequi asperiores quas repudiandae recusandae.</p>
-            </article>
-            <article class="section-comments__article">
-                <div class="section-comments__punctuation">
-                    <i class="fas fa-circle"></i>
-                    <p class="section-comments__name">Joel Vergara</p>
-                    <p class="punctuation">3</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p class="section-comments__comment">Lorem ipsum dolor sit amet elit. Magnam optio excepturi quasi voluptate reprehenderit eaque reiciendis, ipsam quae suscipit nemo modi corporis amet porro consequuntur quaerat deserunt, sint velit!</p>
-            </article>
-            <article class="section-comments__article">
-                <div class="section-comments__punctuation">
-                    <i class="fas fa-circle"></i>
-                    <p class="section-comments__name">Victor Pereira</p>
-                    <p class="punctuation">2</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p class="section-comments__comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, repellat. Repellat dolore dolorum ratione perspiciatis, odit tempora accusantium pariatur debitis consequatur numquam velit! Voluptate.</p>
-            </article>
-        </section>
-    </main>
-    <%- include('./partials/footer.ejs') %>
+                    <div id="button-submit">
+                        <button type="submit" value="add-cart">Añadir al carrito</button>
+                    </div>
+                </form>
+                <form id="form" action="/product-detail/<%= product.id %>?_method=DELETE" method="POST">
+                    <div class="buttons-delete-edit">
+                        <!--<a id="button-add" href="/shopping-cart">Agregar al Carrito</a>-->
+                        <a id="button-edit" href="/product-detail/edit-product/<%= product.id %>">Editar Producto</a>
+                    </div>
+                    <button id="button-delete" type="submit" value="delete-product">Eliminar Producto</button>
+                    <div class="form-div" id="form-compartir">
+                        <h3>Compartir</h3>
+                        <div class="redes">
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://x.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                            <a href="https://ar.pinterest.com/" target="_blank"><i
+                                    class="fab fa-pinterest-square"></i></a>
+                            <a href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </form>
+        </main>
+        <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>
