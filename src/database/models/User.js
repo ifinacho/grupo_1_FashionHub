@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) =>{
                 type: DataTypes.STRING
             },
             dni: {
-                type: DataTypes.STRING
+                type: DataTypes.INTEGER
             },
             profilePhoto: {
                 type: DataTypes.STRING
             },
             birthdate: {
-                type: DataTypes.STRING
+                type: DataTypes.DATE
             },
             email: {
                 type: DataTypes.STRING
@@ -30,11 +30,11 @@ module.exports = (sequelize, DataTypes) =>{
             },
             range: {
                 type: DataTypes.STRING
-            },
+            }
         },
         {
             timestamps: false
         }
-    )
+    );
     return User;
 }

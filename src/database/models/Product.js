@@ -22,19 +22,56 @@ module.exports = (sequelize, DataTypes) => {
             discount: {
                 type: DataTypes.DECIMAL
             },
-            category: {
-                type: DataTypes.STRING
+            categoryId: {
+                type: DataTypes.INTEGER,
+                references: {
+                    model: "Category",
+                    key: "id"
+                }
             },
-            color: {
-                type: DataTypes.STRING
+            colorId: {
+                type: DataTypes.INTEGER,
+                references: {
+                    model: "Color",
+                    key: "id"
+                }
             },
-            size: {
-                type: DataTypes.STRING
+            sizeId: {
+                type: DataTypes.INTEGER,
+                references: {
+                    model: "Size",
+                    key: "id"
+                }
             },
-        },
-        {
-            timestamps: false
-        }
+            userId: {
+                type: DataTypes.INTEGER,
+                references: {
+                    model: "User",
+                    key: "id"
+                }
+            }
+
+        }, {
+        timestamps: false
+    }
     );
+    Product.associate = function (models) {
+        Product.belongsTo(models.Product, {
+            as: "users",
+            foreignKey: 'productId'
+        });
+        Product.belongsTo(models.Category, {
+            as: "categories",
+            foreignKey: "categoryId"
+        });
+        Product.belongsTo(models.Color, {
+            as: "colors",
+            foreignKey: "colorId"
+        });
+        Product.belongsTo(models.Size, {
+            as: "sizes",
+            foreignKey: "sizeId"
+        });
+    };
     return Product;
-}
+};
