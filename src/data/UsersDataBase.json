@@ -3,94 +3,50 @@
         "id": 1,
         "name": "Diana",
         "lastName": "Banegas",
-        "email": "diana.banegas@gmail.com",
         "password": "abc123",
+        "dni": "45987635",
+        "birthdate": "2000-12-01",
+        "email": "diana.banegas@gmail.com",
         "profilePhoto": "default-user.webp"
     },
     {
         "id": 2,
         "name": "Nahuel",
         "lastName": "Quispe",
-        "email": "nahuel.quispe@gmail.com",
         "password": "def456",
+        "dni": "40958236",
+        "birthdate": "1995-08-10",
+        "email": "nahuel.quispe@gmail.com",
         "profilePhoto": "default-user.webp"
     },
     {
         "id": 3,
         "name": "Ricardo",
         "lastName": "Vergara",
-        "email": "ricardo.vergara@gmail.com",
         "password": "ghi789",
+        "dni": "42865714",
+        "birthdate": "1998-06-02",
+        "email": "ricardo.vergara@gmail.com",
         "profilePhoto": "default-user.webp"
     },
     {
         "id": 4,
         "name": "Victor",
         "lastName": "Pereira",
-        "email": "victor.pereira@gmail.com",
         "password": "jkl321",
+        "dni": "35896214",
+        "birthdate": "1993-04-15",
+        "email": "victor.pereira@gmail.com",
         "profilePhoto": "default-user.webp"
     },
     {
         "id": 5,
         "name": "Ignacio",
         "lastName": "Ibañez",
-        "email": "ignacio.ibañez@gmail.com",
         "password": "mno654",
+        "dni": "38654156",
+        "birthdate": "1995-05-05",
+        "email": "ignacio.ibañez@gmail.com",
         "profilePhoto": "default-user.webp"
-    },
-    {
-        "id": "e251edc9-95ed-4664-92af-e74cfb3ba5f0",
-        "name": "estudiante",
-        "password": "$2a$10$I3OpxBXrcK4v/mWPEaSGPu15GbdcHvh8WCh0HS7k9R4dGAftLW6PS",
-        "dni": "0000000",
-        "birthdate": "1990-03-23",
-        "email": "correo@gmal.com",
-        "profilePhoto": "IMG_1714047360765_GBL9XBkXYAAxV0G.jpg"
-    },
-    {
-        "id": "fdeb8970-2c5e-40de-a7f6-be5f6fc0282a",
-        "name": "inti",
-        "password": "$2a$10$uI7huO3c8qAQr57FN3kyE.kymgSNMhxZ.mYxIx3eEcYOjtTwKpofW",
-        "dni": "123423",
-        "birthdate": "2024-04-08",
-        "email": "email@yahoo.com",
-        "profilePhoto": "IMG_1714053993808_photo_5031072627397079085_y.jpg"
-    },
-    {
-        "id": "75f742b9-2332-426b-bf82-839a248f3639",
-        "name": "inti ",
-        "password": "$2a$10$BsvHELvojGOAj4XqQUjlmO4eMMkUxv3T8OxVtZi4hwKaejogk98aS",
-        "dni": "12345232",
-        "birthdate": "2024-04-01",
-        "email": "user@correo.com",
-        "profilePhoto": "IMG_1714054188816_Escudo-para-ninos.jpg"
-    },
-    {
-        "id": "7d648c45-2938-491e-bbe6-10bf683e9539",
-        "name": "Leon Francisco",
-        "password": "$2a$10$xu4VpoOAyGelazlt9ls0iepOBhJ3.AVJbHkZlNCj2zN2QXDcthWDa",
-        "dni": "59621632",
-        "birthdate": "2022-10-04",
-        "email": "leon@gmail.com",
-        "profilePhoto": "IMG_1714354479263_spookyswap_logo.png"
-    },
-    {
-        "id": "9864349d-bff4-4295-859a-038e2d92d3ac",
-        "name": "adminpass",
-        "password": "$2a$10$gRWVOrraCh931H5mmq4R9uged2GSsTDiBEyNQr1YKjqxMgsRaX7PK",
-        "dni": "4100000",
-        "birthdate": "19999-08-03",
-        "email": "admin@pass.com",
-        "profilePhoto": "IMG_1715228689470_photo_5031072627397079085_y.jpg"
-    },
-    {
-        "id": "fcb9fcea-7623-4a90-a81e-be3bed1c9d13",
-        "name": "inq",
-        "password": "$2a$10$YjG.jnmqImRLmXFqm0IPq.E8AEIxVc.gxgfjsqPgL2OB0IQbIxT3G",
-        "dni": "41042309",
-        "birthdate": "2024-05-28",
-        "email": "testadmin@gmail.com",
-        "profilePhoto": "IMG_1718216406910_ropa-termica-mujer-invierno-elle-1668428908.jpg"
     }
 ]

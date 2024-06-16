@@ -12,7 +12,7 @@ const controller = {
 		res.render("home", { TheProducts });
 	},
 	categories: (req, res) => {
-		const category = req.params.category // clothes || accessories || footwear
+		const category = req.params.category // Indumentaria - Accesorio - Calzado
 		db.Product.findAll({
 			where: {
 				category: { [db.Sequelize.Op.eq]: category } 
