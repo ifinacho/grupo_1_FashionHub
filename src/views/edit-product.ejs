@@ -46,19 +46,16 @@
                     <div class="form-group">
                         <label for="category">Categoria *</label>
                         <select name="category" id="category">
-                            <option value="Pantalon">Pantalon</option>
-                            <option value="Remera">Remera</option>
-                            <option value="Atuendo">Atuendo</option>
-                            <option value="Vestido">Vestido</option>
                             <option value="Accesorio">Accesorio</option>
                             <option value="Calzado">Calzado</option>
+                            <option value="Indumentaria">Indumentaria</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <h3>Color *</h3>
                         <% for(let i=0; i < colors.length; i++){ %>
                             <label for="<%= colors[i] %>">
-                                <input id="<%= colors[i] %>" type="radio" name="colorx" value="<%= colors[i] %>"
+                                <input id="<%= colors[i] %>" type="radio" name="color" value="<%= colors[i] %>"
                                     <%if(product.color===colors[i]){%>
                                 <%="checked"%>
                                     <%}%>
@@ -68,7 +65,9 @@
                     </div>
                     <div class="form-group">
                         <label for="size">Talle *</label><br>
-                        <label for="size"><input type="radio" name="size" value="Extra extra large">""</label>
+                        <label for="size"><input type="radio" name="size" value="Small">Small</label>
+                        <label for="size"><input type="radio" name="size" value="Medium">Medium</label>
+                        <label for="size"><input type="radio" name="size" value="Large">Large</label>
                     </div>
                     <div class="form-group">
                         <button type="submit">Confirmar</button>
