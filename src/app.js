@@ -39,8 +39,21 @@ app.use((req, res, next) => {
 
 
 const PORT = process.env.PORT || 3000;
-db.sequelize.sync();
+/*
+db.Category.sync()
+    .then(() => db.Color.sync())
+    .then(() => db.Size.sync())
+    .then(() => db.User.sync())
+    .then(() => db.Product.sync())
+/*
+function generateSQLScript(){
+    const queries = db.sequelize.getQueryInterface().showCreateQueriesForTables();
+    for (const table in queries){
+        console.log(queries[table]);
+    }
+}
 
+generateSQLScript()*/
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto: http://localhost:${PORT}`);
 });

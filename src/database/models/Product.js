@@ -56,22 +56,15 @@ module.exports = (sequelize, DataTypes) => {
     }
     );
     Product.associate = function (models) {
-        Product.belongsTo(models.Product, {
-            as: "users",
-            foreignKey: 'productId'
-        });
-        Product.belongsTo(models.Category, {
-            as: "categories",
-            foreignKey: "categoryId"
-        });
-        Product.belongsTo(models.Color, {
-            as: "colors",
-            foreignKey: "colorId"
-        });
-        Product.belongsTo(models.Size, {
-            as: "sizes",
-            foreignKey: "sizeId"
-        });
+        Product.belongsTo(sequelize.models.Category, { foreignKey: 'categoryId', onDelete: 'CASCADE', onUpdate: 'CASCADE' });
+        Product.belongsTo(sequelize.models.Color, { foreignKey: 'colorId', onDelete: 'CASCADE', onUpdate: 'CASCADE' });
+        Product.belongsTo(sequelize.models.Size, { foreignKey: 'sizeId', onDelete: 'NO ACTION', onUpdate: 'CASCADE' });
+        Product.belongsTo(sequelize.models.User, { foreignKey: 'userId', onDelete: 'NO ACTION', onUpdate: 'CASCADE' });
+
+        sequelize.models.Category.hasMany(Product, { foreignKey: 'categoryId' });
+        sequelize.models.Color.hasMany(Product, { foreignKey: 'colorId' });
+        sequelize.models.Size.hasMany(Product, { foreignKey: 'sizeId' });
+        sequelize.models.User.hasMany(Product, { foreignKey: 'userId' });
     };
     return Product;
 };

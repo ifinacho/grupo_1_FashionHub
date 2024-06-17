@@ -48,5 +48,14 @@
         "birthdate": "1995-05-05",
         "email": "ignacio.ibañez@gmail.com",
         "profilePhoto": "default-user.webp"
+    },
+    {
+        "name": "inti",
+        "lastName": "nahuel",
+        "password": "$2a$10$TUXl9kzk7gvtN2hQ6JHhfuJ9z3DKrDBkCqywwZrb9vUIf.4F7AI8K",
+        "dni": "12349",
+        "birthdate": "2002-02-02",
+        "email": "inti@gmail.com",
+        "profilePhoto": "IMG_1718580349274_WhatsApp Image 2024-06-12 at 18.57.05.jpeg"
     }
 ]
