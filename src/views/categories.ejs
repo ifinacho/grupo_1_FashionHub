@@ -19,16 +19,16 @@
         <h1>Colección</h1>
         <!--<img src="/Banners/Banner-ofertas.jpg" alt="Banner-ofertas" class="banner">-->
         <article>
-            <% for(let i=0; i < products.length; i++){ %>
+            <% products.forEach(product => {%>
                 <div>
-                    <img src="/img/productos/<%= products[i].image ? products[i].image : 'default-image.png' %>" alt="<%= products[i].name %>" title="<%= products[i].name %>">
-                    <a href="/product-detail/<%= products[i].id %>">
+                    <img src="/img/productos/<%= product.image ? product.image : 'default-image.png' %>" alt="<%= product.name %>" title="<%= product.name %>">
+                    <a href="/product-detail/<%= product.id %>">
                         <button>
                             <p>Ver Más</p>
                         </button>
                     </a>
                 </div>
-            <%}%>
+            <%}) %>
         </article>
         <img src="/img/Anuncios/Anuncio1.jpg" alt="anuncios" class="anuncios">
     </main>

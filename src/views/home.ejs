@@ -18,13 +18,13 @@
         <main>
             <img src="/img/Banners/Sale-Off-pink.jpg" alt="Banner-ofertas" class="banner">
             <article>
-                <% for(let i=0; i < TheProducts.length && i < 8; i++){ %>
+                <% for(let i=0; i < products.length && i < 8; i++){ %>
                     <div class="sectionBox-shadow2">
-                        <img src="/img/productos/<%= TheProducts[i].image ? TheProducts[i].image : 'default-image.png' %>"
-                            alt="<%= TheProducts[i].name %>" title="<%= TheProducts[i].name %>">
-                        <a href="/product-detail/<%= TheProducts[i].id %>">
+                        <img src="/img/productos/<%= products[i].image ? products[i].image : 'default-image.png' %>"
+                            alt="<%= products[i].name %>" title="<%= products[i].name %>">
+                        <a href="/product-detail/<%= products[i].id %>">
                             <h2>
-                                <%=TheProducts[i].name %>
+                                <%=products[i].name %>
                             </h2>
                             <button>
                                 <p>Ver Más</p>

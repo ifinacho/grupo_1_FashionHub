@@ -1,21 +1,31 @@
-const fs = require('fs');
-const path = require('path');
 const db = require("../database/models/")
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 //const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
 	index: (req, res) => {
-		const TheProducts = products.filter((product) => product.category === "Atuendo" || product.category === "Pantalon" || product.category === "Remera" || product.category === "Vestido" || product.category === "Calzado" || product.category === "Accesorio")
-		res.render("home", { TheProducts });
+		const products = db.Product.findAll();
+		res.render("home", { products });
 	},
-	categories: (req, res) => {
-		const category = req.params.category // Indumentaria - Accesorio - Calzado
-		db.Product.findAll({
+	categories: async(req, res) => {
+		const categoryId = req.params.category;
+		try {
+			const products = await db.Product.findAll({
+				where: { categoryId},
+				include: [{
+					model: db.Category
+				}]
+			});
+			const productsByCategory = products.filter(product => product.category.id == categoryId);
+			res.render("categories", { products: productsByCategory});
+		} catch (error) {
+			console.log(error);
+			res.status(500).send("error al obtener productos")
+		}
+		/*db.Product.findAll({
 			where: {
-				category: { [db.Sequelize.Op.eq]: category } 
+				categoryId: { [db.Sequelize.Op.eq]: categoryId },
+				include: [{model: db.Category, as: "category"}]
 			}
 		})
 			.then(products => {
@@ -23,17 +33,16 @@ const controller = {
 			})
 			.catch(error => {
 				console.error(error);
-			});
-		/*const TheProducts = products.filter((product)=> product.category === "Atuendo" || product.category === "Pantalon" || product.category === "Remera" || product.category === "Vestido" || product.category === "Calzado" || product.category === "Accesorio")
-		res.render('Coleccion',{TheProducts})*/
+			});*/
 	},
 	search: (req, res) => {
 		const busqueda = req.query.keywords
 		db.Product.findAll({
 			where: {
-				[db.Sequelize.Op.or]: [{ name: { [db.Sequelize.Op.like]: `%${busqueda}%` } },
-				{ category: { [db.Sequelize.Op.like]: `%${busqueda}%` } },
-				{ description: { [db.Sequelize.Op.like]: `%${busqueda}%` } }]
+				[db.Sequelize.Op.or]: [
+					{ name: { [db.Sequelize.Op.like]: `%${busqueda}%` } },
+					{ categoryId: { [db.Sequelize.Op.like]: `%${busqueda}%` } },
+					{ description: { [db.Sequelize.Op.like]: `%${busqueda}%` } }]
 			}
 		})
 			.then(products => {
@@ -42,13 +51,6 @@ const controller = {
 			.catch(error => {
 				console.error(error);
 			});
-		/*const productoBuscado = products.filter((product)=> product.name.toLowerCase().includes(busqueda))
-		
-		res.render('results',{
-			productoBuscado,
-			busqueda,
-			productso
-		})*/
-	},
+	}
 };
 module.exports = controller;

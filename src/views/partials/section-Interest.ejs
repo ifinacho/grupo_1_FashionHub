@@ -1,15 +1,15 @@
 <h1>TAMBIÉN TE PUEDE INTERESAR...</h1>
 <section>
-    <% for(let i=0; i < TheProducts.length && i < 4; i++){%>
+    <% for(let i=0; i < products.length && i < 4; i++){%>
         <div class="sectionBox-shadow">
-            <img src="/img/productos/<%= TheProducts[i].image %>" alt="<%= TheProducts[i].name %>"
-                title="<%= TheProducts[i].name %>">
+            <img src="/img/productos/<%= products[i].image %>" alt="<%= products[i].name %>"
+                title="<%= products[i].name %>">
             <div>
                 <h2>
-                    <%= TheProducts[i].category%>
+                    <%= products[i].category%>
                 </h2>
                 <p>
-                    <%= TheProducts[i].description%>
+                    <%= products[i].description%>
                 </p>
                 <button>
                     <h5>Ver Más</h5>
