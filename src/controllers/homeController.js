@@ -7,17 +7,16 @@ const controller = {
 		const products = db.Product.findAll();
 		res.render("home", { products });
 	},
-	categories: async(req, res) => {
+	categories: async (req, res) => {
 		const categoryId = req.params.category;
 		try {
 			const products = await db.Product.findAll({
-				where: { categoryId},
+				where: { categoryId },
 				include: [{
 					model: db.Category
 				}]
 			});
-			const productsByCategory = products.filter(product => product.category.id == categoryId);
-			res.render("categories", { products: productsByCategory});
+			res.render("categories", { products });
 		} catch (error) {
 			console.log(error);
 			res.status(500).send("error al obtener productos")
