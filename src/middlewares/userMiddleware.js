@@ -1,22 +1,19 @@
-const fs = require('fs');
-const path = require('path');
-const accountsFilePath = path.join(__dirname, '../data/usersDataBase.json')
-const accounts = JSON.parse(fs.readFileSync(accountsFilePath, 'utf-8'))
-
-function userMiddleware(req, res, next) {
-    res.locals.isLogged = Boolean(req.session.userLogger);
+const db = require("../database/models/");
+async function userMiddleware(req, res, next) {
+    res.locals.isLogged = Boolean(req.session.userLogged);
     res.locals.userLogged = req.session.userLogged;
+    if (req.session.userLogged) {
+        try {
+            const user = await db.User.findByPk(req.session.userLogged.id); //busca al usuario en la db
+            if (!user) {
+                delete req.session.userLogged;
+                res.locals.isLogged = false;
+                res.locals.userLogged = null
+            }
+        } catch (error) {
+            console.error("Error al verificar usuario: ", error);
+        }
+    }
     next();
 }
-
 module.exports = userMiddleware;
-
-/*let emailCookie = req.session.userEmail;
-    let userFound = accounts.find(account => account.email === emailCookie)
-    if(userFound){
-        req.session.userLogged = userFound;
-    }
-    if(req.session.userLogged){
-        res.locals.isLogged = true;
-        res.locals.userLogged = req.session.userLogged;
-    }*/
