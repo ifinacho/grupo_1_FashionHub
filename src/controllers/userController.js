@@ -23,7 +23,9 @@ const controller = {
                 if (req.body.rememberMe) {
                     res.cookie("userEmail", user.email, { maxAge: 1000 * 60 * 2 })
                 }
-                return res.redirect("user/profile");
+                res.render("userProfile", {
+                    user: req.session.userLogged
+                });
             } else {
                 return res.render("login", { errors: { email: { msg: "Las credenciales son inválidas" } } });
             }
@@ -79,5 +81,4 @@ const controller = {
         }
     }
 };
-
 module.exports = controller;
