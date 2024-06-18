@@ -57,5 +57,14 @@
         "birthdate": "2002-02-02",
         "email": "inti@gmail.com",
         "profilePhoto": "IMG_1718580349274_WhatsApp Image 2024-06-12 at 18.57.05.jpeg"
+    },
+    {
+        "name": "pepe17",
+        "lastName": "pep",
+        "password": "$2a$10$ShSYjw/PONIUripGHGNDLu7UYOJOeKfhGDKUes9MYvebP6SRZ/TOq",
+        "dni": "123455555",
+        "birthdate": "2002-02-02",
+        "email": "pepe@gmail.com",
+        "profilePhoto": "IMG_1718662890858_GBL9XBkXYAAxV0G.jpg"
     }
 ]

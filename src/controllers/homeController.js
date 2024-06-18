@@ -3,8 +3,8 @@ const db = require("../database/models/")
 //const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
-	index: (req, res) => {
-		const products = db.Product.findAll();
+	index: async(req, res) => {
+		const products = await db.Product.findAll();
 		res.render("home", { products });
 	},
 	categories: async (req, res) => {

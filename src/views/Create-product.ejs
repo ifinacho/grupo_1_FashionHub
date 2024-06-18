@@ -1,73 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FH - CreateProduct</title>
     <link rel="shortcut icon" href="/img/logo/FashionHub-logo.png" type="image/png" />
-    <link rel="stylesheet" href="/css/normalize.css">    
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/norm-header-footer.css">
     <link rel="stylesheet" href="/css/Create-product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <%- include('./partials/header.ejs') %>
-    <main>
-        <div class="container">
-            <h1 class="container-title">Subir Producto</h1>
-            <p class="container-message">Ingrese los siguientes datos para subir el producto</p>
-            <form id="registration-form" action="/create/create-product" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="name">Nombre *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="image">Imagen *</label>
-                    <input type="file" id="image" name="image" required>
-                </div>
-                <div class="form-group">
-                    <label for="description">Descripción *</label>
-                    <!--<input type="text" id="description" name="description" rows="5" cols="35">-->
-                    <textarea name="description" id="description" class="form-input"  rows="4" cols="50" ></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="price">Precio *</label>
-                    <input type="number" id="price" name="price">
-                </div>
-                <div class="form-group">
-                    <label for="discount">Descuento *</label>
-                    <input type="number" id="discount" name="discount">
-                </div>
-                <div class="form-group">
-                    <label for="category">Categoria *</label>
-                    <select name="category" id="category">
-                        <option value="Accesorio">Accesorio</option>
-                        <option value="Calzado">Calzado</option>
-                        <option value="Indumentaria">Indumentaria</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="color">Color *</label><br>
-                    <label for="color"><input type="radio" name="color" value="Negro">Negro</label>
-                    <label for="color"><input type="radio" name="color" value="Blanco">Blanco</label>
-                    <label for="color"><input type="radio" name="color" value="Marron">Marron</label>
-                    <label for="color"><input type="radio" name="color" value="Rosa">Rosa</label>
-                    <label for="color"><input type="radio" name="color" value="Otro">Otro</label>
-                </div>
-                <div class="form-group">
-                    <label for="size">Talle *</label><br>
-                    <label for="size"><input type="radio" name="size" value="Small">Small</label>
-                    <label for="size"><input type="radio" name="size" value="Medium">Medium</label>
-                    <label for="size"><input type="radio" name="size" value="Large">Large</label>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Confirmar</button>
-                </div>
-            </form>
-        </div>
-    </main>
-    <%- include('./partials/footer.ejs') %>
-    <script src="script.js"></script>
+        <main>
+            <div class="container">
+                <h1 class="container-title">Subir Producto</h1>
+                <p class="container-message">Ingrese los siguientes datos para subir el producto</p>
+                <form id="registration-form" action="/create/create-product" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">Nombre *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Imagen *</label>
+                        <input type="file" id="image" name="image" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descripción *</label>
+                        <!--<input type="text" id="description" name="description" rows="5" cols="35">-->
+                        <textarea name="description" id="description" class="form-input" rows="4" cols="50"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Precio *</label>
+                        <input type="number" id="price" name="price">
+                    </div>
+                    <div class="form-group">
+                        <label for="discount">Descuento *</label>
+                        <input type="number" id="discount" name="discount">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Categoria *</label>
+                        <select name="category" id="category">
+                            <% listCategory.forEach(category=> {%>
+                                <option value="<%= category.id%>">
+                                    <%= category.name%>
+                                </option>
+                                <%}) %>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color *</label>
+                        <select name="color" id="color">
+                            <% listColor.forEach(color=> {%>
+                                <option value="<%= color.id%>">
+                                    <%= color.name%>
+                                </option>
+                                <%}) %>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="size">Talle *</label>
+                        <select name="size" id="size">
+                            <% listSize.forEach(size=> {%>
+                                <option value="<%= size.id%>">
+                                    <%= size.name%>
+                                </option>
+                                <%}) %>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <%- include('./partials/footer.ejs') %>
+            <script src="script.js"></script>
 </body>
+
 </html>

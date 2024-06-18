@@ -1,15 +1,12 @@
-const fs = require('fs');
-const path = require('path');
 const crypto = require('crypto')
 const db = require("../database/models/");
 const { error } = require('console');
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json')
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
 
 const controller = {
     // home - muestra todos los productos
-    index: (req, res) => {
-		res.render('home', {products});
+    index: async(req, res) => {
+        const products = await db.Product.findAll()
+            res.render('home', products);
 	},
     
     //details - muestra los detalles de todos los productos
@@ -28,40 +25,41 @@ const controller = {
         res.render("product-detail", {product});*/
     },
     
-    create: (req, res)=> {
-        res.render('create-product');
+    create: async(req, res)=> {
+        const listCategory = await db.Category.findAll();
+        const listColor = await db.Color.findAll();
+        const listSize = await db.Size.findAll();
+        res.render('create-product', {listCategory, listColor, listSize});
     },
-    createPost: (req,res)=>{
+    createPost: async(req,res)=>{
         db.Product.create({
-            /*id: crypto.randomUUID(),*/
             name: req.body.name,
             image: req.file.filename,
             description: req.body.description,
             price: Number(req.body.price),
             discount: Number(req.body.discount),
-            category: req.body.category,
-            color: req.body.color,
-            size: req.body.size
-
-        }).then(() => {
-            res.redirect(`/${req.body.category}`);
+            categoryId: req.body.category,
+            colorId: req.body.color,
+            sizeId: req.body.size
+            //userId buscar manera de obtenerlo
+        }).then((product) => {
+            res.redirect(`/product-detail/${product.id}`);
         }).catch(error => {
             console.error(error);
         });
     },
 
-    edit: (req,res)=>{
-        const colors = ["naranja", "blanco", "Rojo"]; // EN algun momento la conssulta a la base
+    edit: async(req,res)=>{
+        const listCategory = await db.Category.findAll();
+        const listColor = await db.Color.findAll();
+        const listSize = await db.Size.findAll();
         db.Product.findByPk(req.params.id)
         .then(product => {
-            res.render("edit-product", {product, colors})
+            res.render("edit-product", {product, listColor,listCategory,listSize})
         })
         .catch(error => {
             console.error(error);
         });
-        /*const idFound = req.params.id
-        const product = products.find(product => product.id == idFound)
-        res.render('edit-product', {product});*/
     },
     editPut: (req, res)=>{
         db.Product.update({
@@ -70,38 +68,20 @@ const controller = {
             description: req.body.description,
             price: Number(req.body.price),
             discount: Number(req.body.discount),
-            category: req.body.category,
-            color: req.body.color,
-            size: req.body.size
-
+            categoryId: req.body.category,
+            colorId: req.body.color,
+            sizeId: req.body.size
         },{
             where: {
                 id: req.params.id
             }
         })
-        .then(()=>{
-            res.redirect("/Coleccion")
+        .then((product)=>{
+            res.redirect(`/product-detail/${product.id}`);
         })
         .catch(error => {
             console.error(error);
         });
-        /*console.log(req.params.id)
-        const idFound = req.params.id
-		products.forEach(product => {
-			if(product.id == idFound){
-				product.name = req.body.name;
-				product.price = Number(req.body.price);
-				product.discount = Number(req.body.discount);
-                product.color = req.body.color;
-                product.size = req.body.size;
-				product.description = req.body.description;
-				product.image = req.file.filename;
-                product.category = req.body.category;
-			}            
-        })        
-        fs.writeFileSync(productsFilePath,JSON.stringify(products, null, 4))
-
-        res.redirect('/Coleccion')*/
     },
     delete: (req, res)=>{
         db.Product.destroy({
