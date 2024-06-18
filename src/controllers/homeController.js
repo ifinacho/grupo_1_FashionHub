@@ -1,38 +1,27 @@
 const db = require("../database/models/")
 
-//const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
 const controller = {
 	index: async(req, res) => {
 		const products = await db.Product.findAll();
 		res.render("home", { products });
 	},
 	categories: async (req, res) => {
-		const categoryId = req.params.category;
+		const categoryParams = req.params.category;
 		try {
+			const category = await db.Category.findOne({
+				where: {
+					name : categoryParams
+				}
+			})
 			const products = await db.Product.findAll({
-				where: { categoryId },
-				include: [{
-					model: db.Category
-				}]
+				where: { 
+					categoryId: category.id },
 			});
 			res.render("categories", { products });
 		} catch (error) {
 			console.log(error);
 			res.status(500).send("error al obtener productos")
 		}
-		/*db.Product.findAll({
-			where: {
-				categoryId: { [db.Sequelize.Op.eq]: categoryId },
-				include: [{model: db.Category, as: "category"}]
-			}
-		})
-			.then(products => {
-				res.render("categories", { products })
-			})
-			.catch(error => {
-				console.error(error);
-			});*/
 	},
 	search: (req, res) => {
 		const busqueda = req.query.keywords
