@@ -70,8 +70,8 @@ const controller = {
                 id: req.params.id
             }
         })
-        .then((product)=>{
-            res.redirect(`/product-detail/${product.id}`);
+        .then(()=>{
+            res.redirect(`/product-detail/${req.params.id}`);
         })
         .catch(error => {
             console.error(error);
@@ -84,7 +84,7 @@ const controller = {
             }
         })
         .then(()=>{
-            res.redirect("/Coleccion")
+            res.redirect("/")
         })
         .catch(error => {
             console.error(error);
