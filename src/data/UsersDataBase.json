@@ -66,5 +66,14 @@
         "birthdate": "2002-02-02",
         "email": "pepe@gmail.com",
         "profilePhoto": "IMG_1718662890858_GBL9XBkXYAAxV0G.jpg"
+    },
+    {
+        "name": "cardon",
+        "lastName": "puna",
+        "password": "$2a$10$Bwjc3fEmzN3F/JpSzoU1h.L0xkhgfTjs1Hmxw2oXkVOWkcmCbz5U2",
+        "dni": "345123123",
+        "birthdate": "2000-02-03",
+        "email": "cardon@gmail.com",
+        "profilePhoto": "IMG_1718726648185_unnamed.png"
     }
 ]

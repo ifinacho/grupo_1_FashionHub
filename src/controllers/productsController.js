@@ -3,12 +3,6 @@ const db = require("../database/models/");
 const { error } = require('console');
 
 const controller = {
-    // home - muestra todos los productos
-    index: async(req, res) => {
-        const products = await db.Product.findAll()
-            res.render('home', products);
-	},
-    
     //details - muestra los detalles de todos los productos
     details : (req, res) => {
         db.Product.findByPk(req.params.id)
@@ -95,12 +89,6 @@ const controller = {
         .catch(error => {
             console.error(error);
         });
-        /*const idDelete = req.params.id
-		const productsDeleted = products.filter((product)=> product.id != idDelete)
-
-        fs.writeFileSync(productsFilePath,JSON.stringify(productsDeleted, null, 4))
-
-		res.redirect('/Coleccion')*/
     }
 };
 module.exports = controller;

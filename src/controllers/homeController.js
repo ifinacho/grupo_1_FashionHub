@@ -17,7 +17,7 @@ const controller = {
 				where: { 
 					categoryId: category.id },
 			});
-			res.render("categories", { products });
+			res.render("categories", { products , categoryParams});
 		} catch (error) {
 			console.log(error);
 			res.status(500).send("error al obtener productos")
