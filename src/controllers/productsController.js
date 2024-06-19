@@ -4,19 +4,19 @@ const { error } = require('console');
 
 const controller = {
     //details - muestra los detalles de todos los productos
-    details : (req, res) => {
+    details : async (req, res) => {
+        const listColor = await db.Color.findAll();
+        const listSize = await db.Size.findAll();
+
         db.Product.findByPk(req.params.id)
         .then(product => {
+            product.color = listColor.find(c => c.id === product.colorId)?.name;
+            product.size = listSize.find(s => s.id === product.sizeId)?.name;
             res.render("product-detail", {product})
         })
         .catch(error => {
             console.error(error);
         });
-        /*console.log(req.params.id)
-        const idFound = req.params.id
-        const product = products.find(product => product.id == idFound)
-        console.log(product)
-        res.render("product-detail", {product});*/
     },
     
     create: async(req, res)=> {
@@ -25,7 +25,7 @@ const controller = {
         const listSize = await db.Size.findAll();
         res.render('create-product', {listCategory, listColor, listSize});
     },
-    createPost: async(req,res)=>{
+    createPost: (req,res)=>{
         db.Product.create({
             name: req.body.name,
             image: req.file.filename,
