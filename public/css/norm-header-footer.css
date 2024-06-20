@@ -65,14 +65,18 @@ header {
     border-radius: 0.5rem;
     position: sticky;
 }
-.img-logo{
-    width: 10rem;
-}
 .header-container{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     flex-wrap: nowrap;
+}
+#header-conteiner__anchor{
+    display: flex;
+    justify-content: center;
+}
+.img-logo{
+    width: 10rem;
 }
 .header-flex {
     display: flex;

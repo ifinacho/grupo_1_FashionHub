@@ -1,14 +1,12 @@
 /*------------------------------------º main-article º------------------------------------*/
-main article div button p{
-    color: #fff;
-}
-main {
+
+#main-home{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main article{
+main>article{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     width: 80vw;
@@ -43,6 +41,7 @@ main article{
     margin: 1rem;
 }
 #article-button__p{
+    color: #fff;
     padding: 0.25rem;
     font-size: 1.5rem;
 }
