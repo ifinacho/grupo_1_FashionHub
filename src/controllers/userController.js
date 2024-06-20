@@ -54,7 +54,7 @@ const controller = {
             }
             const newUser = {
                 name: req.body.name,
-                lastname: req.body.lastName,
+                lastName: req.body.lastName,
                 password: bcryptjs.hashSync(req.body.password, 10),
                 dni: req.body.dni,
                 birthdate: req.body.birthdate,

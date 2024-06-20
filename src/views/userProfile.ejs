@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="/img/logo/FashionHub-logo.png" type="image/png" />
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/norm-header-footer.css">
-    <link rel="stylesheet" href="/css/product-detail.css">
+    <link rel="stylesheet" href="/css/userProfile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Lobster&display=swap" rel="stylesheet">
 </head>
@@ -21,10 +21,7 @@
         </section>
         <section class="section-user__details">
             <div id="user-name">
-                <h2>¡Hola <%= user.name %>!</h2>
-            </div>
-            <div>
-                <p id="user-username"><%= user.lastName %></p>
+                <h2>¡Hola <%= user.name %> <%= user.lastName %>!</h2>
             </div>
             <div>
                 <p id="user-email"><%= user.email %></p>
