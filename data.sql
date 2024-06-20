@@ -1,0 +1,102 @@
+INSERT INTO `users` (`id`,`name`,`lastName`,`password`,`dni`,`birthdate`,`email`,`profilePhoto`)
+VALUES
+(1,'Diana','Banegas','abc123','45987635','2000-12-01','diana.banegas@gmail.com','default-user.webp'),
+(2,'Nahuel','Quispe','def456','40958236','1995-08-10','nahuel.quispe@gmail.com','default-user.webp'),
+(3,'Ricardo','Vergara','ghi789','42865714','1998-06-02','ricardo.vergara@gmail.com','default-user.webp'),
+(4,'Victor','Pereira','jkl321','35896214','1993-04-15','victor.pereira@gmail.com','default-user.webp'),
+(5,'Ignacio','Ibañez','mno654','38654156','1995-05-05','ignacio.ibañez@gmail.com','default-user.webp');
+
+INSERT INTO `sizes` (`id`,`name`)
+VALUES
+(1,'Small'),
+(2,'Medium'),
+(3,'Large');
+
+INSERT INTO `categories` (`id`,`name`)
+VALUES
+(1,'Indumentaria'),
+(2,'Accesorio'),
+(3,'Calzado');
+
+INSERT INTO `colors` (`id`,`name`)
+VALUES
+(1,'Negro'),
+(2,'Blanco'),
+(3,'Marron'),
+(4,'Rosa'),
+(5,'Otro');
+
+INSERT INTO `products` (`id`,`name`,`price`,`discount`,`userId`,`colorId`,`sizeId`,`description`,`image`,`categoryId`)
+VALUES
+(1,'Cartera crossbody Helen',1000,500,1,1,3,'Descripción del producto','accesorio-cartera-crossbody-helen.webp',2),
+(2,'Atuendo negro con remera Beautiful',5200,5000,1,5,2,'Descripción del producto','atuendo-beautiful.webp',1),
+(3,'Sandalias con cuña azul',2000,1000,1,5,3,'Descripción del producto','calzado-sandalias-cuña-azul.webp',3),
+(4,'Pantalon babucha de Thiara',2000,1000,1,5,3,'Descripción del producto','pantalon-babucha-thiara.webp',1),
+(5,'Remera blusa de Monica',1200,600,1,3,1,'Descripción del producto','remera-blusa-monica.webp',1),
+(6,'Vestido Amelia',3100,2000,1,3,2,'Descripción del producto','vestido-amelia.webp',1),
+(7,'Cartera tote Canva',1000,500,1,2,3,'Descripción del producto','accesorio-cartera-tote-canva.webp',2),
+(8,'Atuendo celeste con blusa Felisa',5600,4000,1,5,1,'Descripción del producto','atuendo-blusa-felisa.webp',1),
+(9,'Sandalias con cuña oro',2500,1000,1,5,3,'Descripción del producto','calzado-sandalias-cuña-oro.webp',3),
+(10,'Pantalon cargo Turci',2500,1000,1,2,3,'Descripción del producto','pantalon-cargo-turci.webp',1),
+(11,'Remera blusa Sales',1000,400,1,2,1,'Descripción del producto','remera-blusa-sales.webp',1),
+(12,'Vestido Brandi',2700,2000,1,5,1,'Descripción del producto','vestido-brandi.webp',1),
+(13,'Cartera Tote Rafia',1000,500,1,3,3,'Descripción del producto','accesorio-cartera-tote-rafia.webp',2),
+(14,'Atuendo violeta con blusa Little',5600,4000,1,5,1,'Descripción del producto','atuendo-blusa-little.webp',1),
+(15,'Sandalias con cuña de piel y pedreria',3200,2500,1,4,3,'Descripción del producto','calzado-sandalias-cuña-piel-pedreria.webp',3),
+(16,'Pantalon babucha de Finne',2000,1000,1,4,3,'Descripción del producto','pantalon-finne.webp',1),
+(17,'Remera blusa Smothie',1000,400,1,4,1,'Descripción del producto','remera-blusa-smothie.webp',1),
+(18,'Vestido calado Strew',5200,5000,1,2,2,'Descripción del producto','vestido-calado-strew.webp',1),
+(19,'Cinto Ariadna',1200,600,1,5,1,'Descripción del producto','accesorio-cinto-ariadna.webp',2),
+(20,'Atuendo marron con blusa Scout',5200,5000,1,3,2,'Descripción del producto','atuendo-blusa-scout.webp',1),
+(21,'Sandalias con cuña de piel y piedras',1000,850,1,4,2,'Descripción del producto','calzado-sandalias-cuña-piel-piedras.webp',3),
+(22,'Pantalon Franchesca',3200,2500,1,1,3,'Descripción del producto','pantalon-franchesca.webp',1),
+(23,'Remera blusa de Sofia',1200,600,1,4,1,'Descripción del producto','remera-blusa-sofia.webp',1),
+(24,'Vestido Heidi',1200,600,1,2,1,'Descripción del producto','vestido-heidi.webp',1),
+(25,'Cinto-Daphne',1000,400,1,1,1,'Descripción del producto','accesorio-cinto-daphne.webp',2),
+(26,'Atuendo negro con remera Energy',5200,5000,1,1,2,'Descripción del producto','atuendo-energy.webp',1),
+(27,'Tacon sandalias con cuentas',1000,850,1,3,2,'Descripción del producto','calzado-sandalias-tacon-cuentas.webp',3),
+(28,'Pantalon jean mom de Austin',2500,1000,1,5,3,'Descripción del producto','pantalon-jean-mom-austin.webp',1),
+(29,'Remera Fury',1000,400,1,5,1,'Descripción del producto','remera-fury.webp',1),
+(30,'Vestido Kala',1000,400,1,3,1,'Descripción del producto','vestido-kala.webp',1),
+(31,'Cinto Madness',1000,500,1,5,3,'Descripción del producto','accesorio-cinto-madness.webp',2),
+(32,'Atuendo verde Evolution con chaqueta',5200,5000,1,5,2,'Descripción del producto','atuendo-evolution.webp',1),
+(33,'Tacon sandalias negro',1000,850,1,1,2,'Descripción del producto','calzado-sandalias-tacon-negro.webp',3),
+(34,'Pantalon Leloir',3200,2500,1,2,3,'Descripción del producto','pantalon-leloir.webp',1),
+(35,'Remera Jazmin',1000,400,1,1,1,'Descripción del producto','remera-jazmin.webp',1),
+(36,'Vestido Quimey',3000,800,1,3,2,'Descripción del producto','vestido-quimey.webp',1),
+(37,'Cinto Payton',3000,800,1,5,2,'Descripción del producto','accesorio-cinto-payton.webp',2),
+(38,'Atuendo blanco con remera Heart',5200,5000,1,2,2,'Descripción del producto','atuendo-heart.webp',1),
+(39,'Tacon sandalias de piel',1000,850,1,1,2,'Descripción del producto','calzado-sandalias-tacon-piel.webp',3),
+(40,'Pantalon palazzo Arizhona',2000,1000,1,4,3,'Descripción del producto','pantalon-palazzo-arizhona.webp',1),
+(41,'Remera Monaco',3000,800,1,3,2,'Descripción del producto','remera-monaco.webp',1),
+(42,'Vestido Rifa azul',2700,2000,1,5,1,'Descripción del producto','vestido-rifa-azul.webp',1),
+(43,'Cinto Spears',1200,600,1,1,1,'Descripción del producto','accesorio-cinto-spears.webp',2),
+(44,'Atuendo blanco con remera Reina',5200,5000,1,2,2,'Descripción del producto','atuendo-reina.webp',1),
+(45,'Sandalias con tacon zueco y piel',5600,4000,1,3,1,'Descripción del producto','calzado-sandalias-tacon-zueco-piel.webp',3),
+(46,'Pantalon palazzo de Artemi',2500,1000,1,2,3,'Descripción del producto','pantalon-palazzo-artemi.webp',1),
+(47,'Remera New Gala',1000,400,1,1,1,'Descripción del producto','remera-new-gala.webp',1),
+(48,'Vestido Rifa beige',3100,2000,1,2,2,'Descripción del producto','vestido-rifa-beige.webp',1),
+(49,'Cinto trenzado Magda',1000,400,1,2,1,'Descripción del producto','accesorio-cinto-trenzado-magda.webp',2),
+(50,'Atuendo blanco con remeron Lets Rock',5200,5000,1,2,2,'Descripción del producto','atuendo-remeron-lets-rock.webp',1),
+(51,'Sandalias con tira de animal print',1500,900,1,5,1,'Descripción del producto','calzado-sandalias-tira-animal-print.webp',3),
+(52,'Pantalon palazzo de Arteo',1800,900,1,3,3,'Descripción del producto','pantalon-palazzo-arteo.webp',1),
+(53,'Remera remeron Eagle Rock',1000,400,1,1,1,'Descripción del producto','remera-remeron-eagle-rock.webp',1),
+(54,'Vestido Rifa negro',2700,2000,1,1,1,'Descripción del producto','vestido-rifa-negro.webp',1),
+(55,'Faja Mex',3000,800,1,2,2,'Descripción del producto','accesorio-faja-mex.webp',2),
+(56,'Atuendo negro con remera Ramones',5200,5000,1,1,2,'Descripción del producto','atuendo-remeron-ramones.webp',1),
+(57,'Zapatos de salon',1500,900,1,1,1,'Descripción del producto','calzado-zapato-salon.webp',3),
+(58,'Pantalon palazzo de Malha',2000,1000,1,2,3,'Descripción del producto','pantalon-palazzo-malha.webp',1),
+(59,'Remera Rock and Roll',3000,800,1,2,2,'Descripción del producto','remera-rock-and-roll.webp',1),
+(60,'Vestido Sunset',3100,2000,1,5,2,'Descripción del producto','vestido-sunset.webp',1),
+(61,'Faja Samy',5600,4000,1,2,1,'Descripción del producto','accesorio-faja-samy.webp',2),
+(62,'Atuendo negro con remeron Real Prince',5600,4000,1,1,1,'Descripción del producto','atuendo-remeron-real-prince.webp',1),
+(63,'Zapatos de salon destalonados',1500,900,1,4,1,'Descripción del producto','calzado-zapatos-salon-destalonados.webp',3),
+(64,'Pantalon sastrero de Vega',3200,2500,1,5,3,'Descripción del producto','pantalon-sastrero-Vega.webp',1),
+(65,'Remera Stamp',1000,400,1,4,1,'Descripción del producto','remera-stamp.webp',1),
+(66,'Vestido Taichu',3100,2000,1,2,2,'Descripción del producto','vestido-taichu.webp',1),
+(67,'Maxi pañuelo arabescos',5200,5000,1,5,2,'Descripción del producto','accesorio-maxi-pañuelo-arabescos.webp',2),
+(68,'Atuendo rosa con remera Rigth',5200,5000,1,4,2,'Descripción del producto','atuendo-rigth.webp',1),
+(69,'Tachuelas zuecos de piel',1500,900,1,4,1,'Descripción del producto','calzado-zuecos-piel-tachuelas.webp',3),
+(70,'Pantalon wide leg Petra',3200,2500,1,2,3,'Descripción del producto','pantalon-wide-leg-petra.webp',1),
+(71,'Remera Unicorn',1000,400,1,2,1,'Descripción del producto','remera-unicorn.webp',1),
+(72,'Vestido Thomy',2700,2000,1,3,1,'Descripción del producto','vestido-thomy.webp',1);
