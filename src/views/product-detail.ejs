@@ -43,7 +43,7 @@
                 </div>
             </section>
             <section class="section-form">
-                <form id="form" action="/shopping-cart" method="POST">
+                <form class="form" action="/shopping-cart" method="POST">
                     <div id="form-title">
                         <h1>
                             <%= product.name %>
@@ -71,7 +71,7 @@
                         </p>
                     </div>
                 </form>
-                <form id="form" action="/product-detail/<%= product.id %>?_method=DELETE" method="POST">
+                <form class="form" action="/product-detail/<%= product.id %>?_method=DELETE" method="POST">
 
                     <% if(locals.isLogged && locals.userLogged.id == product.userId){ %>
                         <div class="buttons-delete-edit">
@@ -79,22 +79,22 @@
                                 Producto</a>
                         </div>
                         <button id="button-delete" type="submit" value="delete-product">Eliminar Producto</button>
-                        <% } %>
-                            <div class="form-div" id="form-compartir">
-                                <h3>Compartir</h3>
-                                <div class="redes">
-                                    <a href="https://www.instagram.com/" target="_blank"><i
-                                            class="fab fa-instagram"></i></a>
-                                    <a href="https://www.facebook.com/" target="_blank"><i
-                                            class="fab fa-facebook-square"></i></a>
-                                    <a href="https://x.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                                    <a href="https://ar.pinterest.com/" target="_blank"><i
-                                            class="fab fa-pinterest-square"></i></a>
-                                    <a href="https://web.whatsapp.com/" target="_blank"><i
-                                            class="fab fa-whatsapp"></i></a>
-                                    <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
-                                </div>
+                    <% } %>
+                        <div class="form-div" id="form-compartir">
+                            <h3>Compartir</h3>
+                            <div class="redes">
+                                <a href="https://www.instagram.com/" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/" target="_blank"><i
+                                        class="fab fa-facebook-square"></i></a>
+                                <a href="https://x.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                                <a href="https://ar.pinterest.com/" target="_blank"><i
+                                        class="fab fa-pinterest-square"></i></a>
+                                <a href="https://web.whatsapp.com/" target="_blank"><i
+                                        class="fab fa-whatsapp"></i></a>
+                                <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
                             </div>
+                        </div>
                 </form>
             </section>
         </main>
