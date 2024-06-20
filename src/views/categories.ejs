@@ -16,7 +16,15 @@
 
     <main>
         <img src="/img/Banners/Sale-Off-pink.jpg" alt="Banner-ofertas" class="banner">
-        <h1><%= categoryParams%></h1>
+        
+        <% if(categoryParams == "Indumentaria") { %>
+            <h1>Ropa</h1>
+        <% }else if(categoryParams == "Accesorio") { %>
+            <h1>Accesorios</h1>
+        <% }else{ %>
+            <h1>Calzados</h1>
+        <% } %>
+        
         <!--<img src="/Banners/Banner-ofertas.jpg" alt="Banner-ofertas" class="banner">-->
         <article>
             <% products.forEach(product => {%>
