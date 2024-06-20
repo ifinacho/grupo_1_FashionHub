@@ -35,8 +35,7 @@ body {
     border: none;
     border-radius: 4px;
 }
-input[type="text"],
-input[type="image"] {
+.input-text {
     width: 95%;
     padding: 8px;
     border: 1px solid #ccc;
