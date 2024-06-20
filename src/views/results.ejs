@@ -16,14 +16,14 @@
 <body>
     <%- include('./partials/header.ejs') %>
         <main id="main-home">
-            <h1>Resultados de la busqueda: <%=busqueda %>
-            </h1>
+            <h1>Resultados de la busqueda: <%=busqueda %></h1>
             <article>
                 <% for(let i=0; i < products.length; i++){ %>
                     <div id="article-div">
                         <img id="article__image" src="/img/productos/<%= products[i].image ? products[i].image : 'default-image.png' %>"
-                            alt="<%= products[i].name %>" title="<%= products[i].name %>">
+                        alt="<%= products[i].name %>" title="<%= products[i].name %>">
                         <a id="article__anchor" href="/product-detail/<%= products[i].id %>">
+                            <h2 id="article__h2"><%= products[i].name %></h2>
                             <button id="article__button">
                                 <p id="article-button__p">Ver Más</p>
                             </button>
