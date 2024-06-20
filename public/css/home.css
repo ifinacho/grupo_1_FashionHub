@@ -7,41 +7,42 @@ main {
     flex-direction: column;
     align-items: center;
 }
-main article div {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    margin: 25px;
-}
-.sectionBox-shadow2{
-    border:solid 1px #CDCDCD;
-    box-shadow: none;
-    width: 250px;
-    transition: all 200ms;
-}
-.sectionBox-shadow2:hover {
-    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
-    width: 80%;
-    border:none;
-}
 
 main article{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     width: 80vw;
 }
-main article div img{
+
+#article-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: white;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin: 25px;
+}
+#article__image{
     width: 100%;
     align-self: center;
 }
-main article div button {
+#article__anchor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+#article__h2{
+    margin: 0 0.5rem;
+}
+#article__button {
     align-self:flex-start;
     width: 50%;
     margin: 1rem;
 }
-main article div button p{
+#article-button__p{
     padding: 0.25rem;
     font-size: 1.5rem;
 }
@@ -73,6 +74,7 @@ main section div{
     margin: 1rem;
     width: 80%;
 }
+
 .sectionBox-shadow{
     box-shadow: none;
     transition: all 250ms;
@@ -81,6 +83,17 @@ main section div{
 .sectionBox-shadow:hover{
     box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
     width: 85%;
+}
+.sectionBox-shadow2{
+    border:solid 1px #CDCDCD;
+    box-shadow: none;
+    width: 250px;
+    transition: all 200ms;
+}
+.sectionBox-shadow2:hover {
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+    width: 80%;
+    border:none;
 }
 main section div div{
     display: flex;

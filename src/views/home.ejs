@@ -19,12 +19,12 @@
             <img src="/img/Banners/Sale-Off-pink.jpg" alt="Banner-ofertas" class="banner">
             <article>
                 <% products.forEach(product => {%>
-                    <div>
-                        <img src="/img/productos/<%= product.image ? product.image : 'default-image.png' %>" alt="<%= product.name %>" title="<%= product.name %>">
-                        <a href="/product-detail/<%= product.id %>">
-                            <h2><%= product.name %></h2>
-                            <button>
-                                <p>Ver Más</p>
+                    <div id="article-div">
+                        <img id="article__image" src="/img/productos/<%= product.image ? product.image : 'default-image.png' %>" alt="<%= product.name %>" title="<%= product.name %>">
+                        <a id="article__anchor" href="/product-detail/<%= product.id %>">
+                            <h2 id="article__h2"><%= product.name %></h2>
+                            <button id="article__button">
+                                <p id="article-button__p">Ver Más</p>
                             </button>
                         </a>
                     </div>
