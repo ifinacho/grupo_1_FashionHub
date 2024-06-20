@@ -24,6 +24,7 @@ const controller = {
         const listColor = await db.Color.findAll();
         const listSize = await db.Size.findAll();
         res.render('create-product', {listCategory, listColor, listSize});
+
     },
     createPost: (req,res)=>{
         db.Product.create({
@@ -34,8 +35,8 @@ const controller = {
             discount: Number(req.body.discount),
             categoryId: req.body.category,
             colorId: req.body.color,
-            sizeId: req.body.size
-            //userId buscar manera de obtenerlo
+            sizeId: req.body.size,
+            userId: req.session.userLogged.id
         }).then((product) => {
             res.redirect(`/product-detail/${product.id}`);
         }).catch(error => {

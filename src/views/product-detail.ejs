@@ -73,7 +73,7 @@
                 </form>
                 <form id="form" action="/product-detail/<%= product.id %>?_method=DELETE" method="POST">
 
-                    <% if(locals.isLogged){ %>
+                    <% if(locals.isLogged && locals.userLogged.id == product.userId){ %>
                         <div class="buttons-delete-edit">
                             <a id="button-edit" href="/product-detail/edit-product/<%= product.id %>">Editar
                                 Producto</a>
