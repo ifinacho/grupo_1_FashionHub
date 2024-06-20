@@ -20,12 +20,12 @@
             </h1>
             <article>
                 <% for(let i=0; i < products.length; i++){ %>
-                    <div>
-                        <img src="/img/productos/<%= products[i].image ? products[i].image : 'default-image.png' %>"
+                    <div id="article-div">
+                        <img id="article__image" src="/img/productos/<%= products[i].image ? products[i].image : 'default-image.png' %>"
                             alt="<%= products[i].name %>" title="<%= products[i].name %>">
-                        <a href="/product-detail/<%= products[i].id %>">
-                            <button>
-                                <p>Ver Más</p>
+                        <a id="article__anchor" href="/product-detail/<%= products[i].id %>">
+                            <button id="article__button">
+                                <p id="article-button__p">Ver Más</p>
                             </button>
                         </a>
                     </div>
