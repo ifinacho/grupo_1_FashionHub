@@ -29,7 +29,6 @@ const controller = {
 			where: {
 				[db.Sequelize.Op.or]: [
 					{ name: { [db.Sequelize.Op.like]: `%${busqueda}%` } },
-					{ categoryId: { [db.Sequelize.Op.like]: `%${busqueda}%` } },
 					{ description: { [db.Sequelize.Op.like]: `%${busqueda}%` } }]
 			}
 		})
