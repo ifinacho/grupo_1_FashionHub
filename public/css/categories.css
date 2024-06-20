@@ -1,47 +1,69 @@
-main article div button p{
-    color: #fff;
-}
-main {
+#main-categories {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-main h1 {
-    font-size: 5.5rem;
+.banner{
+    width: 90%;
+    margin: 40px 0px;
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
 }
-main article div {
+.categories-h1 {
+    font-size: 5.3rem;
+    margin-bottom: 1.75rem;
+}
+
+main>article{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    width: 80vw;
+}
+#article-div {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
     background-color: white;
     box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     margin: 25px;
 }
-main article{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    width: 80vw;
-}
-main article div img{
+#article__image{
     width: 100%;
     align-self: center;
 }
-main article div button {
+#article__anchor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+#article__h2{
+    margin: 0 0.5rem;
+}
+#article__button {
     align-self:flex-start;
     width: 50%;
     margin: 1rem;
 }
-main article div button p{
+#article-button__p{
+    color: #fff;
     padding: 0.25rem;
     font-size: 1.5rem;
 }
+.anuncios{
+    width: 50%;
+    margin: 40px 0px;
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.42);
+}
 
-@media(min-width:426px){
+/*@media(min-width:426px){
 
-    /*main article{
+    main article{
         grid-template-columns: repeat(2,1fr);
-    }*/
+    }
 
     main section div div p {
         display: block;
@@ -49,8 +71,7 @@ main article div button p{
         margin-bottom: 25px;
 
     }
-}
-
+}*/
 @media(min-width:640px){
 
     main article{
@@ -63,18 +84,18 @@ main article div button p{
     /*main article{
         grid-template-columns: repeat(4,1fr);
     }*/
-    main section{
+    /*main section{
         width: 25%;
-    }
-    main section div div button{
+    }*/
+    /*main section div div button{
         width: 70%;
-    }
-    main h1{
+    }*/
+    /*main h1{
         margin: 35px 0px;
-    }
-    main section div div button h5{
+    }*/
+    /*main section div div button h5{
         margin: 10px;
-    }
+    }*/
 }
 
 @media(min-width:960px){

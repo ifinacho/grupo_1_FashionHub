@@ -16,7 +16,7 @@
 <body>
     <%- include('./partials/header.ejs') %>
         <main id="main-home">
-            <img src="/img/Banners/Sale-Off-pink.jpg" alt="Banner-ofertas" class="banner">
+            <img class="banner" src="/img/Banners/Sale-Off-pink.jpg" alt="Banner-ofertas">
             <article>
                 <% products.forEach(product => {%>
                     <div id="article-div">
@@ -31,7 +31,7 @@
                 <%}) %>
             </article>
             <%- include('./partials/section-interest.ejs') %>
-                <img src="/img/Anuncios/Anuncio1.jpg" alt="anuncios" class="anuncios">
+            <img class="anuncios" src="/img/Anuncios/Anuncio1.jpg" alt="anuncios">
         </main>
         <%- include('./partials/footer.ejs') %>
 </body>

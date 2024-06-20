@@ -5,6 +5,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}*/
 a, span{
     color: #461111;
     text-decoration: none;
