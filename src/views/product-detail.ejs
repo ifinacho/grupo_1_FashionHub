@@ -63,42 +63,38 @@
                         <p id="form-color__color-producto">
                             <%= product.color %>
                         </p>
-                        <!--<label class="radio"><input type="radio" name="color" value="rojo"> Rojo</label>
-                    <label class="radio"><input type="radio" name="color" value="amarillo"> Amarillo</label>
-                    <label class="radio"><input type="radio" name="color" value="rosa"> Rosa</label>-->
                     </div>
                     <div class="form-size">
                         <label id="form-size">Talle:</label>
                         <p id="form-size__size-producto">
                             <%= product.size %>
                         </p>
-                        <!--<label class="radio"><input type="radio" name="size" value="small"> Small</label>
-                    <label class="radio"><input type="radio" name="size" value="medium"> Medium</label>
-                    <label class="radio"><input type="radio" name="size" value="large"> Large</label>-->
-                    </div>
-                    <div id="button-submit">
-                        <button type="submit" value="add-cart">Añadir al carrito</button>
                     </div>
                 </form>
                 <form id="form" action="/product-detail/<%= product.id %>?_method=DELETE" method="POST">
-                    <div class="buttons-delete-edit">
-                        <!--<a id="button-add" href="/shopping-cart">Agregar al Carrito</a>-->
-                        <a id="button-edit" href="/product-detail/edit-product/<%= product.id %>">Editar Producto</a>
-                    </div>
-                    <button id="button-delete" type="submit" value="delete-product">Eliminar Producto</button>
-                    <div class="form-div" id="form-compartir">
-                        <h3>Compartir</h3>
-                        <div class="redes">
-                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/" target="_blank"><i
-                                    class="fab fa-facebook-square"></i></a>
-                            <a href="https://x.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                            <a href="https://ar.pinterest.com/" target="_blank"><i
-                                    class="fab fa-pinterest-square"></i></a>
-                            <a href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                            <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+
+                    <% if(locals.isLogged && locals.userLogged.id == product.userId){ %>
+                        <div class="buttons-delete-edit">
+                            <a id="button-edit" href="/product-detail/edit-product/<%= product.id %>">Editar
+                                Producto</a>
                         </div>
-                    </div>
+                        <button id="button-delete" type="submit" value="delete-product">Eliminar Producto</button>
+                        <% } %>
+                            <div class="form-div" id="form-compartir">
+                                <h3>Compartir</h3>
+                                <div class="redes">
+                                    <a href="https://www.instagram.com/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/" target="_blank"><i
+                                            class="fab fa-facebook-square"></i></a>
+                                    <a href="https://x.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                                    <a href="https://ar.pinterest.com/" target="_blank"><i
+                                            class="fab fa-pinterest-square"></i></a>
+                                    <a href="https://web.whatsapp.com/" target="_blank"><i
+                                            class="fab fa-whatsapp"></i></a>
+                                    <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                                </div>
+                            </div>
                 </form>
         </main>
         <%- include('./partials/footer.ejs') %>
