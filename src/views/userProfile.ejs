@@ -14,25 +14,33 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        <section class="section-user__image">
-            <div id="user-image">
-                <img src="/img/usuarios/<%= user.profilePhoto %>" alt="<%= user.name %>" title="<%= user.name %>">
-            </div>
-        </section>
-        <section class="section-user__details">
-            <div id="user-name">
-                <h2>¡Hola <%= user.name %> <%= user.lastName %>!</h2>
-            </div>
-            <div>
-                <p id="user-email"><%= user.email %></p>
-            </div>
-            <div>
-                <p id="user-dni"><%= user.dni %></p>
-            </div>
-            <div>
-                <p id="user-birthdate"><%= user.birthdate %></p>
-            </div>
-        </section>
+        <section id="section-user">
+            <section class="section-user__image">
+                <div >
+                    <img id="user-image" src="/img/usuarios/<%= user.profilePhoto %>" alt="<%= user.name %>" title="<%= user.name %>">
+                </div>
+            </section>
+            <section class="section-user__details">
+                <div id="user-name">
+                    <h2>¡Hola <%= user.name %>!</h2>
+                </div>
+                <div class="user-details__div">
+                    <p id="user-id">ID de usuario: <%= user.id %></p>
+                </div>
+                <div class="user-details__div">
+                    <p id="user-fullName">Nombre completo: <%= user.name %> <%= user.lastName %></p>
+                </div>
+                <div class="user-details__div">
+                    <p id="user-email">Correo electronico: <%= user.email %></p>
+                </div>
+                <div class="user-details__div">
+                    <p id="user-dni">Número de DNI: <%= user.dni %></p>
+                </div>
+                <div class="user-details__div">
+                    <p id="user-birthdate">Fecha de Nacimiento: <%= user.birthdate %></p>
+                </div>
+            </section>
+        </section>        
     </main>
     <%- include('./partials/footer.ejs') %>
 </body>
